@@ -2,7 +2,8 @@
 .venv-*/
 __pycache__/
 checkpoints/
-models/
+/models/*
+!/models/README.md
 adapters/
 built/
 third_party/
