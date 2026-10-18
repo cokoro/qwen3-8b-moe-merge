@@ -1,0 +1,7 @@
+ASI-Bench cf07cb89d8590d958ff42db7ae3d6608f5eb9dbc
+hle 22ed3074b1e7b134bcbc09028d0ba320839b0655
+SWE-bench_Pro-os 66f92766bba642462d4bbe5479e83f91f9211862
+terminal-bench n/a
+NVIDIA GB10, 580.178.04
+aarch64
+PRETTY_NAME="Ubuntu 24.04.5 LTS"

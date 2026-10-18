@@ -1,0 +1,46 @@
+{
+  "schema_version": 3,
+  "task_id": "task_b3d17c8225d3",
+  "prompt_level": "b1",
+  "expected_outputs": [
+    {
+      "name": "analysis.py",
+      "type": "code"
+    },
+    {
+      "name": "results/summary_metrics.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/field_samples.npy",
+      "type": "data"
+    },
+    {
+      "name": "results/field_slice.npy",
+      "type": "data"
+    },
+    {
+      "name": "results/overview.png",
+      "type": "figure"
+    }
+  ],
+  "timeout_seconds": 1800,
+  "instance_id": "chemistry.implicit_solvent_pb_gb__seed31415",
+  "parameters": {
+    "task_id": "implicit_solvent_pb_gb_v6_8_001",
+    "case_pack": "v6_8_continuum_response_hidden_suite",
+    "seed": 2117664529,
+    "suite_mode": "auto",
+    "hidden_binding_rotation_max_degrees": 8.2598,
+    "hidden_binding_translation_max_angstrom": 0.1266,
+    "hidden_ion_rotation_max_degrees": 14.1429,
+    "hidden_ion_translation_max_angstrom": 0.0234,
+    "hidden_box_padding_delta_max_angstrom": 0.4732,
+    "hidden_query_jitter_max_angstrom": 0.1679,
+    "hidden_plane_shift_max_cells": 2,
+    "hidden_binding_ionic_strength_delta_molar": 0.0795,
+    "hidden_ion_ionic_strength_delta_molar": 0.1613,
+    "hidden_binding_temperature_delta_kelvin": 7.4991,
+    "hidden_ion_temperature_delta_kelvin": 4.3877
+  }
+}

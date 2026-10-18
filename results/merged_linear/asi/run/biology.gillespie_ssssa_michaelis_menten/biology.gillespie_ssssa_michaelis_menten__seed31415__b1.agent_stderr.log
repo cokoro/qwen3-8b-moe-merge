@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "<workspace>/analysis.py", line 10, in <module>
+    with open('case_manifest.json') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'case_manifest.json'

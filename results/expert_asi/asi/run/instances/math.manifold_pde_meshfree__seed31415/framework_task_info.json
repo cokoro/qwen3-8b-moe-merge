@@ -1,0 +1,70 @@
+{
+  "schema_version": 3,
+  "task_id": "task_3c6a1223c877",
+  "prompt_level": "b1",
+  "expected_outputs": [
+    {
+      "name": "analysis.py",
+      "type": "code"
+    },
+    {
+      "name": "results/u_pred.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/discretization/convergence_test.json",
+      "type": "data"
+    },
+    {
+      "name": "results/discretization/stencil_validation.json",
+      "type": "data"
+    },
+    {
+      "name": "results/discretization/discretization_report.md",
+      "type": "data"
+    },
+    {
+      "name": "results/solver/solver_diagnostics.json",
+      "type": "data"
+    },
+    {
+      "name": "results/solver/convergence_plot_data.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/robustness/point_cloud_sensitivity.json",
+      "type": "data"
+    },
+    {
+      "name": "results/robustness/parameter_sensitivity.json",
+      "type": "data"
+    },
+    {
+      "name": "results/robustness/linear_vs_nonlinear.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/robustness/robustness_report.md",
+      "type": "data"
+    },
+    {
+      "name": "results/analysis/solution_analysis.md",
+      "type": "data"
+    },
+    {
+      "name": "results/analysis/solution_features.json",
+      "type": "data"
+    }
+  ],
+  "timeout_seconds": 1800,
+  "instance_id": "math.manifold_pde_meshfree__seed31415",
+  "parameters": {
+    "R": 3.565,
+    "r": 1.2814,
+    "alpha": 7.1295,
+    "beta": 0.6065,
+    "l": 6,
+    "N": 11057,
+    "seed": 1610416701
+  }
+}

@@ -1,0 +1,27 @@
+Server failed to start on port 38637, will retry with new port
+Server failed to start on port 41569, will retry with new port
+Server failed to start on port 44651, will retry with new port
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+┃ Trials ┃ Exceptions ┃  Mean ┃
+┃ Exception                  ┃ Count ┃
+│ ContextWindowExceededError │     1 │
+│ RuntimeError               │     1 │
+│ AgentTimeoutError          │     1 │
+Retrying <unknown> in 4 seconds as it raised RuntimeError: cannot schedule new futures after shutdown.
+Retrying <unknown> in 4 seconds as it raised RuntimeError: cannot schedule new futures after shutdown.
+Retrying <unknown> in 4 seconds as it raised RuntimeError: cannot schedule new futures after shutdown.
+Retrying <unknown> in 8 seconds as it raised RuntimeError: cannot schedule new futures after shutdown.
+Retrying <unknown> in 16 seconds as it raised RuntimeError: cannot schedule new futures after shutdown.
+Retrying <unknown> in 32 seconds as it raised RuntimeError: cannot schedule new futures after shutdown.
+Retrying <unknown> in 60 seconds as it raised RuntimeError: cannot schedule new futures after shutdown.
+Retrying <unknown> in 60 seconds as it raised RuntimeError: cannot schedule new futures after shutdown.
+Retrying <unknown> in 60 seconds as it raised RuntimeError: cannot schedule new futures after shutdown.
+Server failed to start on port 46221, will retry with new port
+Server failed to start on port 34597, will retry with new port
+Server failed to start on port 41173, will retry with new port
+┃ Trials ┃ Exceptions ┃  Mean ┃
+┃ Exception    ┃ Count ┃
+│ RuntimeError │     1 │
+  "n_errored": 1,
+  "exceptions": {
+    "RuntimeError": 1

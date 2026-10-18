@@ -1,0 +1,41 @@
+{
+  "schema_version": 3,
+  "task_id": "task_34e1cc2d4788",
+  "prompt_level": "b1",
+  "expected_outputs": [
+    {
+      "name": "analysis.py",
+      "type": "code"
+    },
+    {
+      "name": "results/modes.csv",
+      "type": "data"
+    }
+  ],
+  "timeout_seconds": 1800,
+  "instance_id": "materials.relaxation_mode_recovery__seed31415",
+  "parameters": {
+    "n_modes": 5,
+    "n_curves": 5,
+    "n_points": 96,
+    "x_decades": 7.653121206381433,
+    "noise_frac": 0.014528478363768731,
+    "seed": 2406261880,
+    "truth_seed": 2406261880,
+    "n_close_pairs": 1,
+    "close_gap_min_decades": 0.3428135243418522,
+    "close_gap_max_decades": 0.3728135243418522,
+    "weak_amp_min": 0.15652652393417846,
+    "weak_amp_max": 0.20652652393417845,
+    "enriched_amp_min": 0.783869605369901,
+    "enriched_amp_max": 0.9038696053699009,
+    "phi_min": 0.7826493988636465,
+    "phi_max": 0.960703663517623,
+    "proposal_family": "transition_band",
+    "anchor_min_gap_decades": 1.1,
+    "other_anchor_clearance_decades": 0.78,
+    "proposal_version": "fair_hard_window_v1",
+    "noise_seed": 352009512,
+    "bank_id": "relaxation_mode_bank_008"
+  }
+}

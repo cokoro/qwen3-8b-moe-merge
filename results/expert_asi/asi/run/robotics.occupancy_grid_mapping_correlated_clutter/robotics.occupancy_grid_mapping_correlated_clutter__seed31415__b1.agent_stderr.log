@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "<workspace>/analysis.py", line 137, in <module>
+    main()
+  File "<workspace>/analysis.py", line 13, in main
+    grid = np.zeros((grid_size[0], grid_size[1]), dtype=np.float64)
+                     ~~~~~~~~~^^^
+TypeError: 'int' object is not subscriptable

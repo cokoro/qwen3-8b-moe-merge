@@ -1,0 +1,16 @@
+{
+  "benchmark": "swe_bench_pro_v2_hard51",
+  "metric": "resolved_rate",
+  "n_tasks": 6,
+  "n_resolved": 0,
+  "resolved_rate": 0.0,
+  "n_errored": 1,
+  "exceptions": {
+    "RuntimeError": 1
+  },
+  "started_at": "2026-10-18T05:41:08.273162",
+  "finished_at": "2026-10-18T05:43:04.581533",
+  "job_dirs": [
+    "results/merged_ties/swe/jobs/sbp-hard51-regrade"
+  ]
+}

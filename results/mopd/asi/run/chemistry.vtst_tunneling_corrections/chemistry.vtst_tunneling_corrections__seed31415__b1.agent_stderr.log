@@ -1,0 +1,34 @@
+Traceback (most recent call last):
+  File "<workspace>/analysis.py", line 16, in <module>
+    system_manifest = pd.read_json('data/system_manifest.json')
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<home>/miniconda3/envs/moe-merge/lib/python3.12/site-packages/pandas/io/json/_json.py", line 853, in read_json
+    return json_reader.read()
+           ^^^^^^^^^^^^^^^^^^
+  File "<home>/miniconda3/envs/moe-merge/lib/python3.12/site-packages/pandas/io/json/_json.py", line 989, in read
+    obj = self._read_ujson()
+          ^^^^^^^^^^^^^^^^^^
+  File "<home>/miniconda3/envs/moe-merge/lib/python3.12/site-packages/pandas/io/json/_json.py", line 1035, in _read_ujson
+    obj = self._get_object_parser(self.data)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<home>/miniconda3/envs/moe-merge/lib/python3.12/site-packages/pandas/io/json/_json.py", line 1061, in _get_object_parser
+    return FrameParser(json, **kwargs).parse()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<home>/miniconda3/envs/moe-merge/lib/python3.12/site-packages/pandas/io/json/_json.py", line 1195, in parse
+    obj = self._parse()
+          ^^^^^^^^^^^^^
+  File "<home>/miniconda3/envs/moe-merge/lib/python3.12/site-packages/pandas/io/json/_json.py", line 1430, in _parse
+    return DataFrame(
+           ^^^^^^^^^^
+  File "<home>/miniconda3/envs/moe-merge/lib/python3.12/site-packages/pandas/core/frame.py", line 769, in __init__
+    mgr = dict_to_mgr(data, index, columns, dtype=dtype, copy=copy)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<home>/miniconda3/envs/moe-merge/lib/python3.12/site-packages/pandas/core/internals/construction.py", line 460, in dict_to_mgr
+    return arrays_to_mgr(arrays, columns, index, dtype=dtype, consolidate=copy)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<home>/miniconda3/envs/moe-merge/lib/python3.12/site-packages/pandas/core/internals/construction.py", line 113, in arrays_to_mgr
+    index = _extract_index(arrays)
+            ^^^^^^^^^^^^^^^^^^^^^^
+  File "<home>/miniconda3/envs/moe-merge/lib/python3.12/site-packages/pandas/core/internals/construction.py", line 646, in _extract_index
+    raise ValueError(
+ValueError: Mixing dicts with non-Series may lead to ambiguous ordering.

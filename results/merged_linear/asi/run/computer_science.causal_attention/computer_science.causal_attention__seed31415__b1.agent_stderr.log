@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "<workspace>/analysis.py", line 18, in <module>
+    np.save('results/output.npy', output)
+                                  ^^^^^^
+NameError: name 'output' is not defined

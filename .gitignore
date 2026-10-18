@@ -1,0 +1,19 @@
+.env
+.venv-*/
+__pycache__/
+checkpoints/
+models/
+adapters/
+built/
+third_party/
+data/eval/
+x86/
+# harbor trial directories (trajectories, recordings) ship as the harbor_jobs.tar.gz release asset
+results/**/jobs/
+results_rep2/**/jobs/
+results/_smoke/
+harbor_jobs.tar.gz
+results/_l40s_backup_*/
+# oracle validation trial dirs (TB2 task fixtures include fake credentials); summary kept in results/_validation/swe
+results/_validation/tb2/
+results/_validation/**/oracle/

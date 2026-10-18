@@ -1,0 +1,69 @@
+Server failed to start on port 44049, will retry with new port
+Server failed to start on port 43301, will retry with new port
+Server failed to start on port 43479, will retry with new port
+Retrying <unknown> in 4 seconds as it raised Timeout: litellm.Timeout: APITimeoutError - Request timed out. Error_str: Request timed out..
+Retrying <unknown> in 4 seconds as it raised Timeout: litellm.Timeout: APITimeoutError - Request timed out. Error_str: Request timed out..
+Retrying <unknown> in 4 seconds as it raised Timeout: litellm.Timeout: APITimeoutError - Request timed out. Error_str: Request timed out..
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+┃ Trials ┃ Exceptions ┃  Mean ┃
+┃ Exception         ┃ Count ┃
+│ RuntimeError      │     1 │
+│ AgentTimeoutError │     3 │
+Retrying <unknown> in 4 seconds as it raised RuntimeError: cannot schedule new futures after shutdown.
+Retrying <unknown> in 4 seconds as it raised RuntimeError: cannot schedule new futures after shutdown.
+Retrying <unknown> in 8 seconds as it raised RuntimeError: cannot schedule new futures after shutdown.
+Retrying <unknown> in 4 seconds as it raised RuntimeError: cannot schedule new futures after shutdown.
+Retrying <unknown> in 8 seconds as it raised RuntimeError: cannot schedule new futures after shutdown.
+Retrying <unknown> in 16 seconds as it raised RuntimeError: cannot schedule new futures after shutdown.
+Exception ignored in: <module 'threading' from '/usr/lib/python3.12/threading.py'>
+Traceback (most recent call last):
+    if lock.acquire(block, timeout):
+Server failed to start on port 33783, will retry with new port
+Server failed to start on port 41817, will retry with new port
+Server failed to start on port 39255, will retry with new port
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│   2267 │   except DATASET_RESOLUTION_ERRORS as exc:                          │
+│   119 │   │   except exceptions.CancelledError:                              │
+│    685 │   │   │   raise RuntimeError('Event loop stopped before Future      │
+│   144 │   │   │   │   me = BaseExceptionGroup('unhandled errors in a         │
+│       TaskGroup', self._errors)                                              │
+│   147 │   │   │   │   self._errors = None                                    │
+ExceptionGroup: unhandled errors in a TaskGroup (4 sub-exceptions)
+╭────────────────────────────── Sub-exception #1 ──────────────────────────────╮
+│ ╭─────────────────── Traceback (most recent call last) ────────────────────╮ │
+│ │   200 │   │   for attempt in range(self._retry_config.max_retries + 1):  │ │
+│ │   205 │   │   │   if result.exception_info is None:                      │ │
+│ │    560 │   def _record_exception(self, exc: BaseException) -> None:      │ │
+│ │   1046 │   │   │   raise TypeError('data must be str, not %s' %          │ │
+│ │        errors=errors, newline=newline) as f:                             │ │
+│ │ ❱ 1015 │   │   return io.open(self, mode, buffering, encoding, errors,   │ │
+│ FileNotFoundError: [Errno 2] No such file or directory:                      │
+╭────────────────────────────── Sub-exception #2 ──────────────────────────────╮
+│ ╭─────────────────── Traceback (most recent call last) ────────────────────╮ │
+│ │   200 │   │   for attempt in range(self._retry_config.max_retries + 1):  │ │
+│ │   205 │   │   │   if result.exception_info is None:                      │ │
+│ │    560 │   def _record_exception(self, exc: BaseException) -> None:      │ │
+│ │   1046 │   │   │   raise TypeError('data must be str, not %s' %          │ │
+│ │        errors=errors, newline=newline) as f:                             │ │
+│ │ ❱ 1015 │   │   return io.open(self, mode, buffering, encoding, errors,   │ │
+│ FileNotFoundError: [Errno 2] No such file or directory:                      │
+╭────────────────────────────── Sub-exception #3 ──────────────────────────────╮
+│ ╭─────────────────── Traceback (most recent call last) ────────────────────╮ │
+│ │   200 │   │   for attempt in range(self._retry_config.max_retries + 1):  │ │
+│ │   205 │   │   │   if result.exception_info is None:                      │ │
+│ │    560 │   def _record_exception(self, exc: BaseException) -> None:      │ │
+│ │   1046 │   │   │   raise TypeError('data must be str, not %s' %          │ │
+│ │        errors=errors, newline=newline) as f:                             │ │
+│ │ ❱ 1015 │   │   return io.open(self, mode, buffering, encoding, errors,   │ │
+│ FileNotFoundError: [Errno 2] No such file or directory:                      │
+╭────────────────────────────── Sub-exception #4 ──────────────────────────────╮
+│ ╭─────────────────── Traceback (most recent call last) ────────────────────╮ │
+│ │   200 │   │   for attempt in range(self._retry_config.max_retries + 1):  │ │
+│ │   205 │   │   │   if result.exception_info is None:                      │ │
+│ │    560 │   def _record_exception(self, exc: BaseException) -> None:      │ │
+│ │   1046 │   │   │   raise TypeError('data must be str, not %s' %          │ │
+│ │        errors=errors, newline=newline) as f:                             │ │
+│ │ ❱ 1015 │   │   return io.open(self, mode, buffering, encoding, errors,   │ │
+│ FileNotFoundError: [Errno 2] No such file or directory:                      │

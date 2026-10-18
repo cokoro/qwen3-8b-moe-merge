@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "<workspace>/simulation.py", line 204, in <module>
+    particles = propagate_particles(prior_particles, fit_times, masses, G)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<workspace>/simulation.py", line 34, in propagate_particles
+    outputs[i, j, t] = state
+    ~~~~~~~^^^^^^^^^
+ValueError: could not broadcast input array from shape (4,6) into shape (6,)

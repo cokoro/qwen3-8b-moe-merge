@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "<workspace>/solver.py", line 164, in <module>
+    main()
+  File "<workspace>/solver.py", line 135, in main
+    x, status = path_tracking(f1, f2, g1, g2, gamma, start_x, max_steps=10000)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<workspace>/solver.py", line 90, in path_tracking
+    x, converged = newton_step(f1, f2, x_pred, t + dt, gamma, tol=1e-8)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<workspace>/solver.py", line 66, in newton_step
+    if np.abs(dx) < tol:
+       ^^^^^^^^^^^^^^^^
+ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()

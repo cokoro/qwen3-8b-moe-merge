@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "<workspace>/simulation.py", line 113, in <module>
+    likelihoods[j] = compute_likelihood(prior_particles[i, j], fit_times[i], detected_rows[i])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<workspace>/simulation.py", line 77, in compute_likelihood
+    if obs[3] == 1:
+       ^^^^^^^^^^^
+ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()

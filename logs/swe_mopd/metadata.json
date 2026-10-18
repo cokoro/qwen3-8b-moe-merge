@@ -1,0 +1,19 @@
+{
+  "run_id": "swe_mopd",
+  "host": "x86",
+  "gpu": "NVIDIA L40S 48GB",
+  "gpu_count": 1,
+  "start": "2026-10-18T03:27:27+08:00",
+  "end": "2026-10-18T04:59:20+08:00",
+  "seconds": 5513,
+  "exit_status": "0",
+  "attempts": 1,
+  "raw_log": "x86/logs/eval_mopd_swe.log",
+  "seed": 42,
+  "configs": [
+    "configs/training.yaml",
+    "configs/merging.yaml",
+    "configs/stage2.yaml",
+    "configs/eval/benchmarks.yaml"
+  ]
+}

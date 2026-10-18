@@ -1,0 +1,13 @@
+{
+  "raw": 4000,
+  "after_dedup": 4000,
+  "train": 3800,
+  "validation": 200,
+  "sources": {
+    "asi_commonsense_qa_proxy": 3990,
+    "asi_handauthored": 10
+  },
+  "mean_chars": 489.7,
+  "max_chars": 716,
+  "seed": 42
+}

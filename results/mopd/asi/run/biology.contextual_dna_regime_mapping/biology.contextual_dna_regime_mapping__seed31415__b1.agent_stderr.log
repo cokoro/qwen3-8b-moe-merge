@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "<workspace>/analysis.py", line 213, in <module>
+    main()
+  File "<workspace>/analysis.py", line 165, in main
+    window_size = analysis_spec['window_size']
+                  ~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+KeyError: 'window_size'

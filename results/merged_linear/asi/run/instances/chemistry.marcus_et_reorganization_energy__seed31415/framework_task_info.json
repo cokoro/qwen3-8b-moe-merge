@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "task_id": "task_da64c162583f",
+  "prompt_level": "b1",
+  "expected_outputs": [
+    {
+      "name": "analysis.py",
+      "type": "code"
+    },
+    {
+      "name": "results/aligned_displacement_mw.npy",
+      "type": "data"
+    },
+    {
+      "name": "results/vibrational_basis_mw.npy",
+      "type": "data"
+    },
+    {
+      "name": "results/mode_overlap.npy",
+      "type": "data"
+    },
+    {
+      "name": "results/projected_displacement_mw.npy",
+      "type": "data"
+    },
+    {
+      "name": "results/transported_mode_projection.npy",
+      "type": "data"
+    },
+    {
+      "name": "results/lambda_summary.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/mode_projection.npy",
+      "type": "data"
+    },
+    {
+      "name": "results/rate_curve.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/diagnostics.json",
+      "type": "data"
+    },
+    {
+      "name": "results/overview.png",
+      "type": "figure"
+    }
+  ],
+  "timeout_seconds": 1800,
+  "instance_id": "chemistry.marcus_et_reorganization_energy__seed31415",
+  "parameters": {}
+}

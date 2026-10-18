@@ -1,0 +1,52 @@
+{
+  "schema_version": 3,
+  "task_id": "task_ad51a65c1af0",
+  "prompt_level": "b1",
+  "expected_outputs": [
+    {
+      "name": "analysis.py",
+      "type": "code"
+    },
+    {
+      "name": "results/free_energy_profile.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/rate_constants.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/transmission_profile.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/path_samples.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/isotope_effects.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/isotope_transmission_profile.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/diagnostics.json",
+      "type": "data"
+    },
+    {
+      "name": "results/rate_plot.png",
+      "type": "figure"
+    }
+  ],
+  "timeout_seconds": 1800,
+  "instance_id": "chemistry.vtst_tunneling_corrections__seed31415",
+  "parameters": {
+    "asymmetry_kj_mol": -1.03,
+    "barrier_height_kj_mol": 47.8999,
+    "curve_amplitude": 0.5191,
+    "seed": 1802620927,
+    "transverse_stiffness_scale": 0.8928
+  }
+}

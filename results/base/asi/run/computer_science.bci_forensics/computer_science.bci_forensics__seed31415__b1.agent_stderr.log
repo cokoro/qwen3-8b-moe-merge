@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "<workspace>/analysis.py", line 43, in <module>
+    case_ids = study_manifest['case_ids']
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'case_ids'

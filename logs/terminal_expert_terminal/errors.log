@@ -1,0 +1,7 @@
+Server failed to start on port 45725, will retry with new port
+┃ Trials ┃ Exceptions ┃  Mean ┃
+┃ Exception         ┃ Count ┃
+│ AgentTimeoutError │    49 │
+  "n_errored": 49,
+  "exceptions": {
+    "AgentTimeoutError": 49

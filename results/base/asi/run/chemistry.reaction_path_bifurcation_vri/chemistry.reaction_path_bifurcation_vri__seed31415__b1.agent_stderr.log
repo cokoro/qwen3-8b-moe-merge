@@ -1,0 +1,4 @@
+  File "<workspace>/analysis.py", line 259
+    len(stationary_points)=len(stationary_points),
+    ^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: expression cannot contain assignment, perhaps you meant "=="?

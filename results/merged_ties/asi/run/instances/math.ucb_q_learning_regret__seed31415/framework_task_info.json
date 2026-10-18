@@ -1,0 +1,19 @@
+{
+  "schema_version": 3,
+  "task_id": "task_c8c05d41b7ab",
+  "prompt_level": "b1",
+  "expected_outputs": [
+    {
+      "name": "analysis.py",
+      "type": "code"
+    }
+  ],
+  "timeout_seconds": 1800,
+  "instance_id": "math.ucb_q_learning_regret__seed31415",
+  "parameters": {
+    "seed": 20260537,
+    "budget_scale": 1.5,
+    "eval_seed_count": 8,
+    "id": "seed_20260537"
+  }
+}

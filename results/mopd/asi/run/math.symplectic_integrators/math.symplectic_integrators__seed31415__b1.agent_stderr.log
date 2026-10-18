@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "<workspace>/analysis.py", line 116, in <module>
+    main()
+  File "<workspace>/analysis.py", line 76, in main
+    k1, k2, a, b = estimate_coefficients(df)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<workspace>/analysis.py", line 34, in estimate_coefficients
+    V = 0.5 * (df['x2']**2 + df['x4']**2) + 0.5 * k1 * df['x1']**2 + 0.5 * k2 * df['x3']**2 + a * df['x1']**2 * df['x3'] + b * df['x3']**3
+                                                  ^^
+NameError: name 'k1' is not defined

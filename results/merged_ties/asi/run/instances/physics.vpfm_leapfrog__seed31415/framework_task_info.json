@@ -1,0 +1,29 @@
+{
+  "schema_version": 3,
+  "task_id": "task_b89dee3e7724",
+  "prompt_level": "b1",
+  "expected_outputs": [
+    {
+      "name": "simulation.py",
+      "type": "code"
+    },
+    {
+      "name": "vorticity_frames.npy",
+      "type": "data"
+    },
+    {
+      "name": "kinetic_energy.npy",
+      "type": "data"
+    }
+  ],
+  "timeout_seconds": 1800,
+  "instance_id": "physics.vpfm_leapfrog__seed31415",
+  "parameters": {
+    "grid_size": 135,
+    "cfl": 1.8797,
+    "n_frames": 107,
+    "initial_condition": "leapfrog",
+    "particles_per_cell": 16,
+    "seed": 1802620927
+  }
+}

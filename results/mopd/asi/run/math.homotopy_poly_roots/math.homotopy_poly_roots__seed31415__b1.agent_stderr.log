@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "<workspace>/solver.py", line 80, in <module>
+    x_new = opt.root(lambda x: H_func(x), x_pred, jac=J_func, method='hybr').x
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<home>/miniconda3/envs/moe-merge/lib/python3.12/site-packages/scipy/optimize/_root.py", line 253, in root
+    sol = _root_hybr(_wrapped_fun, x0, args=args, jac=jac, **options)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<home>/miniconda3/envs/moe-merge/lib/python3.12/site-packages/scipy/optimize/_minpack_py.py", line 238, in _root_hybr
+    shape, dtype = _check_func('fsolve', 'func', func, x0, args, n, (n,))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<home>/miniconda3/envs/moe-merge/lib/python3.12/site-packages/scipy/optimize/_minpack_py.py", line 37, in _check_func
+    raise TypeError(msg)
+TypeError: fsolve: there is a mismatch between the input and output shape of the 'func' argument '_wrapped_fun'.Shape should be (4,) but it is (1,).

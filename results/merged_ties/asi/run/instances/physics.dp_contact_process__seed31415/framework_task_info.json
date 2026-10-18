@@ -1,0 +1,37 @@
+{
+  "schema_version": 3,
+  "task_id": "task_6463da34d2f8",
+  "prompt_level": "b1",
+  "expected_outputs": [
+    {
+      "name": "analysis.py",
+      "type": "code"
+    },
+    {
+      "name": "results/dp_summary.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/dp_scan.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/dp_timeseries.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/dp_report.json",
+      "type": "data"
+    }
+  ],
+  "timeout_seconds": 1800,
+  "instance_id": "physics.dp_contact_process__seed31415",
+  "parameters": {
+    "lambda_scan": "1.710,1.728,1.742,1.754,1.766,1.778,1.785,1.795,1.805",
+    "beta_fit_lambdas": "1.785,1.795,1.805",
+    "system_sizes": "32,64,128,256",
+    "n_seeds": 16,
+    "t_max": 1000,
+    "seed": 1802620927
+  }
+}

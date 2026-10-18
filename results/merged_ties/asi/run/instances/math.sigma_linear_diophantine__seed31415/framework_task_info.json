@@ -1,0 +1,26 @@
+{
+  "schema_version": 3,
+  "task_id": "task_d133b74504cd",
+  "prompt_level": "b1",
+  "expected_outputs": [
+    {
+      "name": "analysis.py",
+      "type": "code"
+    },
+    {
+      "name": "results/solutions.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/instance_summary.csv",
+      "type": "data"
+    }
+  ],
+  "timeout_seconds": 1800,
+  "instance_id": "math.sigma_linear_diophantine__seed31415",
+  "parameters": {
+    "seed": 89,
+    "perf_scale": 2.0,
+    "id": "seed_89"
+  }
+}

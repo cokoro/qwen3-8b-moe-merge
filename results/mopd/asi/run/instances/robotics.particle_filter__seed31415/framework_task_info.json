@@ -1,0 +1,47 @@
+{
+  "schema_version": 3,
+  "task_id": "task_03eba8bdd7ff",
+  "prompt_level": "b1",
+  "expected_outputs": [
+    {
+      "name": "analysis.py",
+      "type": "code"
+    },
+    {
+      "name": "results/state_estimates.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/filter_diagnostics.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/summary.json",
+      "type": "data"
+    },
+    {
+      "name": "results/overview.png",
+      "type": "figure"
+    },
+    {
+      "name": "results/conclusion.txt",
+      "type": "conclusion"
+    }
+  ],
+  "timeout_seconds": 1800,
+  "instance_id": "robotics.particle_filter__seed31415",
+  "parameters": {
+    "seed": 1802620927,
+    "T": 95,
+    "dt": 1.0,
+    "sigma_pos": 0.03,
+    "sigma_vel": 0.01,
+    "sigma_range": 0.0288,
+    "sigma_bearing": 0.0038,
+    "range_offset": 1.5,
+    "range_bias": 0.08,
+    "bearing_bias_amp": 0.18,
+    "bearing_bias_rate": 0.003,
+    "n_particles_reference": 8000
+  }
+}

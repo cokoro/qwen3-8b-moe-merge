@@ -1,0 +1,10 @@
+{
+  "benchmark": "asi_bench_seed31415",
+  "protocol": "direct_llm single-turn; public references, local non-official scoring",
+  "metric": "score",
+  "n_tasks": 60,
+  "score": 0.011991386613802538,
+  "hard_gate_pass_rate": 0.06666666666666667,
+  "n_scorer_errors": 2,
+  "official": false
+}

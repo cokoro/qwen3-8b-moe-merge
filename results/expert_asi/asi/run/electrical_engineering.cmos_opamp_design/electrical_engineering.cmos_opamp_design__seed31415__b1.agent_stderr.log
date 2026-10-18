@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "<workspace>/simulation.py", line 121, in <module>
+    simulate()
+  File "<workspace>/simulation.py", line 89, in simulate
+    stdout = run_spice('ac_testbench.cir')
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<workspace>/simulation.py", line 9, in run_spice
+    result = subprocess.run(cmd, capture_output=True, text=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<home>/miniconda3/envs/moe-merge/lib/python3.12/subprocess.py", line 548, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<home>/miniconda3/envs/moe-merge/lib/python3.12/subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "<home>/miniconda3/envs/moe-merge/lib/python3.12/subprocess.py", line 1955, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'ngspice'

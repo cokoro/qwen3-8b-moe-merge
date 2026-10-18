@@ -1,0 +1,19 @@
+Traceback (most recent call last):
+  File "<workspace>/analysis.py", line 143, in <module>
+    main()
+  File "<workspace>/analysis.py", line 81, in main
+    rho_timeseries, survival_timeseries, rho_ss, survival_prob = simulate_lattice(
+                                                                 ^^^^^^^^^^^^^^^^^
+  File "<workspace>/analysis.py", line 63, in simulate_lattice
+    survival_prob = np.mean(survival_timeseries[:, -1], axis=1)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<home>/miniconda3/envs/moe-merge/lib/python3.12/site-packages/numpy/core/fromnumeric.py", line 3504, in mean
+    return _methods._mean(a, axis=axis, dtype=dtype,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<home>/miniconda3/envs/moe-merge/lib/python3.12/site-packages/numpy/core/_methods.py", line 106, in _mean
+    rcount = _count_reduce_items(arr, axis, keepdims=keepdims, where=where)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<home>/miniconda3/envs/moe-merge/lib/python3.12/site-packages/numpy/core/_methods.py", line 77, in _count_reduce_items
+    items *= arr.shape[mu.normalize_axis_index(ax, arr.ndim)]
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+numpy.exceptions.AxisError: axis 1 is out of bounds for array of dimension 1

@@ -1,0 +1,13 @@
+# MOPD: multi-teacher on-policy distillation (src/distill/mopd.py), run_id train_mopd
+student_base: models/Qwen3-8B            # Qwen/Qwen3-8B @ b968826d9c46dd6066d109eabc6255188de91218
+student_lora: {r: 16, lora_alpha: 32, lora_dropout: 0.0, target_modules: [q_proj, k_proj, v_proj, o_proj, gate_proj, up_proj, down_proj]}
+teachers:                                # frozen LoRA experts on the same base
+  hle: checkpoints/expert_hle
+  asi: checkpoints/expert_asi
+prompts: train split of data/{hle,asi}/train.jsonl, 2000 per domain, seed 42 (no benchmark items)
+rollout: {batch_per_domain: 16, temperature: 1.0, top_p: 1.0, max_new_tokens: 320, chat_template: non-thinking}
+objective: mean over response tokens of KL(p_student || p_teacher_domain), exact over the 151,936-token vocabulary
+optimizer: {type: AdamW, lr: 1.0e-4, weight_decay: 0.0, grad_clip: 1.0}
+budget: {max_minutes: 150, steps_done: 152}
+gradient_checkpointing: true
+seed: 42

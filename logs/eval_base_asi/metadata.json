@@ -1,0 +1,19 @@
+{
+  "run_id": "eval_base_asi",
+  "host": "dgx",
+  "gpu": "NVIDIA GB10 (DGX Spark)",
+  "gpu_count": 1,
+  "start": "2026-10-17T18:53:52+08:00",
+  "end": "2026-10-17T22:36:12+08:00",
+  "seconds": 13340,
+  "exit_status": "143",
+  "attempts": 1,
+  "raw_log": "logs/eval_base_asi.log",
+  "seed": 42,
+  "configs": [
+    "configs/training.yaml",
+    "configs/merging.yaml",
+    "configs/stage2.yaml",
+    "configs/eval/benchmarks.yaml"
+  ]
+}

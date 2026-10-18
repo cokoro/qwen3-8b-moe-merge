@@ -1,0 +1,141 @@
+{
+  "result_schema_version": 1,
+  "instance_id": "computer_science.dp_accountant_forensics__seed31415",
+  "task_id": "computer_science.dp_accountant_forensics",
+  "attempt": 1,
+  "prompt_level": "b1",
+  "agent_name": "DirectLLMAdapter",
+  "parameters": {
+    "n_cases": 6,
+    "n_epsilon": 58,
+    "n_target_delta": 5,
+    "n_accountants": 8,
+    "seed": 1915016675
+  },
+  "gates_passed": true,
+  "hard_gates_passed": true,
+  "soft_gate_failures": 0,
+  "gate_results": [],
+  "score_results": [
+    {
+      "scorer_name": "unscored_submission",
+      "score": 0.0,
+      "max_score": 0.0,
+      "passed": true,
+      "details": {
+        "unscored_submission": true
+      },
+      "message": "Submit this run to https://asibench.apexin.ai/ for official scoring."
+    }
+  ],
+  "final_score": 0.0,
+  "max_possible_score": 100.0,
+  "execution_time_seconds": 235.39543104171753,
+  "status": "failed",
+  "provenance": {
+    "agent": {
+      "agent_name": "direct_llm",
+      "cmd_template": null,
+      "config": {
+        "model": "expert_asi",
+        "api_base": "http://127.0.0.1:30001/v1",
+        "api_protocol": "openai",
+        "api_key": "<redacted>"
+      },
+      "allow_external_tools": false,
+      "tool_mode": "restricted",
+      "adapter_class": "DirectLLMAdapter"
+    },
+    "sandbox": {
+      "requested_mode": "none",
+      "effective_mode": "none",
+      "enforcement_status": "not_requested",
+      "verification_status": "not_applicable",
+      "image_identity": null
+    },
+    "runtime": {
+      "python_requirement": ">=3.10",
+      "resolved_python_version": null,
+      "python_requirement_satisfied": null,
+      "packages": [
+        "numpy>=1.24",
+        "matplotlib>=3.7"
+      ],
+      "task_env_cache_key": null,
+      "runtime_source": "host_process",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    }
+  },
+  "agent_output": {
+    "code_files": [
+      "analysis.py"
+    ],
+    "data_files": [],
+    "log": "\nTraceback (most recent call last):\n  File \"<workspace>/analysis.py\", line 3, in <module>\n    import matplotlib.pyplot as plt\nModuleNotFoundError: No module named 'matplotlib'\n",
+    "error_message": null,
+    "status": "failed",
+    "process_exit_code": null,
+    "termination_signal": null,
+    "timeout_phase": null,
+    "raw_model_output_file": "computer_science.dp_accountant_forensics__seed31415__b1.agent_model_output.json",
+    "raw_model_output_format": "json",
+    "llm_response_file": "computer_science.dp_accountant_forensics__seed31415__b1.llm_response.md",
+    "selected_code_file": "computer_science.dp_accountant_forensics__seed31415__b1.selected_code.py",
+    "execution_artifacts": [
+      "computer_science.dp_accountant_forensics__seed31415__b1.artifact.analysis.py"
+    ],
+    "raw_stdout_file": "computer_science.dp_accountant_forensics__seed31415__b1.agent_stdout.log",
+    "raw_stdout_format": "log",
+    "raw_stderr_file": "computer_science.dp_accountant_forensics__seed31415__b1.agent_stderr.log",
+    "model_call_observability": {
+      "schema_version": 1,
+      "capture_status": "captured",
+      "records_file": "computer_science.dp_accountant_forensics__seed31415__b1.model_calls.json",
+      "summary": {
+        "call_records_emitted": 1,
+        "calls_attempted": 1,
+        "calls_attempted_observed": 1,
+        "calls_with_response": 1,
+        "calls_with_nonempty_content": 1,
+        "calls_with_empty_content": 0,
+        "calls_with_omitted_content": 0,
+        "calls_with_known_content_state": 1,
+        "calls_with_unknown_content_state": 0,
+        "calls_with_partial_content": 0,
+        "calls_with_transport_error": 0,
+        "calls_with_timeout": 0,
+        "calls_retried": 0,
+        "calls_without_observable_boundary": 0,
+        "empty_response_rate": 0.0,
+        "empty_response_rate_status": "observed"
+      }
+    },
+    "persisted_outputs": {
+      "dir": "computer_science.dp_accountant_forensics__seed31415__b1.outputs",
+      "files": [
+        {
+          "path": "analysis.py",
+          "sha256": "841fa57354b417b2756e1f2a22d23a75e45ae45c3345880fd95b901fd49036ae",
+          "bytes": 4346
+        }
+      ]
+    },
+    "trajectory_summary": {
+      "total_turns": 1,
+      "total_tool_calls": 0,
+      "tool_call_distribution": {},
+      "thinking_total_chars": 0,
+      "total_code_executions": 1,
+      "code_execution_failures": 1,
+      "unique_files_modified": []
+    },
+    "trajectory_file": "computer_science.dp_accountant_forensics__seed31415__b1.trajectory.json"
+  },
+  "cost": {
+    "input_tokens": 2154,
+    "output_tokens": 1002,
+    "total_tokens": 3156,
+    "estimated_cost_usd": 0.0
+  }
+}

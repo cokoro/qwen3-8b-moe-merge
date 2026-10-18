@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "<workspace>/solver.py", line 39, in <module>
+    canonical_boundary = compute_canonical_values(boundary_samples, map_func)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<workspace>/solver.py", line 30, in compute_canonical_values
+    return map_func(points), map_func_derivative(points)
+           ^^^^^^^^^^^^^^^^
+TypeError: canonical_template() missing 1 required positional argument: 'slit_params'

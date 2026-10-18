@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "<workspace>/analysis.py", line 17, in <module>
+    C_pool_ratios = soil_props["C:N_ratios"]
+                    ~~~~~~~~~~^^^^^^^^^^^^^^
+KeyError: 'C:N_ratios'

@@ -1,0 +1,33 @@
+{
+  "schema_version": 3,
+  "task_id": "task_657a216f68dd",
+  "prompt_level": "b1",
+  "expected_outputs": [
+    {
+      "name": "simulate.py",
+      "type": "code"
+    },
+    {
+      "name": "ca_traces.npz",
+      "type": "data"
+    },
+    {
+      "name": "summary_stats.json",
+      "type": "data"
+    },
+    {
+      "name": "calcium_summary.png",
+      "type": "image"
+    }
+  ],
+  "timeout_seconds": 1800,
+  "instance_id": "biology.calcium_ip3_dyk_oscillations__seed31415",
+  "parameters": {
+    "n_ip3_levels": 6,
+    "n_channel_counts": 5,
+    "T_obs_seconds": 120,
+    "n_replicates": 2,
+    "dt_out_seconds": 0.1,
+    "seed": 554442823
+  }
+}

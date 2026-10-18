@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "<workspace>/simulation.py", line 59, in <module>
+    psi = poisson_solve(w_n)
+          ^^^^^^^^^^^^^^^^^^
+  File "<workspace>/simulation.py", line 38, in poisson_solve
+    lambda_kl = np.reshape(lambda_kl, (N * N, 1))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<home>/miniconda3/envs/moe-merge/lib/python3.12/site-packages/numpy/core/fromnumeric.py", line 285, in reshape
+    return _wrapfunc(a, 'reshape', newshape, order=order)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<home>/miniconda3/envs/moe-merge/lib/python3.12/site-packages/numpy/core/fromnumeric.py", line 59, in _wrapfunc
+    return bound(*args, **kwds)
+           ^^^^^^^^^^^^^^^^^^^^
+ValueError: cannot reshape array of size 17956 into shape (18225,1)

@@ -1,0 +1,72 @@
+[2026-10-18T02:11:24+08:00] START eval_mopd_asi
+
+Sandbox mode: --sandbox none  [No Sandbox]
+  Agent runs directly on the host with full filesystem and network access.
+  Pros:  Zero overhead; fastest startup; works everywhere.
+  Cons:  No isolation — agent can read reference answers, other instances, host files, and environment variables. Results are NOT suitable for formal evaluation (see Issue #7: scores inflated from 25 to 100 due to information leakage).
+  Tip:   Use --sandbox os for isolated evaluation, or --sandbox task for package isolation without Docker.
+
+
+==============================================================
+  Agent Configuration (affects reproducibility)
+==============================================================
+  Agent    direct_llm
+  Model    openai/mopd
+  Effort   N/A (default)
+  Timeout  1800s
+  Tools    N/A
+==============================================================
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+============================================================
+  ASI-Bench Produce-Only Summary
+  Agent: DirectLLMAdapter
+  Tasks: 60  |  Instances: 60
+============================================================
+  Scoring: submit to https://asibench.apexin.ai/
+
+  Unscored submissions (submit mode): 60
+
+  Agent Behavior:
+    Avg turns: 0.9
+    Avg tool calls: 0.0
+    Avg thinking length: 0 chars
+
+  Model Calls:
+    Attempted: unknown (60 observed)
+    Responses: 55
+    Empty response rate: unknown
+
+  Total execution time: 39165s
+============================================================
+results/mopd/asi/run: 60 instances, mean 0.14%, timeouts 0
+{
+  "benchmark": "asi_bench_seed31415",
+  "protocol": "direct_llm single-turn; public references, local non-official scoring",
+  "metric": "score",
+  "n_tasks": 60,
+  "score": 0.0014104477611940297,
+  "hard_gate_pass_rate": 0.05,
+  "n_scorer_errors": 0,
+  "official": false
+}
+[2026-10-18T03:25:51+08:00] END eval_mopd_asi status=0 seconds=4467

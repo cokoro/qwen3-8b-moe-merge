@@ -1,0 +1,30 @@
+{
+  "schema_version": 3,
+  "task_id": "task_425239a95834",
+  "prompt_level": "b1",
+  "expected_outputs": [
+    {
+      "name": "analysis.py",
+      "type": "code"
+    },
+    {
+      "name": "results/soil_moisture.npy",
+      "type": "data"
+    },
+    {
+      "name": "results/water_table.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/fluxes.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/water_balance.png",
+      "type": "figure"
+    }
+  ],
+  "timeout_seconds": 1800,
+  "instance_id": "earth_science.richards_topmodel_hydrology__seed31415",
+  "parameters": {}
+}

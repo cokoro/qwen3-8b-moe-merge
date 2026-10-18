@@ -1,0 +1,7 @@
+<workspace>/analysis.py:29: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  forcing = pd.read_csv('data/forcing.csv', parse_dates=['time_hr'])
+Traceback (most recent call last):
+  File "<workspace>/analysis.py", line 33, in <module>
+    snowpack_init[0]['thickness_m'],
+    ~~~~~~~~~~~~~^^^
+KeyError: 0

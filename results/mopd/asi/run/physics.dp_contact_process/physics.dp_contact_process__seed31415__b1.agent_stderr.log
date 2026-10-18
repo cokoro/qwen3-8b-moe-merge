@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "<workspace>/analysis.py", line 17, in <module>
+    lambda_scan = config['lambda_scan']
+                  ~~~~~~^^^^^^^^^^^^^^^
+KeyError: 'lambda_scan'

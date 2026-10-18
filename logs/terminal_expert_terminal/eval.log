@@ -1,0 +1,62 @@
+[2026-10-18T01:12:00+08:00] START terminal_expert_terminal
+01:12:03 - LiteLLM:WARNING: utils.py:3395 - register_model: model=openai/base:expert_terminal has custom pricing but not in built-in cost map and no prefix/region variant matched; cache_creation_input_token_cost and cache_read_input_token_cost will default to 0 for this model (input/output cost tracking is unaffected). To track cache cost, add them to model_info
+Server failed to start on port 45725, will retry with new port
+Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7f8608f901d0>
+Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x7f85f9104d50>, 14053337.08272229), (<aiohttp.client_proto.ResponseHandler object at 0x7f85fae12cd0>, 14053337.162127664), (<aiohttp.client_proto.ResponseHandler object at 0x7f860847b6d0>, 14053337.212500712), (<aiohttp.client_proto.ResponseHandler object at 0x7f86083a8450>, 14053340.130615221), (<aiohttp.client_proto.ResponseHandler object at 0x7f85fa03bad0>, 14053350.952797998), (<aiohttp.client_proto.ResponseHandler object at 0x7f86084bf050>, 14053358.146278113)])']
+connector: <aiohttp.connector.TCPConnector object at 0x7f8608f53b30>
+Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7f8608e973b0>
+Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7f85f9747680>
+Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x7f85fa616850>, 14065202.901646744)])']
+connector: <aiohttp.connector.TCPConnector object at 0x7f85fa055d00>
+Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7f85fa6971d0>
+  74/74 Mean: 0.000 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5:03:26 0:00:00
+
+tb2-mirror • terminus-2 • base:expert_terminal
+┏━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━┓
+┃ Trials ┃ Exceptions ┃  Mean ┃
+┡━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━┩
+│     74 │         49 │ 0.000 │
+└────────┴────────────┴───────┘
+
+┏━━━━━━━━┳━━━━━━━┓
+┃ Reward ┃ Count ┃
+┡━━━━━━━━╇━━━━━━━┩
+│ 0.0    │    74 │
+└────────┴───────┘
+
+┏━━━━━━━━━━━━━━━━━━━┳━━━━━━━┓
+┃ Exception         ┃ Count ┃
+┡━━━━━━━━━━━━━━━━━━━╇━━━━━━━┩
+│ AgentTimeoutError │    49 │
+└───────────────────┴───────┘
+
+Job Info
+Total runtime: 5h 3m 26s
+Results written to results/expert_terminal/terminal/jobs/tb2/result.json
+Inspect results by running `harbor view results/expert_terminal/terminal/jobs`
+Share results by running `harbor upload 
+results/expert_terminal/terminal/jobs/tb2`
+
+{
+  "benchmark": "terminal_bench_2.0",
+  "metric": "pass_rate",
+  "n_tasks": 74,
+  "n_resolved": 0,
+  "pass_rate": 0.0,
+  "n_errored": 49,
+  "exceptions": {
+    "AgentTimeoutError": 49
+  },
+  "started_at": "2026-10-18T01:12:03.289237",
+  "finished_at": "2026-10-18T06:15:29.850995",
+  "job_dirs": [
+    "results/expert_terminal/terminal/jobs/tb2"
+  ]
+}
+[2026-10-18T06:15:30+08:00] END terminal_expert_terminal status=0 seconds=18210

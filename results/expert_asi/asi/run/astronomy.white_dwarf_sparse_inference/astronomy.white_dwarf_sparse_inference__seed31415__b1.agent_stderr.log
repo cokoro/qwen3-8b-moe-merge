@@ -1,0 +1,4 @@
+  File "<workspace>/analysis.py", line 58
+    json.dump({'mass_limit_solar': ..., 'radius_at_0p6Msun_km': ..., ...}, f)
+                                                                       ^
+SyntaxError: ':' expected after dictionary key

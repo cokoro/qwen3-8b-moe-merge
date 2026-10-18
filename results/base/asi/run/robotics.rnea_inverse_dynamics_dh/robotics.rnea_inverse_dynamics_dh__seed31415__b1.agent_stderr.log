@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "<workspace>/analysis.py", line 307, in <module>
+    main()
+  File "<workspace>/analysis.py", line 271, in main
+    n_dof = task_info['n_dof']
+            ~~~~~~~~~^^^^^^^^^
+TypeError: tuple indices must be integers or slices, not str

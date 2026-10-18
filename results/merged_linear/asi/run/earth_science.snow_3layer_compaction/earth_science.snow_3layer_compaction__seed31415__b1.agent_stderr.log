@@ -1,0 +1,4 @@
+  File "<workspace>/analysis.py", line 40
+    state[0, :, :] = [d['thickness_m'], d['density_kg_m3'], d['ice_mm'], d['liq_mm'], d['temp_K'] for d in layer_data]
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: did you forget parentheses around the comprehension target?

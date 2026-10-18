@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "<workspace>/simulation.py", line 45, in <module>
+    beta_hat[i] = 0.5 * (adjusted_observations.mean() - np.dot(adjusted_design[:, i], beta_hat))
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: shapes (260,) and (100,) not aligned: 260 (dim 0) != 100 (dim 0)

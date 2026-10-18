@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "<workspace>/analysis.py", line 15, in <module>
+    theta_at_psi_neg150 = theta_at_psi(-150)
+                          ^^^^^^^^^^^^^^^^^^
+  File "<workspace>/analysis.py", line 14, in <lambda>
+    theta_at_psi = lambda psi: theta_sat * (1 - np.exp(-psi / (b_param * 3.3)))
+                               ^^^^^^^^^
+NameError: name 'theta_sat' is not defined. Did you mean: 'theta_wilt'?

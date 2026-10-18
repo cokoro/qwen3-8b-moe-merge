@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "<workspace>/solver.py", line 21, in <module>
+    normalization_probes = metadata['normalization_probes']
+                           ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'normalization_probes'

@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "<workspace>/analysis.py", line 230, in <module>
+    main()
+  File "<workspace>/analysis.py", line 136, in main
+    idx = np.where(np.isclose(lambda_scan, lambda_val) & np.isclose(system_sizes, system_size))[0]
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ValueError: operands could not be broadcast together with shapes (9,) (4,) 

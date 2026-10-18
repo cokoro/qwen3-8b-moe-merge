@@ -1,0 +1,26 @@
+{
+  "schema_version": 3,
+  "task_id": "task_40465beed576",
+  "prompt_level": "b1",
+  "expected_outputs": [
+    {
+      "name": "analysis.py",
+      "type": "code"
+    },
+    {
+      "name": "results/snow_state.npy",
+      "type": "data"
+    },
+    {
+      "name": "results/snow_summary.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/snow_evolution.png",
+      "type": "figure"
+    }
+  ],
+  "timeout_seconds": 1800,
+  "instance_id": "earth_science.snow_3layer_compaction__seed31415",
+  "parameters": {}
+}

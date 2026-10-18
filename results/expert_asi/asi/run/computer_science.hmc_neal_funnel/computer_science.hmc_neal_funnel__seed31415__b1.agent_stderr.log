@@ -1,0 +1,4 @@
+  File "<workspace>/analysis.py", line 77
+    'energy_rmse': [compute_energy_rmse(...) for ...],
+                                                 ^^^
+SyntaxError: cannot assign to ellipsis

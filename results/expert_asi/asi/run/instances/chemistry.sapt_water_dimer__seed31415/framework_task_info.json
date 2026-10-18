@@ -1,0 +1,30 @@
+{
+  "schema_version": 3,
+  "task_id": "task_6446a8cde323",
+  "prompt_level": "b1",
+  "expected_outputs": [
+    {
+      "name": "analysis.py",
+      "type": "code"
+    },
+    {
+      "name": "results/components.npy",
+      "type": "data"
+    },
+    {
+      "name": "results/distance_scan.npy",
+      "type": "data"
+    },
+    {
+      "name": "results/total_interaction.npy",
+      "type": "data"
+    },
+    {
+      "name": "results/decomposition_plot.png",
+      "type": "figure"
+    }
+  ],
+  "timeout_seconds": 1800,
+  "instance_id": "chemistry.sapt_water_dimer__seed31415",
+  "parameters": {}
+}

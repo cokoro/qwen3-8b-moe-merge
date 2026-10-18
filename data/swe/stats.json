@@ -1,0 +1,12 @@
+{
+  "raw": 10000,
+  "after_dedup": 9674,
+  "train": 4750,
+  "validation": 250,
+  "sources": {
+    "swebench_train": 5000
+  },
+  "mean_chars": 4056.4,
+  "max_chars": 12080,
+  "seed": 42
+}

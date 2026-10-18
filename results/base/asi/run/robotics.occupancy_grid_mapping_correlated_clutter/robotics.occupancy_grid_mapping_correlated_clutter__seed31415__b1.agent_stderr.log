@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "<workspace>/analysis.py", line 117, in <module>
+    main()
+  File "<workspace>/analysis.py", line 19, in main
+    num_cells = grid_size[0], grid_size[1]
+                ~~~~~~~~~^^^
+TypeError: 'int' object is not subscriptable

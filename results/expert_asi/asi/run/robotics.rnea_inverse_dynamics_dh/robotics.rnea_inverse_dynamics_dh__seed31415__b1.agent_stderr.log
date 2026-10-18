@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "<workspace>/analysis.py", line 155, in <module>
+    main()
+  File "<workspace>/analysis.py", line 131, in main
+    Jv_nom, Jw_nom = compute_jacobians(calibration['q'], task_info['dh_params'], n_dof)
+                                                         ~~~~~~~~~^^^^^^^^^^^^^
+KeyError: 'dh_params'

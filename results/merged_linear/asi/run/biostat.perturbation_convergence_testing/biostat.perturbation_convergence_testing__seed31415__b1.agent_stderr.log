@@ -1,0 +1,4 @@
+  File "<workspace>/analysis.py", line 60
+    beta_proj = v_hat + w_n * lr_b.coef_[0][s1.index(gene) for gene in s2]
+                                                           ^^^
+SyntaxError: invalid syntax

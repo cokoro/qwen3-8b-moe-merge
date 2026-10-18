@@ -1,0 +1,38 @@
+{
+  "schema_version": 3,
+  "task_id": "task_5d538e5912ea",
+  "prompt_level": "b1",
+  "expected_outputs": [
+    {
+      "name": "analysis.py",
+      "type": "code"
+    },
+    {
+      "name": "results/carbon_pools.npy",
+      "type": "data"
+    },
+    {
+      "name": "results/nitrogen_pools.npy",
+      "type": "data"
+    },
+    {
+      "name": "results/fluxes.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/carbon_balance.png",
+      "type": "figure"
+    }
+  ],
+  "timeout_seconds": 1800,
+  "instance_id": "earth_science.2_e_soil_carbon_nitrogen_cycling__seed31415",
+  "parameters": {
+    "clay_fraction": 0.3745,
+    "initial_soc": 36.8858,
+    "mean_annual_temp": 22.6786,
+    "litter_cn_ratio": 16.9162,
+    "simulation_years": 10,
+    "q10": 2.8559,
+    "seed": 554442823
+  }
+}

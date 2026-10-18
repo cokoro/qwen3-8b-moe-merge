@@ -1,0 +1,112 @@
+[2026-10-18T03:27:27+08:00] START swe_mopd
+This is mini-swe-agent version 2.4.6.
+Check the v2 migration guide at https://klieret.short.gy/mini-v2-migration
+Loading global config from '/root/.config/mini-swe-agent/.env'
+Server failed to start on port 41595, will retry with new port
+host-mini-swe-agent: cwd=/app model=openai/base:mopd config=third_party/SWE-bench_Pro-os/v2/tooling/configs/mini_toolcall.yaml
+Server failed to start on port 41835, will retry with new port
+host-mini-swe-agent: cwd=/app model=openai/base:mopd config=third_party/SWE-bench_Pro-os/v2/tooling/configs/mini_toolcall.yaml
+host-mini-swe-agent: cwd=/app model=openai/base:mopd config=third_party/SWE-bench_Pro-os/v2/tooling/configs/mini_toolcall.yaml
+Server failed to start on port 44761, will retry with new port
+host-mini-swe-agent: cwd=/app model=openai/base:mopd config=third_party/SWE-bench_Pro-os/v2/tooling/configs/mini_toolcall.yaml
+host-mini-swe-agent: cwd=/app model=openai/base:mopd config=third_party/SWE-bench_Pro-os/v2/tooling/configs/mini_toolcall.yaml
+Memory explosion detected: 2171MB, growing 386MB/s, ~4.5s until limit
+Memory explosion detected: 2881MB, growing 564MB/s, ~1.8s until limit
+Memory explosion detected: 2724MB, growing 253MB/s, ~4.6s until limit
+Memory explosion detected: 3418MB, growing 509MB/s, ~0.9s until limit
+  6/6 Mean: 0.000 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 0:58:36 0:00:00
+
+swe_tasks_singularity • host-mini-swe-agent • base:mopd
+┏━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━┓
+┃ Trials ┃ Exceptions ┃  Mean ┃
+┡━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━┩
+│      5 │          3 │ 0.000 │
+└────────┴────────────┴───────┘
+
+┏━━━━━━━━┳━━━━━━━┓
+┃ Reward ┃ Count ┃
+┡━━━━━━━━╇━━━━━━━┩
+│ 0.0    │     5 │
+└────────┴───────┘
+
+┏━━━━━━━━━━━━━━━━━━━┳━━━━━━━┓
+┃ Exception         ┃ Count ┃
+┡━━━━━━━━━━━━━━━━━━━╇━━━━━━━┩
+│ RuntimeError      │     1 │
+│ AgentTimeoutError │     2 │
+└───────────────────┴───────┘
+
+Job Info
+Total runtime: 58m 36s
+Results written to results/mopd/swe/jobs/sbp-hard51/result.json
+Inspect results by running `harbor view results/mopd/swe/jobs`
+Share results by running `harbor upload results/mopd/swe/jobs/sbp-hard51`
+
+/usr/lib/python3.12/asyncio/events.py:88: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Retrying <unknown> in 4 seconds as it raised RuntimeError: cannot schedule new futures after shutdown.
+Retrying <unknown> in 4 seconds as it raised RuntimeError: cannot schedule new futures after shutdown.
+Retrying <unknown> in 4 seconds as it raised RuntimeError: cannot schedule new futures after shutdown.
+Retrying <unknown> in 8 seconds as it raised RuntimeError: cannot schedule new futures after shutdown.
+Retrying <unknown> in 16 seconds as it raised RuntimeError: cannot schedule new futures after shutdown.
+Retrying <unknown> in 32 seconds as it raised RuntimeError: cannot schedule new futures after shutdown.
+Retrying <unknown> in 60 seconds as it raised RuntimeError: cannot schedule new futures after shutdown.
+Retrying <unknown> in 60 seconds as it raised RuntimeError: cannot schedule new futures after shutdown.
+Retrying <unknown> in 60 seconds as it raised RuntimeError: cannot schedule new futures after shutdown.
+Server failed to start on port 33497, will retry with new port
+no source patch for instance_future-architect__vuls-ef2be3d6ea4c0a13674aaab08b182eca4e2b9a17-v264a82e2f4818e30f5a25e4da53b27ba119f62b5; applying nothing
+Server failed to start on port 35093, will retry with new port
+Server failed to start on port 40093, will retry with new port
+no source patch for instance_gravitational__teleport-2b15263e49da5625922581569834eec4838a9257-vee9b09fb20c43af7e520f57e9239bbcf46b7113d; applying nothing
+no source patch for instance_internetarchive__openlibrary-322d7a46cdc965bfabbf9500e98fde098c9d95b2-v13642507b4fc1f8d234172bf8129942da2c2ca26; applying nothing
+Memory explosion detected: 2106MB, growing 391MB/s, ~4.6s until limit
+Memory explosion detected: 2838MB, growing 285MB/s, ~3.7s until limit
+Memory explosion detected: 2706MB, growing 316MB/s, ~3.8s until limit
+Memory explosion detected: 2867MB, growing 310MB/s, ~3.3s until limit
+Memory explosion detected: 2698MB, growing 421MB/s, ~2.8s until limit
+no source patch for instance_ansible__ansible-d33bedc48fdd933b5abd65a77c081876298e2f07-v0f01c69f1e2528b935359cfe578530722bca2c59; applying nothing
+  6/6 Mean: 0.000 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 0:02:25 0:00:00
+
+swe_tasks_singularity • patch-replay-agent • replay
+┏━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━┓
+┃ Trials ┃ Exceptions ┃  Mean ┃
+┡━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━┩
+│      5 │          1 │ 0.000 │
+└────────┴────────────┴───────┘
+
+┏━━━━━━━━┳━━━━━━━┓
+┃ Reward ┃ Count ┃
+┡━━━━━━━━╇━━━━━━━┩
+│ 0.0    │     5 │
+└────────┴───────┘
+
+┏━━━━━━━━━━━━━━┳━━━━━━━┓
+┃ Exception    ┃ Count ┃
+┡━━━━━━━━━━━━━━╇━━━━━━━┩
+│ RuntimeError │     1 │
+└──────────────┴───────┘
+
+Job Info
+Total runtime: 2m 25s
+Results written to results/mopd/swe/jobs/sbp-hard51-regrade/result.json
+Inspect results by running `harbor view results/mopd/swe/jobs`
+Share results by running `harbor upload 
+results/mopd/swe/jobs/sbp-hard51-regrade`
+
+{
+  "benchmark": "swe_bench_pro_v2_hard51",
+  "metric": "resolved_rate",
+  "n_tasks": 6,
+  "n_resolved": 0,
+  "resolved_rate": 0.0,
+  "n_errored": 1,
+  "exceptions": {
+    "RuntimeError": 1
+  },
+  "started_at": "2026-10-18T04:56:51.853213",
+  "finished_at": "2026-10-18T04:59:17.597377",
+  "job_dirs": [
+    "results/mopd/swe/jobs/sbp-hard51-regrade"
+  ]
+}
+[2026-10-18T04:59:20+08:00] END swe_mopd status=0 seconds=5513

@@ -1,0 +1,4 @@
+  File "<workspace>/simulate.py", line 1
+    ```bash
+    ^
+SyntaxError: invalid syntax

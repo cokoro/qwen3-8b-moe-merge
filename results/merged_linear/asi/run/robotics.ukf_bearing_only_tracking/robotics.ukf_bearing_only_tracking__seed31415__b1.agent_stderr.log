@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "<workspace>/analysis.py", line 126, in <module>
+    analysis()
+  File "<workspace>/analysis.py", line 15, in analysis
+    measurement_variance = task_info['measurement_variance']
+                           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'measurement_variance'

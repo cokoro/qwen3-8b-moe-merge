@@ -1,0 +1,4 @@
+  File "<workspace>/analysis.py", line 65
+    self.B = (np.sum([np.sum(gamma[i][t] * np.eye(self.n_emissions)[seq[t]] for t in range(len(seq))], axis=0) for seq in sequences], axis=0) + self.pseudocount) / \
+                                                                                                    ^
+SyntaxError: closing parenthesis ']' does not match opening parenthesis '('

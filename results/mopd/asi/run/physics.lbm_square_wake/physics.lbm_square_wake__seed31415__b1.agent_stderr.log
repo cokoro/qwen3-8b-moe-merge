@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "<workspace>/analysis.py", line 4, in <module>
+    import numba as nb
+ModuleNotFoundError: No module named 'numba'

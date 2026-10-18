@@ -1,0 +1,116 @@
+{
+  "result_schema_version": 1,
+  "instance_id": "physics.vpfm_leapfrog__seed31415",
+  "task_id": "physics.vpfm_leapfrog",
+  "attempt": 1,
+  "prompt_level": "b1",
+  "agent_name": "DirectLLMAdapter",
+  "parameters": {
+    "grid_size": 135,
+    "cfl": 1.8797,
+    "n_frames": 107,
+    "initial_condition": "leapfrog",
+    "particles_per_cell": 16,
+    "seed": 1802620927
+  },
+  "gates_passed": true,
+  "hard_gates_passed": true,
+  "soft_gate_failures": 0,
+  "gate_results": [],
+  "score_results": [
+    {
+      "scorer_name": "unscored_submission",
+      "score": 0.0,
+      "max_score": 0.0,
+      "passed": true,
+      "details": {
+        "unscored_submission": true
+      },
+      "message": "Submit this run to https://asibench.apexin.ai/ for official scoring."
+    }
+  ],
+  "final_score": 0.0,
+  "max_possible_score": 100.0,
+  "execution_time_seconds": 1800.0740895271301,
+  "status": "failed",
+  "provenance": {
+    "agent": {
+      "agent_name": "direct_llm",
+      "cmd_template": null,
+      "config": {
+        "model": "mopd",
+        "api_base": "http://127.0.0.1:30001/v1",
+        "api_protocol": "openai",
+        "api_key": "<redacted>"
+      },
+      "allow_external_tools": false,
+      "tool_mode": "restricted",
+      "adapter_class": "DirectLLMAdapter"
+    },
+    "sandbox": {
+      "requested_mode": "none",
+      "effective_mode": "none",
+      "enforcement_status": "not_requested",
+      "verification_status": "not_applicable",
+      "image_identity": null
+    },
+    "runtime": {
+      "python_requirement": ">=3.11",
+      "resolved_python_version": null,
+      "python_requirement_satisfied": null,
+      "packages": [
+        "scipy>=1.11"
+      ],
+      "task_env_cache_key": null,
+      "runtime_source": "host_process",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    }
+  },
+  "agent_output": {
+    "code_files": [],
+    "data_files": [],
+    "log": "litellm.Timeout: APITimeoutError - Request timed out. Error_str: Request timed out.",
+    "error_message": "litellm.Timeout: APITimeoutError - Request timed out. Error_str: Request timed out.",
+    "status": "failed",
+    "process_exit_code": null,
+    "termination_signal": null,
+    "timeout_phase": null,
+    "raw_model_output_file": "physics.vpfm_leapfrog__seed31415__b1.agent_model_output.json",
+    "raw_model_output_format": "json",
+    "model_call_observability": {
+      "schema_version": 1,
+      "capture_status": "partial",
+      "records_file": "physics.vpfm_leapfrog__seed31415__b1.model_calls.json",
+      "summary": {
+        "call_records_emitted": 1,
+        "calls_attempted": 1,
+        "calls_attempted_observed": 1,
+        "calls_with_response": 0,
+        "calls_with_nonempty_content": 0,
+        "calls_with_empty_content": 0,
+        "calls_with_omitted_content": 0,
+        "calls_with_known_content_state": 0,
+        "calls_with_unknown_content_state": 1,
+        "calls_with_partial_content": 0,
+        "calls_with_transport_error": 0,
+        "calls_with_timeout": 1,
+        "calls_retried": 0,
+        "calls_without_observable_boundary": 0,
+        "empty_response_rate": null,
+        "empty_response_rate_status": "unknown",
+        "reason": "one_or_more_calls_have_unknown_content_state"
+      }
+    },
+    "trajectory_summary": {
+      "total_turns": 0,
+      "total_tool_calls": 0,
+      "tool_call_distribution": {},
+      "thinking_total_chars": 0,
+      "total_code_executions": 0,
+      "code_execution_failures": 0,
+      "unique_files_modified": []
+    },
+    "trajectory_file": "physics.vpfm_leapfrog__seed31415__b1.trajectory.json"
+  }
+}

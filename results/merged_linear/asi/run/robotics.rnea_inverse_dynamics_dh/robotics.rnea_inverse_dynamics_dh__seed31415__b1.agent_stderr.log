@@ -1,0 +1,26 @@
+Traceback (most recent call last):
+  File "<workspace>/analysis.py", line 258, in <module>
+    theta_id = compute_theta_id(calibration)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<workspace>/analysis.py", line 167, in compute_theta_id
+    tau0 = compute_tau(q, qd, qdd)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "<workspace>/analysis.py", line 152, in compute_tau
+    M = compute_M(q)
+        ^^^^^^^^^^^^
+  File "<workspace>/analysis.py", line 108, in compute_M
+    Jv = compute_Jv_i(q)
+         ^^^^^^^^^^^^^^^
+  File "<workspace>/analysis.py", line 88, in compute_Jv_i
+    p_plus = compute_p_com_i(q_plus, n_dof-1)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<workspace>/analysis.py", line 75, in compute_p_com_i
+    T = build_T(q)
+        ^^^^^^^^^^
+  File "<workspace>/analysis.py", line 63, in build_T
+    T_i = trans_x(a[i]) @ trans_z(d[i]) @ R
+                          ^^^^^^^^^^^^^
+  File "<workspace>/analysis.py", line 54, in trans_z
+    return np.eye(4) + np.array([[0, 0, 0, 0],
+                       ^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: setting an array element with a sequence. The requested array has an inhomogeneous shape after 2 dimensions. The detected shape was (4, 4) + inhomogeneous part.

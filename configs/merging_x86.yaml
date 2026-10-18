@@ -1,0 +1,22 @@
+# merging.yaml for the x86 SWE host: adapters copied from the DGX into adapters/
+base_model: models/Qwen3-8B
+base_model_hf: Qwen/Qwen3-8B
+base_revision: b968826d9c46dd6066d109eabc6255188de91218
+experts:
+  - name: swe
+    adapter_path: adapters/expert_swe
+    weight: 0.25
+  - name: hle
+    adapter_path: adapters/expert_hle
+    weight: 0.25
+  - name: asi
+    adapter_path: adapters/expert_asi
+    weight: 0.25
+  - name: terminal
+    adapter_path: adapters/expert_terminal
+    weight: 0.25
+linear:
+  normalize_weights: true
+ties:
+  density: 0.2
+  majority_sign_method: total

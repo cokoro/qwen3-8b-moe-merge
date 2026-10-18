@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "<workspace>/analysis.py", line 4, in <module>
+    from numba import njit, prange
+ModuleNotFoundError: No module named 'numba'

@@ -1,0 +1,51 @@
+# Benchmark versions, splits and the fixed evaluation settings used in this experiment.
+# Settings that differ from the official / model-card configuration are marked DEVIATION.
+common:
+  inference: sglang 0.5.21.dev52+gf7ea06e1e, bf16, context 32768, non-thinking chat template
+             (configs/chat_templates/qwen3_nothink.jinja), preserve_thinking: n/a (thinking off), no tools unless stated
+  models_served_as: DGX full checkpoints (HLE, ASI); x86 host base + LoRA adapters on one server (TB2, SWE)
+
+hle:
+  source: cais/hle test split (official parquet via ModelScope mirror cais/hle, sha256 6d0ee0602e8aea6b159509577e884f48ecac7b8e3f6822a35f51335a446c726a)
+  official_code: centerforaisafety/hle @ 22ed3074b1e7b134bcbc09028d0ba320839b0655 (run_model_predictions.py, run_judge_results.py unchanged)
+  split: text-only questions (2158 of 2500); seeded random subset of 500 (seed 42), ids in data/eval/hle/question_ids.json   # DEVIATION: subset
+  images: excluded (base model is text-only); tools: none
+  answer_extraction: official judge prompt (extracted_final_answer / correct yes|no)
+  judge: local Qwen3-8B (non-thinking, sglang structured output) via src/evaluation/hle_judge_compat.py   # DEVIATION: official judge o3-mini-2025-01-31 unavailable
+  judge_settings: one JSON-format sentence appended to the judge prompt; 2 retries, 90 s per call; unjudged = wrong
+  judge_audit: >-   # DEVIATION: added after inspecting judge outputs, applied identically to every model
+    the 8B judge accepts wrong letters, empty extractions and template echoes ("Answer: {your chosen answer}",
+    for which it copies the gold answer it is shown). Primary metric = audited verdict (scripts/summarize.py
+    hle_audited): MC -> exact letter on the last "Answer:" line; other -> judge yes AND real final answer AND
+    judge-extracted answer occurs in the response AND numeric answers equal. Raw judge accuracy kept as hle_judge.
+  supplementary: exact-letter accuracy on the multiple-choice questions (no judge)
+  generation: max_completion_tokens 8192, server default sampling (Qwen3 generation_config), 48 concurrent
+  repeat_runs: base, merged_linear, mopd generated a second time (results_rep2/) to measure run-to-run variance
+  metric: accuracy (%), audited
+
+asi_bench:
+  source: apexin-ai/ASI-Bench, asibench 0.2.0, catalog @ cf07cb89d8590d958ff42db7ae3d6608f5eb9dbc
+  split: seed31415 public instances (60 tasks), prompt level b1                       # DEVIATION: seed42 needs official submission
+  agent: built-in direct_llm (single turn, no tools), timeout 1800 s per instance, sandbox none
+  scoring: asibench local public scoring, per task (src/evaluation/asi_score_per_task.py, 300 s per task)
+  vlm_judge: 13/60 tasks have a VLM-judge rubric item (openai/gpt-5.5) -> unavailable, scored 0 for all models   # DEVIATION
+  metric: mean final_score/max_score (%), plus hard-gate pass rate
+
+terminal_bench:
+  source: terminal-bench@2.0 (harbor registry), 89 tasks; local mirror on the x86 host
+  split: 74 tasks = 89 minus 15 network-dependent tasks (list in scripts/bench_terminal_x86.sh)   # DEVIATION
+  harness: harbor 0.24.0, agent terminus-2, environment singularity (unprivileged pod shim)       # DEVIATION: official = docker
+  sampling: temperature 0.7, max_input_tokens 28672, max_output_tokens 4096, context 32K          # DEVIATION: card = T 1.0, top_p .95, top_k 20, 80K out, 256K ctx
+  runs: 1 (seed n/a)                                                                               # DEVIATION: required 5 runs
+  timeouts: task-defined (multiplier 1.0); concurrency 6-12
+  metric: pass rate (%) over all 74 tasks; timeouts / env errors counted as failures and reported separately
+
+swe_bench_pro:
+  source: scaleapi/SWE-bench_Pro-os @ 66f92766bba642462d4bbe5479e83f91f9211862, v2/hard51_ids.txt (HARD-51)
+  split: seeded subset of HARD-51 fitting the disk/bandwidth budget (src/evaluation/swe_subset.py, seed 42, 15 GB),
+         7 drawn, 1 dropped (image pull failed 3x), 6 run; scored on the gold-patch-validated tasks       # DEVIATION: subset
+  images: ghcr.io/scaleapi/swe-bench_pro-v2:<id> (linux/amd64), converted to SIF on the DGX, run with singularity on x86
+  agent: host_mini_swe (v2/tooling, mini-swe-agent 2.4.6), config v2/tooling/configs/mini_toolcall.yaml, step_limit 100,
+         50-min task budget (task.toml), then patch_replay re-grade on a fresh sandbox (locked protocol)
+  network: agent phase "public" (singularity cannot enforce "no-network"); agent loop on host           # DEVIATION
+  metric: resolved rate (%) over oracle-valid tasks

@@ -1,0 +1,33 @@
+{
+  "schema_version": 3,
+  "task_id": "task_26f82d4a26dc",
+  "prompt_level": "b1",
+  "expected_outputs": [
+    {
+      "name": "prediction_quantiles.npy",
+      "type": "data"
+    },
+    {
+      "name": "risk_summary.csv",
+      "type": "data"
+    }
+  ],
+  "timeout_seconds": 1800,
+  "instance_id": "astronomy.nbody_close_encounters__seed31415",
+  "parameters": {
+    "task_id": "nbody_particle_forecast_v001_s41",
+    "seed": 41,
+    "n_cases": 4,
+    "n_bodies": 4,
+    "n_fit": 32,
+    "n_pred": 121,
+    "n_particles": 72,
+    "sky_sigma": 0.035,
+    "vlos_sigma": 0.018,
+    "missing_probability": 0.18,
+    "close_threshold": 0.28,
+    "solver_rtol": 2e-09,
+    "solver_atol": 2e-11,
+    "solver_max_step": 0.035
+  }
+}

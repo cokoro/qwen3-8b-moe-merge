@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "<workspace>/simulate.py", line 12, in <module>
+    a1, d1 = float(sys_params['a1']), float(sys_params['d1'])
+                   ~~~~~~~~~~^^^^^^
+KeyError: 'a1'

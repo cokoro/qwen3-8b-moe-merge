@@ -1,0 +1,38 @@
+{
+  "schema_version": 3,
+  "task_id": "task_1f6e67bb434f",
+  "prompt_level": "b1",
+  "expected_outputs": [
+    {
+      "name": "analysis.py",
+      "type": "code"
+    },
+    {
+      "name": "transforms.npy",
+      "type": "data"
+    },
+    {
+      "name": "confidence.npy",
+      "type": "data"
+    }
+  ],
+  "timeout_seconds": 1800,
+  "instance_id": "robotics.multiregime_icp_degeneracy__seed31415",
+  "parameters": {
+    "num_pairs": 50,
+    "frac_normal": 0.4,
+    "frac_planar": 0.3,
+    "frac_symmetric": 0.3,
+    "points_min": 900,
+    "points_max": 2200,
+    "noise_std": 0.0095,
+    "scene_extent": 3.0,
+    "max_rot_deg": 21.94,
+    "max_trans": 1.8839,
+    "symmetry_period": 0.8128,
+    "symmetry_units": 6,
+    "eval_points_per_pair": 256,
+    "obs_eig_ratio": 0.02,
+    "seed": 1802620927
+  }
+}

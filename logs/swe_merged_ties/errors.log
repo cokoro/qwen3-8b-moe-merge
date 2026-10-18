@@ -1,0 +1,19 @@
+Server failed to start on port 35179, will retry with new port
+Server failed to start on port 36215, will retry with new port
+Server failed to start on port 45605, will retry with new port
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+┃ Trials ┃ Exceptions ┃  Mean ┃
+┃ Exception                  ┃ Count ┃
+│ RuntimeError               │     1 │
+│ ContextWindowExceededError │     2 │
+│ MemoryLimitExceededError   │     1 │
+Server failed to start on port 40937, will retry with new port
+Server failed to start on port 43051, will retry with new port
+Server failed to start on port 42027, will retry with new port
+┃ Trials ┃ Exceptions ┃  Mean ┃
+┃ Exception    ┃ Count ┃
+│ RuntimeError │     1 │
+  "n_errored": 1,
+  "exceptions": {
+    "RuntimeError": 1

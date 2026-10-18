@@ -1,0 +1,83 @@
+{
+  "schema_version": 3,
+  "task_id": "task_fed2b4ad6479",
+  "prompt_level": "b1",
+  "expected_outputs": [
+    {
+      "name": "analysis.py",
+      "type": "code"
+    },
+    {
+      "name": "results/kernel_audit.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/failure_modes.json",
+      "type": "data"
+    },
+    {
+      "name": "results/selected_kernel.json",
+      "type": "data"
+    },
+    {
+      "name": "results/latent_samples.npy",
+      "type": "data"
+    },
+    {
+      "name": "results/samples.npy",
+      "type": "data"
+    },
+    {
+      "name": "results/transition_audit.npz",
+      "type": "data"
+    },
+    {
+      "name": "results/holdout_transition_audit.npz",
+      "type": "data"
+    },
+    {
+      "name": "results/holdout_terminal_states.npy",
+      "type": "data"
+    },
+    {
+      "name": "results/energy_diagnostics.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/funnel_profile.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/diagnostics.json",
+      "type": "data"
+    },
+    {
+      "name": "results/overview.png",
+      "type": "figure"
+    }
+  ],
+  "timeout_seconds": 1800,
+  "instance_id": "computer_science.hmc_neal_funnel__seed31415",
+  "parameters": {
+    "latent_dim": 12,
+    "sigma_v": 3.0,
+    "n_chains": 4,
+    "warmup_transitions": 120,
+    "kept_transitions": 900,
+    "step_size": 0.0732,
+    "integration_steps": 18,
+    "audit_transitions": 80,
+    "holdout_chains": 3,
+    "holdout_transitions": 160,
+    "holdout_audit_transitions": 100,
+    "holdout_step_size": 0.0765,
+    "holdout_integration_steps": 24,
+    "candidate_probe_count": 72,
+    "candidate_panel_chains": 3,
+    "candidate_panel_warmup": 40,
+    "candidate_panel_kept": 220,
+    "volume_cloud_count": 64,
+    "observation_noise": 2e-05,
+    "seed": 1610416701
+  }
+}

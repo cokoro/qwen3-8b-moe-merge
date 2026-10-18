@@ -1,0 +1,46 @@
+{
+  "schema_version": 3,
+  "task_id": "task_ed8f0cfa07d2",
+  "prompt_level": "b1",
+  "expected_outputs": [
+    {
+      "name": "analysis.py",
+      "type": "code"
+    },
+    {
+      "name": "calibration.csv",
+      "type": "data"
+    },
+    {
+      "name": "observability.csv",
+      "type": "data"
+    },
+    {
+      "name": "residuals.csv",
+      "type": "data"
+    },
+    {
+      "name": "calibration_diagnostics.png",
+      "type": "figure"
+    },
+    {
+      "name": "metrics.json",
+      "type": "data"
+    }
+  ],
+  "timeout_seconds": 1800,
+  "instance_id": "robotics.lidar_imu_time_offset_yaw_calibration__seed31415",
+  "parameters": {
+    "duration_s": 93.5995,
+    "lidar_rate_hz": 9.1257,
+    "imu_rate_hz": 134.1965,
+    "gyro_bias_rad_s": -0.0229,
+    "time_offset_s": 0.0036,
+    "yaw_extrinsic_rad": -0.0289,
+    "gyro_noise_rad_s": 0.003,
+    "scan_yaw_noise_rad": 0.006,
+    "scan_trans_noise_m": 0.018,
+    "low_excitation_fraction": 0.4076,
+    "seed": 1610416701
+  }
+}

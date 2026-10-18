@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "<workspace>/analysis.py", line 46, in <module>
+    analyze_curves()
+  File "<workspace>/analysis.py", line 16, in analyze_curves
+    R = data[['Re', 'Im']].values
+        ~~~~^^^^^^^^^^^^^^
+  File "<home>/miniconda3/envs/moe-merge/lib/python3.12/site-packages/pandas/core/frame.py", line 4384, in __getitem__
+    indexer = self.columns._get_indexer_strict(key, "columns")[1]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<home>/miniconda3/envs/moe-merge/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 6302, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+  File "<home>/miniconda3/envs/moe-merge/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 6352, in _raise_if_missing
+    raise KeyError(f"None of [{key}] are in the [{axis_name}]")
+KeyError: "None of [Index(['Re', 'Im'], dtype='str')] are in the [columns]"

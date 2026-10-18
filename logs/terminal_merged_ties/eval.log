@@ -1,0 +1,6 @@
+[2026-10-18T05:05:29+08:00] START terminal_merged_ties
+05:05:31 - LiteLLM:WARNING: utils.py:3395 - register_model: model=openai/merged_ties has custom pricing but not in built-in cost map and no prefix/region variant matched; cache_creation_input_token_cost and cache_read_input_token_cost will default to 0 for this model (input/output cost tracking is unaffected). To track cache cost, add them to model_info
+Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7f149aab5fa0>
+  74/74 Mean: 0.000 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2:16:29 0:00:00
+[2026-10-18T07:22:02+08:00] END terminal_merged_ties status=130 seconds=8193

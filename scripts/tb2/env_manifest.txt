@@ -1,0 +1,19 @@
+# TB2 environment manifest, frozen 2026-10-17T17:52:20+08:00
+harbor   apptainer 1.5.4  sglang 0.5.21
+2fd84f1564b8361c068acd34a415fc3b0efa8e69bf5e455e9f1d4abeaa2a9498  bin/singularity
+c0f0db739eb27a82ddc8a0c31dd0cb7dd4070c540be4a33e834b78ecb7dc4c56  env.sh
+6f6413f8ff129c18d1a977347f207dbf9b51b812898707b82babe0fa05513aea  run_tb2.sh
+511484657317c4e1ad9f2aa21f4d9596954faa58b43d7677e818a825da8f125c  run_split.sh
+596ed5688d06e461e586fe5a8615acd5794ca84719f46cee92a1da1845fe7751  serve_sglang.sh
+44d897f4d3f8f3e634dec0d06f9d36be0da1faa38e5d9cb4e9f896a415edaf65  mirror_server.py
+cf9ca620b89dbe38cb5e794501b76daef9849270826e873896cda4582c73f8e2  hf_proxy.py
+abd6973b2e8330ca3803146e945120fb26e74bba4881bcc21e2214cc39a6360e  nginx-pypi-cache.conf
+f9e3a4d58d5816195e1af1b32405e5d0643a705a74bf3ee5f300e0869e1e501c  mirror/get-pip.py
+62941c8c13dd665f71676370a3cc19b74c3f304bd429f39b1d3a6243dc03e9f9  container-conf/99harbor-apt-proxy
+1c6745d3bf172db08ec436e10979bbe2457bca23ecc37b8e4f49f1c9f239ea35  /root/.local/share/uv/tools/harbor/lib/python3.12/site-packages/harbor/environments/singularity/singularity.py
+a536a2c9a09028596edb99b118388481560eeb34dfb6354a8b23d5f3c39bd0c4  /root/.local/share/uv/tools/harbor/lib/python3.12/site-packages/harbor/environments/singularity/server.py
+a44a37aa5c296f30cd707422c3a6b2bcd36ca50f7eb1674d155134e67ba526e7  /root/.local/share/uv/tools/harbor/lib/python3.12/site-packages/harbor/environments/singularity/bootstrap.sh
+1119ffd8257f52037764594958b7446b059710f1a5b1decd4310c5def19777d5  /etc/apt-cacher-ng/acng.conf
+d2589e005036d974ba38a06651e46f9c6bf7c117968c5f823eba8dc314264bba  /root/gpufree-data/projects/moe-merge/configs/chat_templates/qwen3_nothink.jinja
+09f0d23ac26fad3a55815c05a26ed9f0a99a0d2a2b5efe39e59a0fe58aa5a91a  /root/gpufree-data/projects/moe-merge/scripts/serve_model.sh
+dataset tasks sha256 (task.toml+tests+instruction): 75f7a7a09d639300

@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "<workspace>/analysis.py", line 151, in <module>
+    main()
+  File "<workspace>/analysis.py", line 108, in main
+    L = build_gmls_matrix(points, h, R, r, alpha, beta, l, N, K, l_max)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<workspace>/analysis.py", line 50, in build_gmls_matrix
+    neighbors = np.argsort(cdist(points[i], points))[:K]
+                           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<home>/miniconda3/envs/moe-merge/lib/python3.12/site-packages/scipy/spatial/distance.py", line 3104, in cdist
+    raise ValueError('XA must be a 2-dimensional array.')
+ValueError: XA must be a 2-dimensional array.

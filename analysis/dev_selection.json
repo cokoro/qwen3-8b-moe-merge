@@ -1,0 +1,86 @@
+{
+  "base": {
+    "path": "models/Qwen3-8B",
+    "swe": {
+      "loss": 1.0673476976608547,
+      "tokens": 55439
+    },
+    "hle": {
+      "loss": 1.5060205317821058,
+      "tokens": 12579
+    },
+    "asi": {
+      "loss": 3.2799057832747733,
+      "tokens": 5561
+    },
+    "terminal": {
+      "loss": 3.812800783011744,
+      "tokens": 2633
+    },
+    "mean_loss": 2.4165186989323697
+  },
+  "merged_linear": {
+    "path": "checkpoints/merged_linear",
+    "swe": {
+      "loss": 0.7740548077994464,
+      "tokens": 55439
+    },
+    "hle": {
+      "loss": 0.40035318856361,
+      "tokens": 12579
+    },
+    "asi": {
+      "loss": 0.018881573777386577,
+      "tokens": 5561
+    },
+    "terminal": {
+      "loss": 0.9913179378205272,
+      "tokens": 2633
+    },
+    "mean_loss": 0.5461518769902426
+  },
+  "merged_ties": {
+    "path": "checkpoints/merged_ties",
+    "swe": {
+      "loss": 0.747807512328223,
+      "tokens": 55439
+    },
+    "hle": {
+      "loss": 0.3559271239051664,
+      "tokens": 12579
+    },
+    "asi": {
+      "loss": 0.042038094727304035,
+      "tokens": 5561
+    },
+    "terminal": {
+      "loss": 0.8305084395218475,
+      "tokens": 2633
+    },
+    "mean_loss": 0.49407029262063523
+  },
+  "mopd": {
+    "path": "checkpoints/full/expert_mopd",
+    "swe": {
+      "loss": 0.888324327722949,
+      "tokens": 55439
+    },
+    "hle": {
+      "loss": 0.4835505548840022,
+      "tokens": 12579
+    },
+    "asi": {
+      "loss": 0.8719550463562067,
+      "tokens": 5561
+    },
+    "terminal": {
+      "loss": 2.3110412810630234,
+      "tokens": 2633
+    },
+    "mean_loss": 1.1387178025065454
+  },
+  "_selected": {
+    "model": "merged_ties",
+    "rule": "lowest equal-weight mean dev loss over 4 domains, base excluded"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "task_id": "task_337f258372fb",
+  "prompt_level": "b1",
+  "expected_outputs": [
+    {
+      "name": "simulation.py",
+      "type": "code"
+    },
+    {
+      "name": "predicted_field.npy",
+      "type": "data"
+    },
+    {
+      "name": "spectral_density.npy",
+      "type": "data"
+    },
+    {
+      "name": "data_exploration.json",
+      "type": "data"
+    },
+    {
+      "name": "physical_quantities.json",
+      "type": "data"
+    },
+    {
+      "name": "field_visualization.png",
+      "type": "figure"
+    },
+    {
+      "name": "spectral_visualization.png",
+      "type": "figure"
+    }
+  ],
+  "timeout_seconds": 1800,
+  "instance_id": "physics.ks_2d_anisotropic__seed31415",
+  "parameters": {
+    "domain_length_x": 64.0,
+    "domain_length_y": 24.0,
+    "viscosity_x": 0.9,
+    "mu": 0.35,
+    "gamma": 1.2,
+    "delta": 1.4,
+    "lambda_xy": 0.3,
+    "lambda_yy": 0.4,
+    "alpha": 0.05,
+    "grid_size_x": 128,
+    "grid_size_y": 128,
+    "observation_time": 10.0,
+    "prediction_horizon": 20.0,
+    "n_obs_snapshots": 21,
+    "seed": 1695474502
+  }
+}

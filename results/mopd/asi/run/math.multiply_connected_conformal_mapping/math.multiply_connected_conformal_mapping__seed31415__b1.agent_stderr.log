@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "<workspace>/solver.py", line 35, in <module>
+    parameters = optimize.minimize(lambda params: 0, [0.0]*len(metadata['slit_params']))
+                                                               ~~~~~~~~^^^^^^^^^^^^^^^
+KeyError: 'slit_params'

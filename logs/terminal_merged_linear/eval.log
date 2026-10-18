@@ -1,0 +1,47 @@
+[2026-10-18T01:12:00+08:00] START terminal_merged_linear
+01:12:03 - LiteLLM:WARNING: utils.py:3395 - register_model: model=openai/base:merged_linear has custom pricing but not in built-in cost map and no prefix/region variant matched; cache_creation_input_token_cost and cache_read_input_token_cost will default to 0 for this model (input/output cost tracking is unaffected). To track cache cost, add them to model_info
+  74/74 Mean: 0.014 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3:21:35 0:00:00
+
+tb2-mirror • terminus-2 • base:merged_linear
+┏━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━┓
+┃ Trials ┃ Exceptions ┃  Mean ┃
+┡━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━┩
+│     74 │         22 │ 0.014 │
+└────────┴────────────┴───────┘
+
+┏━━━━━━━━┳━━━━━━━┓
+┃ Reward ┃ Count ┃
+┡━━━━━━━━╇━━━━━━━┩
+│ 0.0    │    73 │
+│ 1.0    │     1 │
+└────────┴───────┘
+
+┏━━━━━━━━━━━━━━━━━━━┳━━━━━━━┓
+┃ Exception         ┃ Count ┃
+┡━━━━━━━━━━━━━━━━━━━╇━━━━━━━┩
+│ AgentTimeoutError │    22 │
+└───────────────────┴───────┘
+
+Job Info
+Total runtime: 3h 21m 36s
+Results written to results/merged_linear/terminal/jobs/tb2/result.json
+Inspect results by running `harbor view results/merged_linear/terminal/jobs`
+Share results by running `harbor upload results/merged_linear/terminal/jobs/tb2`
+
+{
+  "benchmark": "terminal_bench_2.0",
+  "metric": "pass_rate",
+  "n_tasks": 74,
+  "n_resolved": 1,
+  "pass_rate": 0.013513513513513514,
+  "n_errored": 22,
+  "exceptions": {
+    "AgentTimeoutError": 22
+  },
+  "started_at": "2026-10-18T01:12:03.297941",
+  "finished_at": "2026-10-18T04:33:39.352605",
+  "job_dirs": [
+    "results/merged_linear/terminal/jobs/tb2"
+  ]
+}
+[2026-10-18T04:33:39+08:00] END terminal_merged_linear status=0 seconds=12099

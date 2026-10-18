@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "<workspace>/analysis.py", line 11, in <module>
+    grid_rows, grid_cols = grid_size
+    ^^^^^^^^^^^^^^^^^^^^
+TypeError: cannot unpack non-iterable int object

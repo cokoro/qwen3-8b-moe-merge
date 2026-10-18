@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "<workspace>/analysis.py", line 114, in <module>
+    main()
+  File "<workspace>/analysis.py", line 97, in main
+    r, t = icp(source, target)
+           ^^^^^^^^^^^^^^^^^^^
+  File "<workspace>/analysis.py", line 61, in icp
+    t = np.mean(diff - m @ u, axis=0)
+                ~~~~~^~~~~~~
+ValueError: operands could not be broadcast together with shapes (1230,3) (3,3) 

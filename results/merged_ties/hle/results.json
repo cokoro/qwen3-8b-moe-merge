@@ -1,0 +1,16 @@
+{
+  "benchmark": "hle",
+  "protocol": "official scripts; text-only subset",
+  "judge": "judge-qwen3-8b",
+  "official_judge": false,
+  "judge_base_url": "http://127.0.0.1:30000/v1",
+  "judge_prompt_json_hint": true,
+  "n_judged": 494,
+  "n_questions": 500,
+  "n_answered": 494,
+  "accuracy": 0.068,
+  "official_accuracy_line": "Accuracy: 6.8%",
+  "started": "2026-10-18T04:00:36.432384",
+  "finished": "2026-10-18T04:10:14.636648",
+  "model": "merged_ties"
+}

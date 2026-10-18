@@ -1,0 +1,539 @@
+[2026-10-18T03:25:27+08:00] START swe_expert_swe
+This is mini-swe-agent version 2.4.6.
+Check the v2 migration guide at https://klieret.short.gy/mini-v2-migration
+Loading global config from '/root/.config/mini-swe-agent/.env'
+Server failed to start on port 44049, will retry with new port
+Server failed to start on port 43301, will retry with new port
+host-mini-swe-agent: cwd=/app model=openai/base:expert_swe config=third_party/SWE-bench_Pro-os/v2/tooling/configs/mini_toolcall.yaml
+Server failed to start on port 43479, will retry with new port
+host-mini-swe-agent: cwd=/app model=openai/base:expert_swe config=third_party/SWE-bench_Pro-os/v2/tooling/configs/mini_toolcall.yaml
+host-mini-swe-agent: cwd=/app model=openai/base:expert_swe config=third_party/SWE-bench_Pro-os/v2/tooling/configs/mini_toolcall.yaml
+host-mini-swe-agent: cwd=/app model=openai/base:expert_swe config=third_party/SWE-bench_Pro-os/v2/tooling/configs/mini_toolcall.yaml
+Memory explosion detected: 2765MB, growing 252MB/s, ~4.5s until limit
+Memory explosion detected: 3380MB, growing 653MB/s, ~0.8s until limit
+host-mini-swe-agent: cwd=/app model=openai/base:expert_swe config=third_party/SWE-bench_Pro-os/v2/tooling/configs/mini_toolcall.yaml
+Retrying <unknown> in 4 seconds as it raised Timeout: litellm.Timeout: APITimeoutError - Request timed out. Error_str: Request timed out..
+Retrying <unknown> in 4 seconds as it raised Timeout: litellm.Timeout: APITimeoutError - Request timed out. Error_str: Request timed out..
+Retrying <unknown> in 4 seconds as it raised Timeout: litellm.Timeout: APITimeoutError - Request timed out. Error_str: Request timed out..
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+  6/6 Mean: 0.000 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1:08:58 0:00:00
+
+swe_tasks_singularity • host-mini-swe-agent • base:expert_swe
+┏━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━┓
+┃ Trials ┃ Exceptions ┃  Mean ┃
+┡━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━┩
+│      5 │          4 │ 0.000 │
+└────────┴────────────┴───────┘
+
+┏━━━━━━━━┳━━━━━━━┓
+┃ Reward ┃ Count ┃
+┡━━━━━━━━╇━━━━━━━┩
+│ 0.0    │     5 │
+└────────┴───────┘
+
+┏━━━━━━━━━━━━━━━━━━━┳━━━━━━━┓
+┃ Exception         ┃ Count ┃
+┡━━━━━━━━━━━━━━━━━━━╇━━━━━━━┩
+│ RuntimeError      │     1 │
+│ AgentTimeoutError │     3 │
+└───────────────────┴───────┘
+
+Job Info
+Total runtime: 1h 8m 58s
+Results written to results/expert_swe/swe/jobs/sbp-hard51/result.json
+Inspect results by running `harbor view results/expert_swe/swe/jobs`
+Share results by running `harbor upload results/expert_swe/swe/jobs/sbp-hard51`
+
+/usr/lib/python3.12/asyncio/events.py:88: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Retrying <unknown> in 4 seconds as it raised RuntimeError: cannot schedule new futures after shutdown.
+Retrying <unknown> in 4 seconds as it raised RuntimeError: cannot schedule new futures after shutdown.
+Retrying <unknown> in 8 seconds as it raised RuntimeError: cannot schedule new futures after shutdown.
+Retrying <unknown> in 4 seconds as it raised RuntimeError: cannot schedule new futures after shutdown.
+Retrying <unknown> in 8 seconds as it raised RuntimeError: cannot schedule new futures after shutdown.
+Retrying <unknown> in 16 seconds as it raised RuntimeError: cannot schedule new futures after shutdown.
+Exception ignored in: <module 'threading' from '/usr/lib/python3.12/threading.py'>
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1592, in _shutdown
+    atexit_call()
+  File "/usr/lib/python3.12/concurrent/futures/thread.py", line 31, in _python_exit
+    t.join()
+  File "/usr/lib/python3.12/threading.py", line 1147, in join
+    self._wait_for_tstate_lock()
+  File "/usr/lib/python3.12/threading.py", line 1167, in _wait_for_tstate_lock
+    if lock.acquire(block, timeout):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/gpufree-data/projects/swe-eval/.venv-harness/lib/python3.12/site-packages/harbor/cli/jobs.py", line 375, in _handle_sigterm
+    raise KeyboardInterrupt
+KeyboardInterrupt: 
+Server failed to start on port 33783, will retry with new port
+no source patch for instance_flipt-io__flipt-e2bd19dafa7166c96b082fb2a59eb54b4be0d778; applying nothing
+no source patch for instance_future-architect__vuls-ef2be3d6ea4c0a13674aaab08b182eca4e2b9a17-v264a82e2f4818e30f5a25e4da53b27ba119f62b5; applying nothing
+Server failed to start on port 41817, will retry with new port
+Server failed to start on port 39255, will retry with new port
+⠦ 1/6 Mean: 0.000 ━━━━━━╸                                  0:00:30 -:--:--
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /root/gpufree-data/projects/swe-eval/.venv-harness/lib/python3.12/site-packa │
+│ ges/harbor/cli/jobs.py:1947 in start                                         │
+│                                                                              │
+│   1944 │   options.apply_defaults()                                          │
+│   1945 │   try:                                                              │
+│   1946 │   │   config = build_job_config(**options.arguments)                │
+│ ❱ 1947 │   │   return _execute_job(                                          │
+│   1948 │   │   │   config,                                                   │
+│   1949 │   │   │   diff_sources=options.arguments["diff_sources"],           │
+│   1950 │   │   │   print_config=options.arguments["print_config"],           │
+│                                                                              │
+│ /root/gpufree-data/projects/swe-eval/.venv-harness/lib/python3.12/site-packa │
+│ ges/harbor/cli/jobs.py:2266 in _execute_job                                  │
+│                                                                              │
+│   2263 │   # (when --upload is set) so everything stays on one event loop.   │
+│        See                                                                   │
+│   2264 │   # the long comment in `HarborHubUploadPlugin.on_job_end` for why  │
+│        this matters.                                                         │
+│   2265 │   try:                                                              │
+│ ❱ 2266 │   │   job, job_result = run_async(_run_job())                       │
+│   2267 │   except DATASET_RESOLUTION_ERRORS as exc:                          │
+│   2268 │   │   abort_dataset_resolution(console, exc, "No job was started.") │
+│   2269                                                                       │
+│                                                                              │
+│ /root/gpufree-data/projects/swe-eval/.venv-harness/lib/python3.12/site-packa │
+│ ges/harbor/cli/utils.py:111 in run_async                                     │
+│                                                                              │
+│   108 │   │   return asyncio.run(                                            │
+│   109 │   │   │   with_async_cleanup(coro),                                  │
+│       loop_factory=asyncio.ProactorEventLoop                                 │
+│   110 │   │   )                                                              │
+│ ❱ 111 │   return asyncio.run(with_async_cleanup(coro))                       │
+│   112                                                                        │
+│   113                                                                        │
+│   114 def parse_kwargs(kwargs_list: list[str] | None) -> dict[str, Any]:     │
+│                                                                              │
+│ /usr/lib/python3.12/asyncio/runners.py:194 in run                            │
+│                                                                              │
+│   191 │   │   │   "asyncio.run() cannot be called from a running event       │
+│       loop")                                                                 │
+│   192 │                                                                      │
+│   193 │   with Runner(debug=debug, loop_factory=loop_factory) as runner:     │
+│ ❱ 194 │   │   return runner.run(main)                                        │
+│   195                                                                        │
+│   196                                                                        │
+│   197 def _cancel_all_tasks(loop):                                           │
+│                                                                              │
+│ /usr/lib/python3.12/asyncio/runners.py:118 in run                            │
+│                                                                              │
+│   115 │   │                                                                  │
+│   116 │   │   self._interrupt_count = 0                                      │
+│   117 │   │   try:                                                           │
+│ ❱ 118 │   │   │   return self._loop.run_until_complete(task)                 │
+│   119 │   │   except exceptions.CancelledError:                              │
+│   120 │   │   │   if self._interrupt_count > 0:                              │
+│   121 │   │   │   │   uncancel = getattr(task, "uncancel", None)             │
+│                                                                              │
+│ /usr/lib/python3.12/asyncio/base_events.py:687 in run_until_complete         │
+│                                                                              │
+│    684 │   │   if not future.done():                                         │
+│    685 │   │   │   raise RuntimeError('Event loop stopped before Future      │
+│        completed.')                                                          │
+│    686 │   │                                                                 │
+│ ❱  687 │   │   return future.result()                                        │
+│    688 │                                                                     │
+│    689 │   def stop(self):                                                   │
+│    690 │   │   """Stop running the event loop.                               │
+│                                                                              │
+│ /root/gpufree-data/projects/swe-eval/.venv-harness/lib/python3.12/site-packa │
+│ ges/harbor/utils/async_cleanup.py:20 in with_async_cleanup                   │
+│                                                                              │
+│   17 │   async with AsyncExitStack() as stack:                               │
+│   18 │   │   token = _exit_stack.set(stack)                                  │
+│   19 │   │   try:                                                            │
+│ ❱ 20 │   │   │   return await coro                                           │
+│   21 │   │   finally:                                                        │
+│   22 │   │   │   _exit_stack.reset(token)                                    │
+│   23                                                                         │
+│                                                                              │
+│ /root/gpufree-data/projects/swe-eval/.venv-harness/lib/python3.12/site-packa │
+│ ges/harbor/cli/jobs.py:2223 in _run_job                                      │
+│                                                                              │
+│   2220 │   │   │   )                                                         │
+│   2221 │   │   │   await hub_plugin.on_job_start(job)                        │
+│   2222 │   │                                                                 │
+│ ❱ 2223 │   │   job_result = await job.run()                                  │
+│   2224 │   │                                                                 │
+│   2225 │   │   # Print the run summary BEFORE plugin and Harbor Hub finalize │
+│        so users                                                              │
+│   2226 │   │   # see results even if downstream operations fail.             │
+│                                                                              │
+│ /root/gpufree-data/projects/swe-eval/.venv-harness/lib/python3.12/site-packa │
+│ ges/harbor/job.py:1052 in run                                                │
+│                                                                              │
+│   1049 │   │   │   │   │   │   completed=n_existing,                         │
+│   1050 │   │   │   │   │   )                                                 │
+│   1051 │   │   │   │   │                                                     │
+│ ❱ 1052 │   │   │   │   │   trial_results = await                             │
+│        self._run_trials_with_queue(                                          │
+│   1053 │   │   │   │   │   │   loading_progress, progress_task               │
+│   1054 │   │   │   │   │   )                                                 │
+│   1055 │   │   │   else:                                                     │
+│                                                                              │
+│ /root/gpufree-data/projects/swe-eval/.venv-harness/lib/python3.12/site-packa │
+│ ges/harbor/job.py:1226 in _run_trials_with_queue                             │
+│                                                                              │
+│   1223 │   │                                                                 │
+│   1224 │   │   coros =                                                       │
+│        self._trial_queue.submit_batch(self._remaining_trial_configs)         │
+│   1225 │   │                                                                 │
+│ ❱ 1226 │   │   async with asyncio.TaskGroup() as tg:                         │
+│   1227 │   │   │   tasks = [tg.create_task(coro) for coro in coros]          │
+│   1228 │   │                                                                 │
+│   1229 │   │   return [t.result() for t in tasks]                            │
+│                                                                              │
+│ /usr/lib/python3.12/asyncio/taskgroups.py:145 in __aexit__                   │
+│                                                                              │
+│   142 │   │   │   # a bunch of them.                                         │
+│   143 │   │   │   try:                                                       │
+│   144 │   │   │   │   me = BaseExceptionGroup('unhandled errors in a         │
+│       TaskGroup', self._errors)                                              │
+│ ❱ 145 │   │   │   │   raise me from None                                     │
+│   146 │   │   │   finally:                                                   │
+│   147 │   │   │   │   self._errors = None                                    │
+│   148                                                                        │
+╰──────────────────────────────────────────────────────────────────────────────╯
+ExceptionGroup: unhandled errors in a TaskGroup (4 sub-exceptions)
+
+╭────────────────────────────── Sub-exception #1 ──────────────────────────────╮
+│ ╭─────────────────── Traceback (most recent call last) ────────────────────╮ │
+│ │ /root/gpufree-data/projects/swe-eval/.venv-harness/lib/python3.12/site-p │ │
+│ │ ackages/harbor/trial/queue.py:242 in _run_trial                          │ │
+│ │                                                                          │ │
+│ │   239 │   async def _run_trial(self, trial_config: TrialConfig) ->       │ │
+│ │       TrialResult:                                                       │ │
+│ │   240 │   │   """Execute a single trial, acquiring the semaphore for     │ │
+│ │       concurrency control."""                                            │ │
+│ │   241 │   │   async with self._semaphore:                                │ │
+│ │ ❱ 242 │   │   │   return await                                           │ │
+│ │       self._execute_trial_with_retries(trial_config)                     │ │
+│ │   243 │                                                                  │ │
+│ │   244 │   def submit(self, trial_config: TrialConfig) -> Coroutine[Any,  │ │
+│ │       Any, TrialResult]:                                                 │ │
+│ │   245 │   │   """                                                        │ │
+│ │                                                                          │ │
+│ │ /root/gpufree-data/projects/swe-eval/.venv-harness/lib/python3.12/site-p │ │
+│ │ ackages/harbor/trial/queue.py:203 in _execute_trial_with_retries         │ │
+│ │                                                                          │ │
+│ │   200 │   │   for attempt in range(self._retry_config.max_retries + 1):  │ │
+│ │   201 │   │   │   trial = await Trial.create(trial_config)               │ │
+│ │   202 │   │   │   self._setup_hooks(trial)                               │ │
+│ │ ❱ 203 │   │   │   result = await trial.run()                             │ │
+│ │   204 │   │   │                                                          │ │
+│ │   205 │   │   │   if result.exception_info is None:                      │ │
+│ │   206 │   │   │   │   return result                                      │ │
+│ │                                                                          │ │
+│ │ /root/gpufree-data/projects/swe-eval/.venv-harness/lib/python3.12/site-p │ │
+│ │ ackages/harbor/trial/trial.py:515 in run                                 │ │
+│ │                                                                          │ │
+│ │    512 │   │   │   await self._recover_outputs()                         │ │
+│ │    513 │   │   finally:                                                  │ │
+│ │    514 │   │   │   try:                                                  │ │
+│ │ ❱  515 │   │   │   │   await self._finalize()                            │ │
+│ │    516 │   │   │   finally:                                              │ │
+│ │    517 │   │   │   │   try:                                              │ │
+│ │    518 │   │   │   │   │   self._scrub_jobs_dir()                        │ │
+│ │                                                                          │ │
+│ │ /root/gpufree-data/projects/swe-eval/.venv-harness/lib/python3.12/site-p │ │
+│ │ ackages/harbor/trial/trial.py:557 in _finalize                           │ │
+│ │                                                                          │ │
+│ │    554 │   │   finally:                                                  │ │
+│ │    555 │   │   │   await self._stop_agent_environment()                  │ │
+│ │    556 │   │   self.result.finished_at = self._now()                     │ │
+│ │ ❱  557 │   │                                                             │ │
+│ │        self.paths.result_path.write_text(self.result.model_dump_json(ind │ │
+│ │        ent=4))                                                           │ │
+│ │    558 │   │   await self._emit(TrialEvent.END)                          │ │
+│ │    559 │                                                                 │ │
+│ │    560 │   def _record_exception(self, exc: BaseException) -> None:      │ │
+│ │                                                                          │ │
+│ │ /usr/lib/python3.12/pathlib.py:1049 in write_text                        │ │
+│ │                                                                          │ │
+│ │   1046 │   │   │   raise TypeError('data must be str, not %s' %          │ │
+│ │   1047 │   │   │   │   │   │   │   data.__class__.__name__)              │ │
+│ │   1048 │   │   encoding = io.text_encoding(encoding)                     │ │
+│ │ ❱ 1049 │   │   with self.open(mode='w', encoding=encoding,               │ │
+│ │        errors=errors, newline=newline) as f:                             │ │
+│ │   1050 │   │   │   return f.write(data)                                  │ │
+│ │   1051 │                                                                 │ │
+│ │   1052 │   def iterdir(self):                                            │ │
+│ │                                                                          │ │
+│ │ /usr/lib/python3.12/pathlib.py:1015 in open                              │ │
+│ │                                                                          │ │
+│ │   1012 │   │   """                                                       │ │
+│ │   1013 │   │   if "b" not in mode:                                       │ │
+│ │   1014 │   │   │   encoding = io.text_encoding(encoding)                 │ │
+│ │ ❱ 1015 │   │   return io.open(self, mode, buffering, encoding, errors,   │ │
+│ │        newline)                                                          │ │
+│ │   1016 │                                                                 │ │
+│ │   1017 │   def read_bytes(self):                                         │ │
+│ │   1018 │   │   """                                                       │ │
+│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+│ FileNotFoundError: [Errno 2] No such file or directory:                      │
+│ 'results/expert_swe/swe/jobs/sbp-hard51-regrade/instance_future-architect__v │
+│ uls__t4yusZn/result.json'                                                    │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭────────────────────────────── Sub-exception #2 ──────────────────────────────╮
+│ ╭─────────────────── Traceback (most recent call last) ────────────────────╮ │
+│ │ /root/gpufree-data/projects/swe-eval/.venv-harness/lib/python3.12/site-p │ │
+│ │ ackages/harbor/trial/queue.py:242 in _run_trial                          │ │
+│ │                                                                          │ │
+│ │   239 │   async def _run_trial(self, trial_config: TrialConfig) ->       │ │
+│ │       TrialResult:                                                       │ │
+│ │   240 │   │   """Execute a single trial, acquiring the semaphore for     │ │
+│ │       concurrency control."""                                            │ │
+│ │   241 │   │   async with self._semaphore:                                │ │
+│ │ ❱ 242 │   │   │   return await                                           │ │
+│ │       self._execute_trial_with_retries(trial_config)                     │ │
+│ │   243 │                                                                  │ │
+│ │   244 │   def submit(self, trial_config: TrialConfig) -> Coroutine[Any,  │ │
+│ │       Any, TrialResult]:                                                 │ │
+│ │   245 │   │   """                                                        │ │
+│ │                                                                          │ │
+│ │ /root/gpufree-data/projects/swe-eval/.venv-harness/lib/python3.12/site-p │ │
+│ │ ackages/harbor/trial/queue.py:203 in _execute_trial_with_retries         │ │
+│ │                                                                          │ │
+│ │   200 │   │   for attempt in range(self._retry_config.max_retries + 1):  │ │
+│ │   201 │   │   │   trial = await Trial.create(trial_config)               │ │
+│ │   202 │   │   │   self._setup_hooks(trial)                               │ │
+│ │ ❱ 203 │   │   │   result = await trial.run()                             │ │
+│ │   204 │   │   │                                                          │ │
+│ │   205 │   │   │   if result.exception_info is None:                      │ │
+│ │   206 │   │   │   │   return result                                      │ │
+│ │                                                                          │ │
+│ │ /root/gpufree-data/projects/swe-eval/.venv-harness/lib/python3.12/site-p │ │
+│ │ ackages/harbor/trial/trial.py:515 in run                                 │ │
+│ │                                                                          │ │
+│ │    512 │   │   │   await self._recover_outputs()                         │ │
+│ │    513 │   │   finally:                                                  │ │
+│ │    514 │   │   │   try:                                                  │ │
+│ │ ❱  515 │   │   │   │   await self._finalize()                            │ │
+│ │    516 │   │   │   finally:                                              │ │
+│ │    517 │   │   │   │   try:                                              │ │
+│ │    518 │   │   │   │   │   self._scrub_jobs_dir()                        │ │
+│ │                                                                          │ │
+│ │ /root/gpufree-data/projects/swe-eval/.venv-harness/lib/python3.12/site-p │ │
+│ │ ackages/harbor/trial/trial.py:557 in _finalize                           │ │
+│ │                                                                          │ │
+│ │    554 │   │   finally:                                                  │ │
+│ │    555 │   │   │   await self._stop_agent_environment()                  │ │
+│ │    556 │   │   self.result.finished_at = self._now()                     │ │
+│ │ ❱  557 │   │                                                             │ │
+│ │        self.paths.result_path.write_text(self.result.model_dump_json(ind │ │
+│ │        ent=4))                                                           │ │
+│ │    558 │   │   await self._emit(TrialEvent.END)                          │ │
+│ │    559 │                                                                 │ │
+│ │    560 │   def _record_exception(self, exc: BaseException) -> None:      │ │
+│ │                                                                          │ │
+│ │ /usr/lib/python3.12/pathlib.py:1049 in write_text                        │ │
+│ │                                                                          │ │
+│ │   1046 │   │   │   raise TypeError('data must be str, not %s' %          │ │
+│ │   1047 │   │   │   │   │   │   │   data.__class__.__name__)              │ │
+│ │   1048 │   │   encoding = io.text_encoding(encoding)                     │ │
+│ │ ❱ 1049 │   │   with self.open(mode='w', encoding=encoding,               │ │
+│ │        errors=errors, newline=newline) as f:                             │ │
+│ │   1050 │   │   │   return f.write(data)                                  │ │
+│ │   1051 │                                                                 │ │
+│ │   1052 │   def iterdir(self):                                            │ │
+│ │                                                                          │ │
+│ │ /usr/lib/python3.12/pathlib.py:1015 in open                              │ │
+│ │                                                                          │ │
+│ │   1012 │   │   """                                                       │ │
+│ │   1013 │   │   if "b" not in mode:                                       │ │
+│ │   1014 │   │   │   encoding = io.text_encoding(encoding)                 │ │
+│ │ ❱ 1015 │   │   return io.open(self, mode, buffering, encoding, errors,   │ │
+│ │        newline)                                                          │ │
+│ │   1016 │                                                                 │ │
+│ │   1017 │   def read_bytes(self):                                         │ │
+│ │   1018 │   │   """                                                       │ │
+│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+│ FileNotFoundError: [Errno 2] No such file or directory:                      │
+│ 'results/expert_swe/swe/jobs/sbp-hard51-regrade/instance_ansible__ansible-d3 │
+│ 3bed__BtVUF57/result.json'                                                   │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭────────────────────────────── Sub-exception #3 ──────────────────────────────╮
+│ ╭─────────────────── Traceback (most recent call last) ────────────────────╮ │
+│ │ /root/gpufree-data/projects/swe-eval/.venv-harness/lib/python3.12/site-p │ │
+│ │ ackages/harbor/trial/queue.py:242 in _run_trial                          │ │
+│ │                                                                          │ │
+│ │   239 │   async def _run_trial(self, trial_config: TrialConfig) ->       │ │
+│ │       TrialResult:                                                       │ │
+│ │   240 │   │   """Execute a single trial, acquiring the semaphore for     │ │
+│ │       concurrency control."""                                            │ │
+│ │   241 │   │   async with self._semaphore:                                │ │
+│ │ ❱ 242 │   │   │   return await                                           │ │
+│ │       self._execute_trial_with_retries(trial_config)                     │ │
+│ │   243 │                                                                  │ │
+│ │   244 │   def submit(self, trial_config: TrialConfig) -> Coroutine[Any,  │ │
+│ │       Any, TrialResult]:                                                 │ │
+│ │   245 │   │   """                                                        │ │
+│ │                                                                          │ │
+│ │ /root/gpufree-data/projects/swe-eval/.venv-harness/lib/python3.12/site-p │ │
+│ │ ackages/harbor/trial/queue.py:203 in _execute_trial_with_retries         │ │
+│ │                                                                          │ │
+│ │   200 │   │   for attempt in range(self._retry_config.max_retries + 1):  │ │
+│ │   201 │   │   │   trial = await Trial.create(trial_config)               │ │
+│ │   202 │   │   │   self._setup_hooks(trial)                               │ │
+│ │ ❱ 203 │   │   │   result = await trial.run()                             │ │
+│ │   204 │   │   │                                                          │ │
+│ │   205 │   │   │   if result.exception_info is None:                      │ │
+│ │   206 │   │   │   │   return result                                      │ │
+│ │                                                                          │ │
+│ │ /root/gpufree-data/projects/swe-eval/.venv-harness/lib/python3.12/site-p │ │
+│ │ ackages/harbor/trial/trial.py:515 in run                                 │ │
+│ │                                                                          │ │
+│ │    512 │   │   │   await self._recover_outputs()                         │ │
+│ │    513 │   │   finally:                                                  │ │
+│ │    514 │   │   │   try:                                                  │ │
+│ │ ❱  515 │   │   │   │   await self._finalize()                            │ │
+│ │    516 │   │   │   finally:                                              │ │
+│ │    517 │   │   │   │   try:                                              │ │
+│ │    518 │   │   │   │   │   self._scrub_jobs_dir()                        │ │
+│ │                                                                          │ │
+│ │ /root/gpufree-data/projects/swe-eval/.venv-harness/lib/python3.12/site-p │ │
+│ │ ackages/harbor/trial/trial.py:557 in _finalize                           │ │
+│ │                                                                          │ │
+│ │    554 │   │   finally:                                                  │ │
+│ │    555 │   │   │   await self._stop_agent_environment()                  │ │
+│ │    556 │   │   self.result.finished_at = self._now()                     │ │
+│ │ ❱  557 │   │                                                             │ │
+│ │        self.paths.result_path.write_text(self.result.model_dump_json(ind │ │
+│ │        ent=4))                                                           │ │
+│ │    558 │   │   await self._emit(TrialEvent.END)                          │ │
+│ │    559 │                                                                 │ │
+│ │    560 │   def _record_exception(self, exc: BaseException) -> None:      │ │
+│ │                                                                          │ │
+│ │ /usr/lib/python3.12/pathlib.py:1049 in write_text                        │ │
+│ │                                                                          │ │
+│ │   1046 │   │   │   raise TypeError('data must be str, not %s' %          │ │
+│ │   1047 │   │   │   │   │   │   │   data.__class__.__name__)              │ │
+│ │   1048 │   │   encoding = io.text_encoding(encoding)                     │ │
+│ │ ❱ 1049 │   │   with self.open(mode='w', encoding=encoding,               │ │
+│ │        errors=errors, newline=newline) as f:                             │ │
+│ │   1050 │   │   │   return f.write(data)                                  │ │
+│ │   1051 │                                                                 │ │
+│ │   1052 │   def iterdir(self):                                            │ │
+│ │                                                                          │ │
+│ │ /usr/lib/python3.12/pathlib.py:1015 in open                              │ │
+│ │                                                                          │ │
+│ │   1012 │   │   """                                                       │ │
+│ │   1013 │   │   if "b" not in mode:                                       │ │
+│ │   1014 │   │   │   encoding = io.text_encoding(encoding)                 │ │
+│ │ ❱ 1015 │   │   return io.open(self, mode, buffering, encoding, errors,   │ │
+│ │        newline)                                                          │ │
+│ │   1016 │                                                                 │ │
+│ │   1017 │   def read_bytes(self):                                         │ │
+│ │   1018 │   │   """                                                       │ │
+│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+│ FileNotFoundError: [Errno 2] No such file or directory:                      │
+│ 'results/expert_swe/swe/jobs/sbp-hard51-regrade/instance_gravitational__tele │
+│ port__XLWMbTt/result.json'                                                   │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭────────────────────────────── Sub-exception #4 ──────────────────────────────╮
+│ ╭─────────────────── Traceback (most recent call last) ────────────────────╮ │
+│ │ /root/gpufree-data/projects/swe-eval/.venv-harness/lib/python3.12/site-p │ │
+│ │ ackages/harbor/trial/queue.py:242 in _run_trial                          │ │
+│ │                                                                          │ │
+│ │   239 │   async def _run_trial(self, trial_config: TrialConfig) ->       │ │
+│ │       TrialResult:                                                       │ │
+│ │   240 │   │   """Execute a single trial, acquiring the semaphore for     │ │
+│ │       concurrency control."""                                            │ │
+│ │   241 │   │   async with self._semaphore:                                │ │
+│ │ ❱ 242 │   │   │   return await                                           │ │
+│ │       self._execute_trial_with_retries(trial_config)                     │ │
+│ │   243 │                                                                  │ │
+│ │   244 │   def submit(self, trial_config: TrialConfig) -> Coroutine[Any,  │ │
+│ │       Any, TrialResult]:                                                 │ │
+│ │   245 │   │   """                                                        │ │
+│ │                                                                          │ │
+│ │ /root/gpufree-data/projects/swe-eval/.venv-harness/lib/python3.12/site-p │ │
+│ │ ackages/harbor/trial/queue.py:203 in _execute_trial_with_retries         │ │
+│ │                                                                          │ │
+│ │   200 │   │   for attempt in range(self._retry_config.max_retries + 1):  │ │
+│ │   201 │   │   │   trial = await Trial.create(trial_config)               │ │
+│ │   202 │   │   │   self._setup_hooks(trial)                               │ │
+│ │ ❱ 203 │   │   │   result = await trial.run()                             │ │
+│ │   204 │   │   │                                                          │ │
+│ │   205 │   │   │   if result.exception_info is None:                      │ │
+│ │   206 │   │   │   │   return result                                      │ │
+│ │                                                                          │ │
+│ │ /root/gpufree-data/projects/swe-eval/.venv-harness/lib/python3.12/site-p │ │
+│ │ ackages/harbor/trial/trial.py:515 in run                                 │ │
+│ │                                                                          │ │
+│ │    512 │   │   │   await self._recover_outputs()                         │ │
+│ │    513 │   │   finally:                                                  │ │
+│ │    514 │   │   │   try:                                                  │ │
+│ │ ❱  515 │   │   │   │   await self._finalize()                            │ │
+│ │    516 │   │   │   finally:                                              │ │
+│ │    517 │   │   │   │   try:                                              │ │
+│ │    518 │   │   │   │   │   self._scrub_jobs_dir()                        │ │
+│ │                                                                          │ │
+│ │ /root/gpufree-data/projects/swe-eval/.venv-harness/lib/python3.12/site-p │ │
+│ │ ackages/harbor/trial/trial.py:557 in _finalize                           │ │
+│ │                                                                          │ │
+│ │    554 │   │   finally:                                                  │ │
+│ │    555 │   │   │   await self._stop_agent_environment()                  │ │
+│ │    556 │   │   self.result.finished_at = self._now()                     │ │
+│ │ ❱  557 │   │                                                             │ │
+│ │        self.paths.result_path.write_text(self.result.model_dump_json(ind │ │
+│ │        ent=4))                                                           │ │
+│ │    558 │   │   await self._emit(TrialEvent.END)                          │ │
+│ │    559 │                                                                 │ │
+│ │    560 │   def _record_exception(self, exc: BaseException) -> None:      │ │
+│ │                                                                          │ │
+│ │ /usr/lib/python3.12/pathlib.py:1049 in write_text                        │ │
+│ │                                                                          │ │
+│ │   1046 │   │   │   raise TypeError('data must be str, not %s' %          │ │
+│ │   1047 │   │   │   │   │   │   │   data.__class__.__name__)              │ │
+│ │   1048 │   │   encoding = io.text_encoding(encoding)                     │ │
+│ │ ❱ 1049 │   │   with self.open(mode='w', encoding=encoding,               │ │
+│ │        errors=errors, newline=newline) as f:                             │ │
+│ │   1050 │   │   │   return f.write(data)                                  │ │
+│ │   1051 │                                                                 │ │
+│ │   1052 │   def iterdir(self):                                            │ │
+│ │                                                                          │ │
+│ │ /usr/lib/python3.12/pathlib.py:1015 in open                              │ │
+│ │                                                                          │ │
+│ │   1012 │   │   """                                                       │ │
+│ │   1013 │   │   if "b" not in mode:                                       │ │
+│ │   1014 │   │   │   encoding = io.text_encoding(encoding)                 │ │
+│ │ ❱ 1015 │   │   return io.open(self, mode, buffering, encoding, errors,   │ │
+│ │        newline)                                                          │ │
+│ │   1016 │                                                                 │ │
+│ │   1017 │   def read_bytes(self):                                         │ │
+│ │   1018 │   │   """                                                       │ │
+│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+│ FileNotFoundError: [Errno 2] No such file or directory:                      │
+│ 'results/expert_swe/swe/jobs/sbp-hard51-regrade/instance_flipt-io__flipt-e2b │
+│ d19d__tBy8zCv/result.json'                                                   │
+╰──────────────────────────────────────────────────────────────────────────────╯
+[2026-10-18T05:21:07+08:00] END swe_expert_swe status=1 seconds=6940

@@ -1,0 +1,48 @@
+[2026-10-18T02:10:27+08:00] START terminal_mopd
+02:10:29 - LiteLLM:WARNING: utils.py:3395 - register_model: model=openai/base:mopd has custom pricing but not in built-in cost map and no prefix/region variant matched; cache_creation_input_token_cost and cache_read_input_token_cost will default to 0 for this model (input/output cost tracking is unaffected). To track cache cost, add them to model_info
+  74/74 Mean: 0.000 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3:30:36 0:00:00
+
+tb2-mirror • terminus-2 • base:mopd
+┏━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━┓
+┃ Trials ┃ Exceptions ┃  Mean ┃
+┡━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━┩
+│     73 │         27 │ 0.000 │
+└────────┴────────────┴───────┘
+
+┏━━━━━━━━┳━━━━━━━┓
+┃ Reward ┃ Count ┃
+┡━━━━━━━━╇━━━━━━━┩
+│ 0.0    │    73 │
+└────────┴───────┘
+
+┏━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━┓
+┃ Exception            ┃ Count ┃
+┡━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━┩
+│ AgentTimeoutError    │    26 │
+│ VerifierTimeoutError │     1 │
+└──────────────────────┴───────┘
+
+Job Info
+Total runtime: 3h 30m 36s
+Results written to results/mopd/terminal/jobs/tb2/result.json
+Inspect results by running `harbor view results/mopd/terminal/jobs`
+Share results by running `harbor upload results/mopd/terminal/jobs/tb2`
+
+{
+  "benchmark": "terminal_bench_2.0",
+  "metric": "pass_rate",
+  "n_tasks": 74,
+  "n_resolved": 0,
+  "pass_rate": 0.0,
+  "n_errored": 27,
+  "exceptions": {
+    "AgentTimeoutError": 26,
+    "VerifierTimeoutError": 1
+  },
+  "started_at": "2026-10-18T02:10:29.625776",
+  "finished_at": "2026-10-18T05:41:06.389034",
+  "job_dirs": [
+    "results/mopd/terminal/jobs/tb2"
+  ]
+}
+[2026-10-18T05:41:07+08:00] END terminal_mopd status=0 seconds=12640

@@ -1,0 +1,64 @@
+{
+  "schema_version": 3,
+  "task_id": "task_3864fcbe6867",
+  "prompt_level": "b1",
+  "expected_outputs": [
+    {
+      "name": "solver.py",
+      "type": "code"
+    },
+    {
+      "name": "slit_params.csv",
+      "type": "data"
+    },
+    {
+      "name": "canonical_boundary.npy",
+      "type": "data"
+    },
+    {
+      "name": "canonical_probes.npy",
+      "type": "data"
+    },
+    {
+      "name": "canonical_probe_derivatives.npy",
+      "type": "data"
+    },
+    {
+      "name": "canonical_sample_values.npy",
+      "type": "data"
+    },
+    {
+      "name": "canonical_sample_derivatives.npy",
+      "type": "data"
+    },
+    {
+      "name": "canonical_boundary_sample_values.npy",
+      "type": "data"
+    },
+    {
+      "name": "canonical_boundary_sample_derivatives.npy",
+      "type": "data"
+    },
+    {
+      "name": "source_inverse_sample_values.npy",
+      "type": "data"
+    },
+    {
+      "name": "source_inverse_sample_derivatives.npy",
+      "type": "data"
+    }
+  ],
+  "timeout_seconds": 1800,
+  "instance_id": "math.multiply_connected_conformal_mapping__seed31415",
+  "parameters": {
+    "case": "A",
+    "seed": 11,
+    "n_boundary": 96,
+    "n_reference_boundary": 768,
+    "n_modes": 16,
+    "n_probes": 28,
+    "n_holdout": 192,
+    "n_hidden_boundary": 384,
+    "n_inverse_holdout": 160
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "schema_version": 3,
+  "task_id": "task_b623d5e4240e",
+  "prompt_level": "b1",
+  "expected_outputs": [
+    {
+      "name": "solution.py",
+      "type": "code"
+    },
+    {
+      "name": "reconstruction.npy",
+      "type": "data"
+    },
+    {
+      "name": "reconstruction.png",
+      "type": "figure"
+    },
+    {
+      "name": "iteration_log.csv",
+      "type": "data"
+    },
+    {
+      "name": "metrics.json",
+      "type": "data"
+    }
+  ],
+  "timeout_seconds": 1800,
+  "instance_id": "math.nnls_modulus_deblur__seed31415",
+  "parameters": {
+    "image_size": 128,
+    "kernel_size": 15,
+    "kernel_type": "motion",
+    "log10_condition_number": 4.0852,
+    "noise_std": 0.0181,
+    "sparsity_level": 0.0423,
+    "min_spike_separation": 3,
+    "spike_amplitude_min": 0.3206,
+    "spike_amplitude_max": 0.9889,
+    "seed": 211316956
+  }
+}

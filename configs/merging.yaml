@@ -1,0 +1,38 @@
+# local copy of Qwen/Qwen3-8B@base_revision (sha256-verified, see models/Qwen3-8B/verification.json)
+base_model: models/Qwen3-8B
+base_model_hf: Qwen/Qwen3-8B
+base_revision: b968826d9c46dd6066d109eabc6255188de91218
+output_dir: checkpoints
+
+experts:
+  - name: swe
+    adapter_path: checkpoints/expert_swe
+    weight: 0.25
+  - name: hle
+    adapter_path: checkpoints/expert_hle
+    weight: 0.25
+  - name: asi
+    adapter_path: checkpoints/expert_asi
+    weight: 0.25
+  - name: terminal
+    adapter_path: checkpoints/expert_terminal
+    weight: 0.25
+
+linear:
+  method: weighted_average
+  normalize_weights: true
+  preserve_base: false
+
+ties:
+  density: 0.2
+  majority_sign_method: total
+  epsilon: 1.0e-6
+
+dare:
+  density: 0.2
+  rescale: true
+
+soup:
+  greedy: true
+  eval_set_path: data/validation.jsonl
+  max_candidates: 10

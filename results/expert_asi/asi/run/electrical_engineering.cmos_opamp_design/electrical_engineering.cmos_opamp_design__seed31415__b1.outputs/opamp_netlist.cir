@@ -1,0 +1,22 @@
+
+.include data/mosfet_22nm.lib
+
+.subckt opamp vdd gnd inp inn out
+.param lch=44n w6=1.2u w7=1.2u w8=1.2u w12=1.0u w34=2.0u w5=1.5u
+
+M6 iref_node iref_node vdd vdd pmos W=1.2u L=44n AD=1.2u*38e-9 AS=1.2u*76e-9 PD=152e-9 PS=1.2u+304e-9
+M7 tail iref_node vdd vdd pmos W=1.2u L=44n AD=1.2u*38e-9 AS=1.2u*76e-9 PD=152e-9 PS=1.2u+304e-9
+M8 out iref_node vdd vdd pmos W=1.2u L=44n AD=1.2u*38e-9 AS=1.2u*76e-9 PD=152e-9 PS=1.2u+304e-9
+
+M1 d1 inn tail vdd pmos W=1.0u L=44n AD=1.0u*38e-9 AS=1.0u*76e-9 PD=152e-9 PS=1.0u+304e-9
+M2 d2 inp tail vdd pmos W=1.0u L=44n AD=1.0u*38e-9 AS=1.0u*76e-9 PD=152e-9 PS=1.0u+304e-9
+
+M3 d1 d1 gnd gnd nmos W=2.0u L=44n AD=2.0u*38e-9 AS=2.0u*76e-9 PD=152e-9 PS=2.0u+304e-9
+M4 d2 d1 gnd gnd nmos W=2.0u L=44n AD=2.0u*38e-9 AS=2.0u*76e-9 PD=152e-9 PS=2.0u+304e-9
+
+M5 out d2 gnd gnd nmos W=1.5u L=44n AD=1.5u*38e-9 AS=1.5u*76e-9 PD=152e-9 PS=1.5u+304e-9
+
+Rz d2 cc_mid 100k
+Cc cc_mid out 10p
+.ends opamp
+    

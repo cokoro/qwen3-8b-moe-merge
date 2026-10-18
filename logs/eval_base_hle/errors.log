@@ -1,0 +1,5 @@
+Error: Request timed out.
+Error: Request timed out.
+Traceback (most recent call last):
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/home/qiker/miniconda3/envs/moe-merge/bin/python', '-m', 'src.evaluation.hle_judge_compat', '--dataset', '/home/qiker/moe-merge/data/eval/hle', '--predictions', '/home/qiker/moe-merge/results/base/hle/hle_base.json', '--judge', 'Qwen/Qwen3.5-397B-A17B', '--num_workers', '8']' died with <Signals.SIGTERM: 15>.

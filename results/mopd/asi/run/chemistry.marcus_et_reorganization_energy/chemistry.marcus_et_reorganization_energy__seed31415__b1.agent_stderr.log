@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "<workspace>/analysis.py", line 48, in <module>
+    aligned_b_a, rot_b_a, rmsd_b_a = align_coords(coords_b, coords_a, masses)
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<workspace>/analysis.py", line 44, in align_coords
+    return aligned + com, q, rmsd
+           ~~~~~~~~^~~~~
+ValueError: operands could not be broadcast together with shapes (3,7) (3,) 

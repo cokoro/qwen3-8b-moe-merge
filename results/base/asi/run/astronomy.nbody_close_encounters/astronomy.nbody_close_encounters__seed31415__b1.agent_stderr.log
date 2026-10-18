@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "<workspace>/simulation.py", line 131, in <module>
+    positions_fit, velocities_fit = propagate_state(prior_particles_case, fit_times_case, masses_case, G)
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<workspace>/simulation.py", line 28, in propagate_state
+    positions[0] = state[:, :3]
+    ~~~~~~~~~^^^
+ValueError: could not broadcast input array from shape (72,3,6) into shape (4,3)

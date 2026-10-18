@@ -1,0 +1,65 @@
+{
+  "schema_version": 3,
+  "task_id": "task_5968f6d4e635",
+  "prompt_level": "b1",
+  "expected_outputs": [
+    {
+      "name": "analysis.py",
+      "type": "code"
+    },
+    {
+      "name": "results/engine_audit.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/failure_modes.json",
+      "type": "data"
+    },
+    {
+      "name": "results/selected_engine.json",
+      "type": "data"
+    },
+    {
+      "name": "results/interval_summary.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/coverage_audit.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/probe_audit.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/case_probe_profile.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/failure_evidence.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/family_ablation.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/reliability_report.json",
+      "type": "data"
+    },
+    {
+      "name": "results/engine_overview.png",
+      "type": "figure"
+    }
+  ],
+  "timeout_seconds": 1800,
+  "instance_id": "computer_science.bci_forensics__seed31415",
+  "parameters": {
+    "sample_size": 74,
+    "n_observed_bootstrap": 885,
+    "n_calibration_replications": 108,
+    "n_calibration_bootstrap": 374,
+    "confidence_level": 0.9021,
+    "seed": 1802620927
+  }
+}

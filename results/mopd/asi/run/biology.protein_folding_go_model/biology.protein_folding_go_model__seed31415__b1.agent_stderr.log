@@ -1,0 +1,4 @@
+  File "<workspace>/simulation.py", line 86
+    r_ij = np.linalg.norm(r[i] - r[j]) for i,j in contacts
+                                       ^^^
+SyntaxError: invalid syntax

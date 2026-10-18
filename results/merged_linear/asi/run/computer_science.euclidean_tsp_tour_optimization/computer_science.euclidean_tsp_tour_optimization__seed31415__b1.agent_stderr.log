@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "<workspace>/solver.py", line 212, in <module>
+    main()
+  File "<workspace>/solver.py", line 200, in main
+    nodes = read_tsp_file(args.input)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<workspace>/solver.py", line 13, in read_tsp_file
+    with open(path, 'r') as f:
+         ^^^^^^^^^^^^^^^
+TypeError: expected str, bytes or os.PathLike object, not NoneType

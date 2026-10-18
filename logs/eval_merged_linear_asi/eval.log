@@ -1,0 +1,73 @@
+[2026-10-17T18:58:02+08:00] START eval_merged_linear_asi
+
+Sandbox mode: --sandbox none  [No Sandbox]
+  Agent runs directly on the host with full filesystem and network access.
+  Pros:  Zero overhead; fastest startup; works everywhere.
+  Cons:  No isolation — agent can read reference answers, other instances, host files, and environment variables. Results are NOT suitable for formal evaluation (see Issue #7: scores inflated from 25 to 100 due to information leakage).
+  Tip:   Use --sandbox os for isolated evaluation, or --sandbox task for package isolation without Docker.
+
+
+==============================================================
+  Agent Configuration (affects reproducibility)
+==============================================================
+  Agent    direct_llm
+  Model    openai/merged_linear
+  Effort   N/A (default)
+  Timeout  1800s
+  Tools    N/A
+==============================================================
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+============================================================
+  ASI-Bench Produce-Only Summary
+  Agent: DirectLLMAdapter
+  Tasks: 60  |  Instances: 60
+============================================================
+  Scoring: submit to https://asibench.apexin.ai/
+
+  Unscored submissions (submit mode): 60
+
+  Agent Behavior:
+    Avg turns: 1.0
+    Avg tool calls: 0.0
+    Avg thinking length: 0 chars
+
+  Model Calls:
+    Attempted: unknown (60 observed)
+    Responses: 58
+    Empty response rate: unknown
+
+  Total execution time: 32570s
+============================================================
+Scoring [1/60] astronomy.nbody_close_encounters b1 astronomy.nbody_close_encounters__seed31415
+Scoring [2/60] astronomy.planet_activity_sep b1 astronomy.planet_activity_sep__seed31415
+Scoring [3/60] astronomy.white_dwarf_sparse_inference b1 astronomy.white_dwarf_sparse_inference__seed31415
+Scoring [4/60] biology.calcium_ip3_dyk_oscillations b1 biology.calcium_ip3_dyk_oscillations__seed31415
+Scoring [5/60] biology.contextual_dna_regime_mapping b1 biology.contextual_dna_regime_mapping__seed31415
+Scoring [6/60] biology.gene_network_timeseries b1 biology.gene_network_timeseries__seed31415
+Scoring [7/60] biology.gillespie_ssssa_michaelis_menten b1 biology.gillespie_ssssa_michaelis_menten__seed31415
+Scoring [8/60] biology.protein_folding_go_model b1 biology.protein_folding_go_model__seed31415
+Scoring [9/60] biology.scrna_seq_analysis b1 biology.scrna_seq_analysis__seed31415
+Scoring [10/60] biostat.perturbation_convergence_testing b1 biostat.perturbation_convergence_testing__seed31415
+Scoring [11/60] chemistry.implicit_solvent_pb_gb b1 chemistry.implicit_solvent_pb_gb__seed31415
+Scoring [12/60] chemistry.marcus_et_reorganization_energy b1 chemistry.marcus_et_reorganization_energy__seed31415
+Scoring [13/60] chemistry.metadynamics_for_dipeptide_in_vacuum b1 chemistry.metadynamics_for_dipeptide_in_vacuum__seed31415
+Scoring [14/60] chemistry.reaction_path_bifurcation_vri b1 chemistry.reaction_path_bifurcation_vri__seed31415
+Scoring [15/60] chemistry.sapt_water_dimer b1 chemistry.sapt_water_dimer__seed31415
+Scoring [16/60] chemistry.vtst_tunneling_corrections b1 chemistry.vtst_tunneling_corrections__seed31415
+Scoring [17/60] computer_science.affinity_subset_bound_audit b1 computer_science.affinity_subset_bound_audit__seed31415
+Scoring [18/60] computer_science.bci_forensics b1 computer_science.bci_forensics__seed31415
+Scoring [19/60] computer_science.causal_attention b1 computer_science.causal_attention__seed31415
+Scoring [20/60] computer_science.deployment_prediction_sets b1 computer_science.deployment_prediction_sets__seed31415
+Scoring [21/60] computer_science.dp_accountant_forensics b1 computer_science.dp_accountant_forensics__seed31415
+Scoring [22/60] computer_science.euclidean_tsp_tour_optimization b1 computer_science.euclidean_tsp_tour_optimization__seed31415
+Scoring [23/60] computer_science.hmc_neal_funnel b1 computer_science.hmc_neal_funnel__seed31415
+Terminated
+[2026-10-17T22:36:12+08:00] END eval_merged_linear_asi status=143 seconds=13090

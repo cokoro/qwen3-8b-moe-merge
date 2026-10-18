@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "<workspace>/analysis.py", line 264, in <module>
+    theta_id = identify_last_link_parameters(calibration, a, alpha, d, theta_offset, mass, com, inertia_diag, gravity_base)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<workspace>/analysis.py", line 145, in identify_last_link_parameters
+    M[i] = compute_mass_matrix(q[i], a, alpha, d, theta_offset, mass, com, inertia_diag, gravity_base)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<workspace>/analysis.py", line 65, in compute_mass_matrix
+    M += mass[i] * Jv[:, i].reshape(-1, 1) @ Jv[:, i].reshape(1, -1)
+ValueError: operands could not be broadcast together with shapes (5,5) (3,3) (5,5) 

@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "<workspace>/analysis.py", line 79, in <module>
+    main()
+  File "<workspace>/analysis.py", line 62, in main
+    with open('results/solutions.csv', 'w', newline='') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'results/solutions.csv'

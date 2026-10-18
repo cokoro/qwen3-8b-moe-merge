@@ -1,0 +1,50 @@
+{
+  "schema_version": 3,
+  "task_id": "task_d36b7da9a5be",
+  "prompt_level": "b1",
+  "expected_outputs": [
+    {
+      "name": "simulation.py",
+      "type": "code"
+    },
+    {
+      "name": "results/report_a.npy",
+      "type": "data"
+    },
+    {
+      "name": "results/report_b.npy",
+      "type": "data"
+    },
+    {
+      "name": "results/field_a.npy",
+      "type": "data"
+    },
+    {
+      "name": "results/field_b.npy",
+      "type": "data"
+    },
+    {
+      "name": "results/report_c.npy",
+      "type": "data"
+    },
+    {
+      "name": "results/overview.png",
+      "type": "figure"
+    }
+  ],
+  "timeout_seconds": 1800,
+  "instance_id": "physics.lid_driven_cavity_flow__seed31415",
+  "parameters": {
+    "grid_size": 127,
+    "reynolds_number": 1000,
+    "probe_scheme": "wall_refined",
+    "probe_count": 145,
+    "lid_velocity": 0.9085,
+    "probe_warp_strength": 1.0652,
+    "probe_randomness": 0.1815,
+    "wall_trace_depth_cells": 1,
+    "max_steps": 28000,
+    "tolerance": 2e-05,
+    "seed": 1610416701
+  }
+}

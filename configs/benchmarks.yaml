@@ -1,0 +1,57 @@
+swe_bench:
+  name: swe_bench_pro_v2_hard
+  split: hard51
+  repo: princeton-nlp/SWE-bench
+  version: v2
+  inference:
+    max_context_length: 16384
+    temperature: 0.0
+    max_new_tokens: 4096
+    top_p: 0.95
+  execution:
+    timeout_seconds: 300
+    max_retries: 1
+    docker_image: swebench/eval:latest
+  metrics:
+    - resolved_rate
+    - patch_quality
+    - test_pass_rate
+
+hle:
+  name: hle
+  split: test
+  inference:
+    max_context_length: 8192
+    temperature: 0.0
+    max_new_tokens: 2048
+  metrics:
+    - accuracy
+    - reasoning_score
+
+asi_bench:
+  name: asi_bench
+  split: test
+  inference:
+    max_context_length: 8192
+    temperature: 0.1
+    max_new_tokens: 2048
+  execution:
+    timeout_seconds: 180
+    max_steps: 20
+  metrics:
+    - success_rate
+    - efficiency_score
+
+terminal_bench:
+  name: terminal_bench
+  split: test
+  inference:
+    max_context_length: 4096
+    temperature: 0.0
+    max_new_tokens: 512
+  execution:
+    timeout_seconds: 60
+    sandbox: true
+  metrics:
+    - command_accuracy
+    - task_completion_rate

@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "<workspace>/analysis.py", line 9, in <module>
+    leaf_params = json.load(open('leaf_params.json'))
+                            ^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'leaf_params.json'

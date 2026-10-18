@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "<workspace>/analysis.py", line 15, in <module>
+    disturbance_scenarios = np.array(public_cases["disturbance_scenarios"])
+                                     ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'disturbance_scenarios'

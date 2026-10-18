@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "<workspace>/analysis.py", line 31, in <module>
+    load_data()
+  File "<workspace>/analysis.py", line 13, in load_data
+    output_spec = task_info['output_spec']
+                  ~~~~~~~~~^^^^^^^^^^^^^^^
+KeyError: 'output_spec'

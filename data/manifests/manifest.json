@@ -1,0 +1,46 @@
+{
+ "data/asi/train.jsonl": {
+  "sha256": "b74a088b87e5b3c1c755f7a51289f5d0de1af5863eca35767ad8fe77703ab671",
+  "bytes": 2556100
+ },
+ "data/asi/validation.jsonl": {
+  "sha256": "6d3114ca1189b2902a3fb6bc5cc3ffda2cc609b207ce94bf556e6bed05669233",
+  "bytes": 135437
+ },
+ "data/hle/train.jsonl": {
+  "sha256": "9ae626ab75699d1b88e4d091423991fa5b5dc57578b028ca573dd713b94fd4fc",
+  "bytes": 1930390
+ },
+ "data/hle/validation.jsonl": {
+  "sha256": "f70c0b6daeaf59a4b8d153473d6186547b9c9a83e50917828fd4800392e36b66",
+  "bytes": 101746
+ },
+ "data/swe/train.jsonl": {
+  "sha256": "dc3e8b259813633025ff26ad7636e7607eef73d9de62ed4fed2f0ab481bf661c",
+  "bytes": 21194421
+ },
+ "data/swe/validation.jsonl": {
+  "sha256": "1128482d3921dc70cf1a023e41a0ae05d8f7f88051191670712b2be6fd28e96e",
+  "bytes": 1132302
+ },
+ "data/terminal/train.jsonl": {
+  "sha256": "1529a62ec4c420253a0f5337cbdc817a601d6c18092a066598b226b3e883ab00",
+  "bytes": 812962
+ },
+ "data/terminal/validation.jsonl": {
+  "sha256": "d57dd801e584b6b75202c69d9ac1af07b236ebbc0526ec2820fb214536b9b501",
+  "bytes": 34419
+ },
+ "data/eval/hle/provenance.json": {
+  "sha256": "c1bac43c39ef160e7f128cecfb85da91278b02957bc6efdd87a5310b4e0e1955",
+  "bytes": 286
+ },
+ "data/eval/hle/question_ids.json": {
+  "sha256": "3ca8e45da7b15b4008d32f28c81fc80014fec6959ec7667457d86a007f5ef40c",
+  "bytes": 14000
+ },
+ "data/eval/hle_source/test.parquet": {
+  "sha256": "6d0ee0602e8aea6b159509577e884f48ecac7b8e3f6822a35f51335a446c726a",
+  "bytes": 274276147
+ }
+}

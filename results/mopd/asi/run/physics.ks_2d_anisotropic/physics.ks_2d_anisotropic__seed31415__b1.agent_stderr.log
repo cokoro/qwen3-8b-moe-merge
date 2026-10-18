@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "<workspace>/simulation.py", line 50, in <module>
+    Q, f1, f2, f3 = compute_ETDRK4_coefficients(kx, ky, dt, L_hat)
+    ^^^^^^^^^^^^^
+TypeError: cannot unpack non-iterable NoneType object

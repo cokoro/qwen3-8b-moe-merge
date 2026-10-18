@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "<workspace>/solver.py", line 82, in <module>
+    main()
+  File "<workspace>/solver.py", line 12, in main
+    input_path = sys.argv[1]
+                 ~~~~~~~~^^^
+IndexError: list index out of range

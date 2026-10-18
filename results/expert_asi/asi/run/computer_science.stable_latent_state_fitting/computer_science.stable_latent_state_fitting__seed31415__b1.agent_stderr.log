@@ -1,0 +1,4 @@
+  File "<workspace>/analysis.py", line 127
+    write_result(pd.DataFrame([(seq, len(sequences[seq]), np.mean(log_likelihood), np.std(log_likelihood), np.max(gamma[seq]) for seq in range(len(sequences))]), 'results/stream_diagnostics.csv')
+                                                                                                                                                              ^
+SyntaxError: closing parenthesis ']' does not match opening parenthesis '('

@@ -1,0 +1,5 @@
+# Fold config for the Qwen3-14B MOPD student (small 8B experts -> bigger student)
+base_model: models/Qwen3-14B
+base_model_hf: Qwen/Qwen3-14B
+base_revision: null
+experts: []

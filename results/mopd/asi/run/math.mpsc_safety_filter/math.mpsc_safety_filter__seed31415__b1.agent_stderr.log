@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "<workspace>/analysis.py", line 10, in <module>
+    K = np.array(system_data['K'])
+                 ~~~~~~~~~~~^^^^^
+KeyError: 'K'

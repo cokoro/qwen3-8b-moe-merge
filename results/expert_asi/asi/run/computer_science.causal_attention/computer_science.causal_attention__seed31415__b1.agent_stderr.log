@@ -1,0 +1,4 @@
+  File "<workspace>/analysis.py", line 57
+    return {'x': grad_x, 'matrix_0': grad_matrix_0, ...}
+                                                      ^
+SyntaxError: ':' expected after dictionary key

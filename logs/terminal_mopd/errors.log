@@ -1,0 +1,8 @@
+┃ Trials ┃ Exceptions ┃  Mean ┃
+┃ Exception            ┃ Count ┃
+│ AgentTimeoutError    │    26 │
+│ VerifierTimeoutError │     1 │
+  "n_errored": 27,
+  "exceptions": {
+    "AgentTimeoutError": 26,
+    "VerifierTimeoutError": 1

@@ -1,0 +1,113 @@
+[2026-10-18T03:25:27+08:00] START swe_base
+This is mini-swe-agent version 2.4.6.
+Check the v2 migration guide at https://klieret.short.gy/mini-v2-migration
+Loading global config from '/root/.config/mini-swe-agent/.env'
+Server failed to start on port 38637, will retry with new port
+host-mini-swe-agent: cwd=/app model=openai/base config=third_party/SWE-bench_Pro-os/v2/tooling/configs/mini_toolcall.yaml
+Server failed to start on port 41569, will retry with new port
+host-mini-swe-agent: cwd=/app model=openai/base config=third_party/SWE-bench_Pro-os/v2/tooling/configs/mini_toolcall.yaml
+Server failed to start on port 44651, will retry with new port
+host-mini-swe-agent: cwd=/app model=openai/base config=third_party/SWE-bench_Pro-os/v2/tooling/configs/mini_toolcall.yaml
+host-mini-swe-agent: cwd=/app model=openai/base config=third_party/SWE-bench_Pro-os/v2/tooling/configs/mini_toolcall.yaml
+host-mini-swe-agent: cwd=/app model=openai/base config=third_party/SWE-bench_Pro-os/v2/tooling/configs/mini_toolcall.yaml
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+  6/6 Mean: 0.000 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 0:50:16 0:00:00
+
+swe_tasks_singularity • host-mini-swe-agent • base
+┏━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━┓
+┃ Trials ┃ Exceptions ┃  Mean ┃
+┡━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━┩
+│      4 │          3 │ 0.000 │
+└────────┴────────────┴───────┘
+
+┏━━━━━━━━┳━━━━━━━┓
+┃ Reward ┃ Count ┃
+┡━━━━━━━━╇━━━━━━━┩
+│ 0.0    │     4 │
+└────────┴───────┘
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━┓
+┃ Exception                  ┃ Count ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━┩
+│ ContextWindowExceededError │     1 │
+│ RuntimeError               │     1 │
+│ AgentTimeoutError          │     1 │
+└────────────────────────────┴───────┘
+
+Job Info
+Total runtime: 50m 16s
+Results written to results/base/swe/jobs/sbp-hard51/result.json
+Inspect results by running `harbor view results/base/swe/jobs`
+Share results by running `harbor upload results/base/swe/jobs/sbp-hard51`
+
+/usr/lib/python3.12/asyncio/events.py:88: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Retrying <unknown> in 4 seconds as it raised RuntimeError: cannot schedule new futures after shutdown.
+Retrying <unknown> in 4 seconds as it raised RuntimeError: cannot schedule new futures after shutdown.
+Retrying <unknown> in 4 seconds as it raised RuntimeError: cannot schedule new futures after shutdown.
+Retrying <unknown> in 8 seconds as it raised RuntimeError: cannot schedule new futures after shutdown.
+Retrying <unknown> in 16 seconds as it raised RuntimeError: cannot schedule new futures after shutdown.
+Retrying <unknown> in 32 seconds as it raised RuntimeError: cannot schedule new futures after shutdown.
+Retrying <unknown> in 60 seconds as it raised RuntimeError: cannot schedule new futures after shutdown.
+Retrying <unknown> in 60 seconds as it raised RuntimeError: cannot schedule new futures after shutdown.
+Retrying <unknown> in 60 seconds as it raised RuntimeError: cannot schedule new futures after shutdown.
+Server failed to start on port 46221, will retry with new port
+Server failed to start on port 34597, will retry with new port
+no source patch for instance_future-architect__vuls-ef2be3d6ea4c0a13674aaab08b182eca4e2b9a17-v264a82e2f4818e30f5a25e4da53b27ba119f62b5; applying nothing
+no source patch for instance_ansible__ansible-d33bedc48fdd933b5abd65a77c081876298e2f07-v0f01c69f1e2528b935359cfe578530722bca2c59; applying nothing
+Server failed to start on port 41173, will retry with new port
+Memory explosion detected: 1775MB, growing 468MB/s, ~4.5s until limit
+Memory explosion detected: 2858MB, growing 260MB/s, ~4.0s until limit
+Memory explosion detected: 2968MB, growing 262MB/s, ~3.5s until limit
+Memory explosion detected: 3423MB, growing 338MB/s, ~1.4s until limit
+  6/6 Mean: 0.000 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 0:01:52 0:00:00
+
+swe_tasks_singularity • patch-replay-agent • replay
+┏━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━┓
+┃ Trials ┃ Exceptions ┃  Mean ┃
+┡━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━┩
+│      5 │          1 │ 0.000 │
+└────────┴────────────┴───────┘
+
+┏━━━━━━━━┳━━━━━━━┓
+┃ Reward ┃ Count ┃
+┡━━━━━━━━╇━━━━━━━┩
+│ 0.0    │     5 │
+└────────┴───────┘
+
+┏━━━━━━━━━━━━━━┳━━━━━━━┓
+┃ Exception    ┃ Count ┃
+┡━━━━━━━━━━━━━━╇━━━━━━━┩
+│ RuntimeError │     1 │
+└──────────────┴───────┘
+
+Job Info
+Total runtime: 1m 52s
+Results written to results/base/swe/jobs/sbp-hard51-regrade/result.json
+Inspect results by running `harbor view results/base/swe/jobs`
+Share results by running `harbor upload 
+results/base/swe/jobs/sbp-hard51-regrade`
+
+{
+  "benchmark": "swe_bench_pro_v2_hard51",
+  "metric": "resolved_rate",
+  "n_tasks": 6,
+  "n_resolved": 0,
+  "resolved_rate": 0.0,
+  "n_errored": 1,
+  "exceptions": {
+    "RuntimeError": 1
+  },
+  "started_at": "2026-10-18T04:33:53.205248",
+  "finished_at": "2026-10-18T04:35:45.631917",
+  "job_dirs": [
+    "results/base/swe/jobs/sbp-hard51-regrade"
+  ]
+}
+[2026-10-18T04:35:48+08:00] END swe_base status=0 seconds=4221

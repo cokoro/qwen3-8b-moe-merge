@@ -1,0 +1,12 @@
+{
+  "raw": 3000,
+  "after_dedup": 3000,
+  "train": 2850,
+  "validation": 150,
+  "sources": {
+    "hle_proxy_gsm8k": 3000
+  },
+  "mean_chars": 512.3,
+  "max_chars": 1643,
+  "seed": 42
+}

@@ -1,0 +1,91 @@
+{
+  "schema_version": 3,
+  "task_id": "task_585e749bff24",
+  "prompt_level": "b1",
+  "expected_outputs": [
+    {
+      "name": "analysis.py",
+      "type": "code"
+    },
+    {
+      "name": "results/pes_query_predictions.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/pes_curvature_predictions.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/model_diagnostics.json",
+      "type": "data"
+    },
+    {
+      "name": "results/stationary_points.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/vri_report.json",
+      "type": "data"
+    },
+    {
+      "name": "results/local_normal_form.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/irc_paths.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/deterministic_launches.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/deterministic_fates.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/branching_summary.json",
+      "type": "data"
+    },
+    {
+      "name": "results/phase_grid_diagnostics.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/phase_space_summary.json",
+      "type": "data"
+    },
+    {
+      "name": "results/diagnostic_plot.png",
+      "type": "figure"
+    },
+    {
+      "name": "results/scientific_note.md",
+      "type": "data"
+    }
+  ],
+  "timeout_seconds": 1800,
+  "instance_id": "chemistry.reaction_path_bifurcation_vri__seed31415",
+  "parameters": {
+    "surface_regime": "entrance_sheared",
+    "rotation_degrees": 11.6453,
+    "shift_x": 0.1259,
+    "shift_y": -0.013,
+    "energy_noise_scale": 0.0007,
+    "force_noise_scale": 0.0037,
+    "curvature_noise_scale": 0.0073,
+    "energy_delta": 0.035,
+    "exit_offset": 0.012,
+    "n_energy_observations": 160,
+    "n_force_observations": 160,
+    "n_curvature_observations": 96,
+    "n_queries": 128,
+    "n_launches": 48,
+    "phase_grid_side": 9,
+    "t_max": 24.0,
+    "backward_t_max": 4.0,
+    "max_sample_dt": 0.04,
+    "product_capture_radius": 0.28,
+    "seed": 1725911020
+  }
+}

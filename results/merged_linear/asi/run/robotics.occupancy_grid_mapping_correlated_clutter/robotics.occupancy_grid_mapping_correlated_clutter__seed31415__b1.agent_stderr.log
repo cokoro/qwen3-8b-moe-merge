@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "<workspace>/analysis.py", line 120, in <module>
+    main()
+  File "<workspace>/analysis.py", line 13, in main
+    width = metadata['width']
+            ~~~~~~~~^^^^^^^^^
+KeyError: 'width'

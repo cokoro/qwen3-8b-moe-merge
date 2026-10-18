@@ -1,0 +1,65 @@
+#!/bin/bash
+# Shim used by harbor's singularity environment inside this unprivileged k8s pod.
+#  - k8s masks /proc, so a new PID namespace (needs a fresh procfs mount) is refused:
+#    rewrite "--containall --pid" -> "--contain --cleanenv --ipc" (same isolation minus PID ns).
+#  - Without a PID ns the container could signal host processes, so containers run as the
+#    unprivileged user tbsandbox (fakeroot maps container root -> uid 2000); vLLM/harbor run as root.
+#  - Without a PID ns, killing apptainer does not kill container processes, so every container
+#    runs in its own cgroup (/sys/fs/cgroup/harbor/trial-<pid>) that is killed when the trial ends.
+#  - pypi.org / github.com / huggingface.co are unreachable from this host: inject local mirrors.
+REAL=/usr/bin/apptainer
+SANDBOX_UID=2000
+if [ "$1" != "exec" ]; then exec "$REAL" "$@"; fi
+
+args=()
+prev=""
+for a in "$@"; do
+  case "$a" in
+    --pid) ;;
+    --containall) args+=(--contain --cleanenv --ipc) ;;
+    *) args+=("$a") ;;
+  esac
+  if [ "$prev" = "-B" ]; then chmod -R a+rwX "${a%%:*}" 2>/dev/null; fi
+  prev="$a"
+done
+# harbor passes --no-mount bind-paths, which leaves /etc/resolv.conf empty -> bind host DNS config read-only.
+# apt goes through the host apt-cacher-ng (127.0.0.1:3142 -> tuna mirror), shared cache across all trials.
+args=("${args[0]}" -B /etc/resolv.conf:/etc/resolv.conf:ro \
+      -B /root/gpufree-data/tb2/container-conf/99harbor-apt-proxy:/etc/apt/apt.conf.d/99harbor-apt-proxy:ro \
+      "${args[@]:1}")
+
+M=http://127.0.0.1:18080
+PYPI=http://127.0.0.1:18082/simple    # nginx caching proxy -> tuna (nginx-pypi-cache.conf)
+export APPTAINERENV_PIP_INDEX_URL=$PYPI
+export APPTAINERENV_PIP_TRUSTED_HOST=127.0.0.1
+export APPTAINERENV_PIP_DEFAULT_TIMEOUT=120
+export APPTAINERENV_UV_DEFAULT_INDEX=$PYPI
+export APPTAINERENV_UV_INDEX_URL=$PYPI
+export APPTAINERENV_UV_INSTALLER_GITHUB_BASE_URL=$M
+export APPTAINERENV_UV_PYTHON_INSTALL_MIRROR=$M/python-build-standalone
+export APPTAINERENV_UV_HTTP_TIMEOUT=300
+# huggingface.co is blocked -> hf-mirror via hf_proxy.py (fixes absolute huggingface.co pagination links)
+export APPTAINERENV_HF_ENDPOINT=http://127.0.0.1:18081
+export APPTAINERENV_HF_HUB_DISABLE_XET=1
+export APPTAINERENV_GOPROXY=https://goproxy.cn,direct
+# github.com is blocked; git clone / archive downloads go through githubfast.com (env-only git config, no file changes)
+export APPTAINERENV_GIT_CONFIG_COUNT=1
+export APPTAINERENV_GIT_CONFIG_KEY_0=url.https://githubfast.com/.insteadOf
+export APPTAINERENV_GIT_CONFIG_VALUE_0=https://github.com/
+export HOME=/home/tbsandbox APPTAINER_CACHEDIR=/home/tbsandbox/.apptainer
+cd /tmp
+
+CG_ROOT=/sys/fs/cgroup/harbor
+CG=$CG_ROOT/trial-$$
+mkdir -p "$CG"
+echo 8192 > "$CG/pids.max" 2>/dev/null
+cleanup() { echo 1 > "$CG/cgroup.kill" 2>/dev/null; }
+trap 'cleanup' TERM INT HUP
+( echo $BASHPID > "$CG/cgroup.procs"
+  exec setpriv --reuid=$SANDBOX_UID --regid=$SANDBOX_UID --init-groups "$REAL" "${args[@]}" ) &
+child=$!
+wait $child
+rc=$?
+cleanup
+for i in 1 2 3 4 5 6 7 8 9 10; do rmdir "$CG" 2>/dev/null && break; sleep 0.5; done
+exit $rc

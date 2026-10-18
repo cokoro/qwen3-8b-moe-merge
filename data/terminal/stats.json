@@ -1,0 +1,14 @@
+{
+  "raw": 3869,
+  "after_dedup": 3712,
+  "train": 1900,
+  "validation": 100,
+  "sources": {
+    "terminal_nl2sh_alfa": 1927,
+    "terminal_handauthored": 6,
+    "terminal_seta_env": 67
+  },
+  "mean_chars": 248.6,
+  "max_chars": 11905,
+  "seed": 42
+}

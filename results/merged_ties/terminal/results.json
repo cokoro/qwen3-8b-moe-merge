@@ -1,0 +1,16 @@
+{
+  "benchmark": "terminal_bench_2.0",
+  "metric": "pass_rate",
+  "n_tasks": 72,
+  "n_resolved": 0,
+  "pass_rate": 0.0,
+  "n_errored": 26,
+  "exceptions": {
+    "AgentTimeoutError": 26
+  },
+  "started_at": "2026-10-18T05:05:31.765695",
+  "finished_at": null,
+  "job_dirs": [
+    "results/merged_ties/terminal/jobs/tb2"
+  ]
+}

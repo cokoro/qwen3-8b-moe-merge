@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "<workspace>/analysis.py", line 93, in <module>
+    main()
+  File "<workspace>/analysis.py", line 72, in main
+    num_pairs, units, convention = load_data()
+                                   ^^^^^^^^^^^
+  File "<workspace>/analysis.py", line 9, in load_data
+    return num_pairs, meta['units'], meta['convention']
+                                     ~~~~^^^^^^^^^^^^^^
+KeyError: 'convention'

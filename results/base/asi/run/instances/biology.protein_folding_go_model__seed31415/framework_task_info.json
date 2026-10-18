@@ -1,0 +1,68 @@
+{
+  "schema_version": 3,
+  "task_id": "task_33443c92979f",
+  "prompt_level": "b1",
+  "expected_outputs": [
+    {
+      "name": "simulation.py",
+      "type": "code"
+    },
+    {
+      "name": "final_coords.npy",
+      "type": "data"
+    },
+    {
+      "name": "order_parameter_trajectory.npy",
+      "type": "data"
+    },
+    {
+      "name": "order_parameter_histograms.npy",
+      "type": "data"
+    },
+    {
+      "name": "heat_capacity_curve.npy",
+      "type": "data"
+    },
+    {
+      "name": "temperature_observables.json",
+      "type": "data"
+    },
+    {
+      "name": "transition_free_energy_profile.npy",
+      "type": "data"
+    },
+    {
+      "name": "q_energy_joint_histograms.npy",
+      "type": "data"
+    },
+    {
+      "name": "native_contact_probability.npy",
+      "type": "data"
+    },
+    {
+      "name": "transition_analysis.json",
+      "type": "data"
+    },
+    {
+      "name": "visualization.png",
+      "type": "figure"
+    }
+  ],
+  "timeout_seconds": 1800,
+  "instance_id": "biology.protein_folding_go_model__seed31415",
+  "parameters": {
+    "protein_id": "synthetic_minifold",
+    "n_beads": 20,
+    "contact_cutoff_angstrom": 8.8797,
+    "min_seq_separation": 4,
+    "friction": 0.5639,
+    "dt_reduced": 0.0052,
+    "n_steps_per_T": 57505,
+    "n_temperatures": 6,
+    "temperature_span_low": 0.5851,
+    "temperature_span_high": 1.3733,
+    "seed": 211316956,
+    "n_temperatures_fine": 400,
+    "n_q_bins_transition": 60
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "schema_version": 3,
+  "task_id": "task_6e493f79ed5e",
+  "prompt_level": "b1",
+  "expected_outputs": [
+    {
+      "name": "analysis.py",
+      "type": "code"
+    },
+    {
+      "name": "results/candidate_summary.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/matrix_a.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/matrix_b.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/vector_a.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/fit_trace.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/local_weights.npy",
+      "type": "data"
+    },
+    {
+      "name": "results/neighbor_summary.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/local_assignments.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/stream_diagnostics.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/diagnostics.png",
+      "type": "figure"
+    }
+  ],
+  "timeout_seconds": 1800,
+  "instance_id": "computer_science.stable_latent_state_fitting__seed31415",
+  "parameters": {
+    "seed": 1610416701,
+    "n_latent_states": 11,
+    "n_symbols": 32,
+    "n_sequences": 6,
+    "length_min": 1778,
+    "length_max": 2221,
+    "stickiness": 0.8237,
+    "emission_sharpness": 0.8085,
+    "rare_state_fraction": 0.0639
+  }
+}

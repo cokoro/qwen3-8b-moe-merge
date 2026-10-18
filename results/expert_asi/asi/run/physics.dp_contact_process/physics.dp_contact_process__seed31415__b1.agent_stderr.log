@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "<workspace>/analysis.py", line 136, in <module>
+    main()
+  File "<workspace>/analysis.py", line 65, in main
+    for t_idx, t in enumerate(np.arange(0, t_max + dt, dt)):
+                                                   ^^
+NameError: name 'dt' is not defined. Did you mean: 't'?

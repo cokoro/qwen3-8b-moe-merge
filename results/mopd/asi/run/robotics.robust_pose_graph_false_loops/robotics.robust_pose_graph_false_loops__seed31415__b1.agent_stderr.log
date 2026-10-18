@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "<workspace>/analysis.py", line 16, in <module>
+    num_odom_edges = task_info['num_odom_edges']
+                     ~~~~~~~~~^^^^^^^^^^^^^^^^^^
+KeyError: 'num_odom_edges'

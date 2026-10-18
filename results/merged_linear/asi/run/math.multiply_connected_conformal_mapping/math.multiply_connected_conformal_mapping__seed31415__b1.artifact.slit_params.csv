@@ -1,0 +1,5 @@
+component_id,role,center_re,center_im,half_length,half_thickness,angle_rad
+0,outer_boundary,0.0,0.0,1.0,1.0,0.0
+1,slit_1,0.0,0.0,1.0,1.0,0.0
+2,slit_2,0.0,0.0,1.0,1.0,0.0
+3,slit_3,0.0,0.0,1.0,1.0,0.0
