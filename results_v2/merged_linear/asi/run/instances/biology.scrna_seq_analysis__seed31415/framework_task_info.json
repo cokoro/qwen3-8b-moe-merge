@@ -1,0 +1,44 @@
+{
+  "schema_version": 3,
+  "task_id": "task_887434e3a1a3",
+  "prompt_level": "b1",
+  "expected_outputs": [
+    {
+      "name": "analysis.py",
+      "type": "code"
+    },
+    {
+      "name": "clusters.npy",
+      "type": "data"
+    },
+    {
+      "name": "pseudotime.npy",
+      "type": "data"
+    },
+    {
+      "name": "de_genes.json",
+      "type": "data"
+    },
+    {
+      "name": "grn_scores.npy",
+      "type": "data"
+    },
+    {
+      "name": "method_choices.json",
+      "type": "data"
+    }
+  ],
+  "timeout_seconds": 1800,
+  "instance_id": "biology.scrna_seq_analysis__seed31415",
+  "parameters": {
+    "seed": 1610416701,
+    "n_cells": 800,
+    "n_genes": 250,
+    "n_clusters": 4,
+    "n_tf_genes": 20,
+    "markers_per_cluster": 10,
+    "grn_density": 0.12,
+    "dropout_rate": 0.5935,
+    "batch_effect_type": "nested"
+  }
+}

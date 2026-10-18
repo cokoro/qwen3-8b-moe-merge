@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "<workspace>/simulation.py", line 22, in <module>
+    theta = state_tokens[control['state_bundle']['file']][0]
+            ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo_root>/.ai4sci-bench/task-envs/13be8820d908729f/lib/python3.12/site-packages/numpy/lib/_npyio_impl.py", line 243, in __getitem__
+    raise KeyError(f"{key} is not a file in the archive") from None
+KeyError: 'state_tokens.npz is not a file in the archive'

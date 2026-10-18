@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "<workspace>/simulate.py", line 224, in <module>
+    simulate()
+  File "<workspace>/simulate.py", line 21, in simulate
+    a1, d1 = system['a1'], system['d1']
+             ~~~~~~^^^^^^
+KeyError: 'a1'

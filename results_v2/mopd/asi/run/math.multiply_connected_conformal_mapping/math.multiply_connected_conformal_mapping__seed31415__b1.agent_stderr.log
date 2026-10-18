@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "<workspace>/solver.py", line 41, in <module>
+    canonical_boundary_samples = map_function(boundary_samples)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<workspace>/solver.py", line 36, in map_function
+    boundary = boundary_representation(theta, mode_indices, coefficients)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<workspace>/solver.py", line 30, in boundary_representation
+    return np.sum(coeffs[modes] * np.exp(1j * theta[modes]), axis=0)
+                  ~~~~~~^^^^^^^
+IndexError: index -16 is out of bounds for axis 0 with size 4

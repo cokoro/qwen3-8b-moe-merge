@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "<workspace>/analysis.py", line 135, in <module>
+    main()
+  File "<workspace>/analysis.py", line 92, in main
+    import scipy
+ModuleNotFoundError: No module named 'scipy'

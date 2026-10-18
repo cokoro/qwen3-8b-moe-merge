@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "<workspace>/solver.py", line 72, in <module>
+    tsp_solver(args.input, args.output, args.seed, args.time_limit_seconds)
+  File "<workspace>/solver.py", line 36, in tsp_solver
+    coords = read_tsp_file(input_path)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<workspace>/solver.py", line 7, in read_tsp_file
+    with open(path, 'r') as f:
+         ^^^^^^^^^^^^^^^
+TypeError: expected str, bytes or os.PathLike object, not NoneType

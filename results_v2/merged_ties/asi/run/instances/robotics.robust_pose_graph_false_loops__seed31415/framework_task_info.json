@@ -1,0 +1,47 @@
+{
+  "schema_version": 3,
+  "task_id": "task_4a52e2af45b2",
+  "prompt_level": "b1",
+  "expected_outputs": [
+    {
+      "name": "analysis.py",
+      "type": "code"
+    },
+    {
+      "name": "poses.npy",
+      "type": "data"
+    },
+    {
+      "name": "loop_closure_scores.csv",
+      "type": "data"
+    },
+    {
+      "name": "metrics.json",
+      "type": "data"
+    },
+    {
+      "name": "map_diagnostics.png",
+      "type": "figure"
+    }
+  ],
+  "timeout_seconds": 1800,
+  "instance_id": "robotics.robust_pose_graph_false_loops__seed31415",
+  "parameters": {
+    "num_laps": 8,
+    "points_per_side": 18,
+    "corridor_spacing": 8.6793,
+    "step": 1.0,
+    "odom_trans_noise": 0.0478,
+    "odom_rot_noise": 0.0207,
+    "odom_forward_bias": 0.0381,
+    "odom_lateral_bias": 0.009,
+    "odom_rot_bias": 0.0035,
+    "loop_trans_noise": 0.075,
+    "loop_rot_noise": 0.03,
+    "false_loop_fraction": 0.421,
+    "true_loop_stride": 9,
+    "loops_per_lap_pair": 5,
+    "min_loop_separation": 25,
+    "seed": 1725911020
+  }
+}

@@ -1,0 +1,4 @@
+  File "<workspace>/simulation.py", line 14
+    raise RuntimeError("ng
+                       ^
+SyntaxError: unterminated string literal (detected at line 14)

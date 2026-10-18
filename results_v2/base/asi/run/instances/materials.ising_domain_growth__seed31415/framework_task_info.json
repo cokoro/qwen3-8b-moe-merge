@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "task_id": "task_307f6b30fa70",
+  "prompt_level": "b1",
+  "expected_outputs": [
+    {
+      "name": "simulation.py",
+      "type": "code"
+    },
+    {
+      "name": "seriesA.npy",
+      "type": "data"
+    },
+    {
+      "name": "seriesB.npy",
+      "type": "data"
+    },
+    {
+      "name": "stackC.npy",
+      "type": "data"
+    },
+    {
+      "name": "stackD.npy",
+      "type": "data"
+    },
+    {
+      "name": "stackE.npy",
+      "type": "data"
+    },
+    {
+      "name": "metadataA.json",
+      "type": "data"
+    },
+    {
+      "name": "metadataB.json",
+      "type": "data"
+    },
+    {
+      "name": "figure.png",
+      "type": "figure"
+    }
+  ],
+  "timeout_seconds": 1800,
+  "instance_id": "materials.ising_domain_growth__seed31415",
+  "parameters": {
+    "lattice_size": 100,
+    "temperature": 2.0236,
+    "total_mcs": 12305,
+    "n_snapshots": 6,
+    "n_measurements": 189,
+    "seed": 1802620927,
+    "dynamics_seed": 1802725656
+  }
+}

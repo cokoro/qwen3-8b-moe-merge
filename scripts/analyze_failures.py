@@ -79,6 +79,9 @@ def hle_items(res, model):
 
 def asi_items(res, model):
     rep = res / model / "asi" / "local_score_seed31415.json"
+    v2 = Path("results_v2") / model / "asi" / "local_score_seed31415.json"
+    if v2.exists():  # ASI v2 (declared per-task runtime environments) supersedes the invalid v1 run
+        rep = v2
     if not rep.exists():
         return []
     out = []

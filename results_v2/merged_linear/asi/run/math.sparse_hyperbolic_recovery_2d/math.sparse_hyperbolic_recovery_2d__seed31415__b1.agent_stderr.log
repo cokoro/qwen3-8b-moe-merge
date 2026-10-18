@@ -1,0 +1,4 @@
+  File "<workspace>/analysis.py", line 41
+    normals.append(normals_k`)
+                            ^
+SyntaxError: invalid syntax

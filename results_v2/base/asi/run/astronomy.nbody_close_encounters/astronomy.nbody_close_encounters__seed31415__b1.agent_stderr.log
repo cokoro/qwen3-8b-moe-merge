@@ -1,0 +1,4 @@
+  File "<workspace>/simulation.py", line 101
+    separations = np.sqrt((state[i, 0] - state[j, 0])**2 + (state[i, 1] - state[j, 1])**2) for i in range(num_bodies) for j in range(i+1, num_bodies))
+                                                                                                                                                     ^
+SyntaxError: unmatched ')'

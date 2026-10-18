@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "<workspace>/solver.py", line 54, in <module>
+    main()
+  File "<workspace>/solver.py", line 35, in main
+    map_func = fit_map(boundary_samples, canonical_boundary, probe_points, probe_values, source_samples, sample_derivatives)
+                                         ^^^^^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'canonical_boundary' where it is not associated with a value

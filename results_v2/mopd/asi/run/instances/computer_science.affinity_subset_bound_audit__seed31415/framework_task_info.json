@@ -1,0 +1,57 @@
+{
+  "schema_version": 3,
+  "task_id": "task_f8a199c7cc4d",
+  "prompt_level": "b1",
+  "expected_outputs": [
+    {
+      "name": "analysis.py",
+      "type": "code"
+    },
+    {
+      "name": "results/group_labels.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/subset_scores.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/pair_regime_summary.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/bound_comparison.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/spectral_report.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/adjusted_affinity.npz",
+      "type": "data"
+    },
+    {
+      "name": "results/diagnostics.png",
+      "type": "figure"
+    }
+  ],
+  "timeout_seconds": 1800,
+  "instance_id": "computer_science.affinity_subset_bound_audit__seed31415",
+  "parameters": {
+    "seed": 901016081,
+    "n_groups": 8,
+    "samples_per_group": 40,
+    "selected_per_group": 4,
+    "selected_count_jitter": 1,
+    "decoy_per_group": 8,
+    "decoy_support_max": 2,
+    "minimum_support_fraction": 0.6,
+    "alpha": 0.573,
+    "beta": 0.3429,
+    "gamma": 0.4511,
+    "noise_level": 0.053,
+    "nuisance_strength": 0.0963,
+    "decoy_strength": 0.1276
+  }
+}

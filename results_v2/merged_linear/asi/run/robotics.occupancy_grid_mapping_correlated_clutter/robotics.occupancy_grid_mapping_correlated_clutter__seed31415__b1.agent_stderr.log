@@ -1,0 +1,4 @@
+  File "<workspace>/analysis.py", line 77
+    local_background = np.quantile(clipped, 0.85
+                                  ^
+SyntaxError: '(' was never closed

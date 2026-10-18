@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "<workspace>/simulation.py", line 117, in <module>
+    main()
+  File "<workspace>/simulation.py", line 19, in main
+    case_ids = [case['id'] for case in case_order]
+                ~~~~^^^^^^
+TypeError: string indices must be integers, not 'str'

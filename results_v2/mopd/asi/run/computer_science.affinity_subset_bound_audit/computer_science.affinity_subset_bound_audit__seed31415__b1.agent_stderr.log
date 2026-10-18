@@ -1,0 +1,4 @@
+  File "<workspace>/analysis.py", line 87
+    pair_regime_summary['q
+                        ^
+SyntaxError: unterminated string literal (detected at line 87)

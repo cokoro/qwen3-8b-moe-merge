@@ -1,0 +1,35 @@
+{
+  "schema_version": 3,
+  "task_id": "task_13f11dac5030",
+  "prompt_level": "b1",
+  "expected_outputs": [
+    {
+      "name": "solver.py",
+      "type": "code"
+    }
+  ],
+  "timeout_seconds": 1800,
+  "instance_id": "computer_science.euclidean_tsp_tour_optimization__seed31415",
+  "parameters": {
+    "baseline_move_budget": 8000,
+    "baseline_neighbor_window": 10,
+    "compile_watchdog_seconds": 120.0,
+    "coordinate_limit": 1000000,
+    "finalization_reserve_seconds": 30.0,
+    "max_candidates": 4,
+    "minimum_baseline_gap": 0.005,
+    "minimum_search_progress": 5e-05,
+    "n_cities": 4000,
+    "reference_max_trials": [
+      12,
+      12,
+      12
+    ],
+    "reference_portfolio_reserve_seconds": 1800.0,
+    "screen_long_max_trials": 4,
+    "screen_short_max_trials": 1,
+    "screening_budget_seconds": 300.0,
+    "seed": 1915016675,
+    "total_deadline_seconds": 2700.0
+  }
+}

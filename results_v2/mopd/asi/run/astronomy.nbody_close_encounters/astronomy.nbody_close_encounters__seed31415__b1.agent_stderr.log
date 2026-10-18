@@ -1,0 +1,9 @@
+TypeError: only 0-dimensional arrays can be converted to Python scalars
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<workspace>/simulation.py", line 65, in <module>
+    likelihoods[case_idx, p_idx, t_idx] = likelihood
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: setting an array element with a sequence.

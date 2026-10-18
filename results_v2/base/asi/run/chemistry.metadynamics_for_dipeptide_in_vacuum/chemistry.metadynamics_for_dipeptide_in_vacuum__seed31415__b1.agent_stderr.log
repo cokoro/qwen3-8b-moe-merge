@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "<workspace>/analysis.py", line 26, in <module>
+    phi_force = app.CustomTorsionForce("theta")
+                ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'openmm.app' has no attribute 'CustomTorsionForce'

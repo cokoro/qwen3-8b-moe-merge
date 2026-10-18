@@ -1,0 +1,4 @@
+  File "<workspace>/simulation.py", line 98
+    np.save('spectral_density
+            ^
+SyntaxError: unterminated string literal (detected at line 98)

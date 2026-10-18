@@ -1,0 +1,86 @@
+{
+  "schema_version": 3,
+  "task_id": "task_2ad31b5f65bb",
+  "prompt_level": "b1",
+  "expected_outputs": [
+    {
+      "name": "simulation.py",
+      "type": "code"
+    },
+    {
+      "name": "obs_matrix_a.npy",
+      "type": "data"
+    },
+    {
+      "name": "obs_matrix_b.npy",
+      "type": "data"
+    },
+    {
+      "name": "obs_tensor_c.npy",
+      "type": "data"
+    },
+    {
+      "name": "obs_matrix_d.npy",
+      "type": "data"
+    },
+    {
+      "name": "obs_matrix_e.npy",
+      "type": "data"
+    },
+    {
+      "name": "obs_matrix_f.npy",
+      "type": "data"
+    },
+    {
+      "name": "phase_summary.json",
+      "type": "data"
+    },
+    {
+      "name": "phase_fit_diagnostics.json",
+      "type": "data"
+    },
+    {
+      "name": "overview.png",
+      "type": "figure"
+    }
+  ],
+  "timeout_seconds": 1800,
+  "instance_id": "physics.kt_phase_transition_2d_xy_model__seed31415",
+  "parameters": {
+    "setting_key": "scan_761c69759dbb7959",
+    "seed": 1610416701,
+    "lattice_sizes": [
+      32,
+      50,
+      68,
+      86,
+      104
+    ],
+    "temperature_grid": [
+      0.819153359053576,
+      0.8487403022195039,
+      0.8742303047792673,
+      0.8843826879180795,
+      0.8910202054672556,
+      0.8970202054672556,
+      0.9030202054672556,
+      0.9137920353476516,
+      0.9284916476588422
+    ],
+    "profile_temperature_indices": [
+      3,
+      5,
+      6,
+      8
+    ],
+    "eta_fit_window": [
+      7,
+      24
+    ],
+    "n_lattice_sizes": 5,
+    "n_temperatures": 9,
+    "n_profile_temperatures": 4,
+    "max_radius": 50,
+    "jackknife_block_count": 5
+  }
+}

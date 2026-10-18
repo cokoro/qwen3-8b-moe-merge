@@ -1,0 +1,4 @@
+  File "<workspace>/solution.py", line 34
+    with the rest of the code omitted for brevity
+             ^^^^
+SyntaxError: invalid syntax

@@ -1,0 +1,141 @@
+{
+  "description": "Multi-turn mini-swe-agent (tool-call) trajectories converted from SWE-agent SWE-smith trajectories; one sample per selected assistant turn (prompt = all previous messages, completion = that turn), <= 4 turns per trajectory picked uniformly incl. the final submit turn.",
+  "eval_format": {
+    "agent": "host_mini_swe + third_party/SWE-bench_Pro-os/v2/tooling/configs/mini_toolcall.yaml",
+    "system": "mini system_template + sglang-rendered bash tool block (embedded in content because train_expert.py does not pass tools)",
+    "tool_schema_as_rendered": {
+      "type": "function",
+      "function": {
+        "description": "Execute a bash command",
+        "name": "bash",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "command": {
+              "type": "string",
+              "description": "The bash command to execute"
+            }
+          },
+          "required": [
+            "command"
+          ]
+        },
+        "strict": false
+      },
+      "defer_loading": null
+    },
+    "system_information": {
+      "system": "Linux",
+      "release": "5.15.0-168-generic",
+      "version": "#178-Ubuntu SMP Fri Jan 9 19:05:03 UTC 2026",
+      "machine": "x86_64"
+    },
+    "assistant": "reasoning text + exactly one bash tool call (tool_calls[].function.arguments is a dict)",
+    "tool": "role=tool, mini observation_template JSON",
+    "final": "echo COMPLETE_TASK_AND_SUBMIT_FINAL_OUTPUT",
+    "returncode": "inferred from output (SWE-agent does not log exit codes)"
+  },
+  "sources": {
+    "swe_smith": {
+      "license": "mit (SWE-bench/SWE-smith-trajectories)",
+      "split": "tool (resolved only)",
+      "train_samples": 4000,
+      "validation_samples": 202
+    }
+  },
+  "raw_trajectories": 24100,
+  "resolved_trajectories": 9427,
+  "unconvertible_dropped": {
+    "view error": 657,
+    "timeout": 396,
+    "empty old_str": 50,
+    "create error": 159,
+    "str_replace error": 5,
+    "no tool call": 25,
+    "editor:insert": 6,
+    "no pr_description": 146
+  },
+  "duplicate_instance_trajectories_skipped": 3281,
+  "converted_one_per_instance": 4702,
+  "per_repo_cap": 30,
+  "repos_used": 120,
+  "train": 4000,
+  "validation": 202,
+  "train_trajectories": 1192,
+  "validation_trajectories": 58,
+  "tokens_train": {
+    "mean": 5098.2,
+    "min": 1032,
+    "p50": 6042,
+    "p90": 8071,
+    "p99": 8183,
+    "max": 8192
+  },
+  "tokens_validation": {
+    "mean": 5194.2,
+    "min": 1080,
+    "p50": 6047,
+    "p90": 8062,
+    "p99": 8149,
+    "max": 8180
+  },
+  "turn_position": {
+    "intermediate": 3270,
+    "final": 730
+  },
+  "length_control": {
+    "max_tokens": 8192,
+    "samples_truncated": 1768,
+    "messages_truncated": 8344,
+    "samples_dropped_too_long": 798
+  },
+  "decontamination": {
+    "reference": "SWE-bench Pro v2, 642 tasks in 11 repos (HARD-51 ⊂ these repos)",
+    "pro_repos": [
+      "ansible/ansible",
+      "element-hq/element-web",
+      "flipt-io/flipt",
+      "future-architect/vuls",
+      "gravitational/teleport",
+      "internetarchive/openlibrary",
+      "navidrome/navidrome",
+      "nodebb/nodebb",
+      "protonmail/webclients",
+      "qutebrowser/qutebrowser",
+      "tutao/tutanota"
+    ],
+    "criteria": [
+      "repository (owner/repo or repo name) is a SWE-bench Pro v2 repository",
+      "PR description 13-gram containment >= 0.2 vs any of the 642 instructions"
+    ],
+    "removed_trajectories": {},
+    "removed_total": 0,
+    "examples": {}
+  },
+  "tokenizer": "models/Qwen3-8B + configs/chat_templates/qwen3_nothink.jinja",
+  "seed": 42,
+  "format_check": {
+    "samples": [
+      "sv2_066c96131c_t03",
+      "sv2_0ebd20afaf_t07"
+    ],
+    "rendered": "format_check_samples.txt",
+    "checks": {
+      "system_with_embedded_tools_equals_render_with_tools": true,
+      "eval_system_prompt_matches": true,
+      "eval_first_user_matches_our_render": true,
+      "instruction_wrapper_matches": true,
+      "eval_observations_rerendered_identically": "14/14",
+      "pro_instructions_with_same_wrapper": "642/642",
+      "train_tail_variants_no_blank_vs_blank": [
+        3061,
+        939
+      ],
+      "every_assistant_has_exactly_one_bash_call": true,
+      "final_turn_is_submit_alone": true,
+      "sv2_066c96131c_t03_prompt_render_is_prefix_of_full": true,
+      "sv2_0ebd20afaf_t07_prompt_render_is_prefix_of_full": true
+    },
+    "conclusion": "Rendered text matches what host_mini_swe + mini_toolcall.yaml send through sglang (qwen3_nothink, qwen25 tool parser): system turn = mini system prompt + the bash tool block, user = mini instance_template around the SWE-bench Pro instruction wrapper, assistant = reasoning text + one <tool_call>{\"name\": \"bash\", ...}, tool results = <tool_response> with mini's JSON observation, final turn = echo COMPLETE_TASK_AND_SUBMIT_FINAL_OUTPUT alone."
+  }
+}

@@ -1,0 +1,4 @@
+  File "<workspace>/analysis.py", line 70
+    constraints.append({'type': 'ineq', 'fun': constraint_H_u)
+                                                             ^
+SyntaxError: closing parenthesis ')' does not match opening parenthesis '{'

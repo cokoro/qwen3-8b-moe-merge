@@ -1,0 +1,26 @@
+{
+  "schema_version": 3,
+  "task_id": "task_9ae3c31d63bd",
+  "prompt_level": "b1",
+  "expected_outputs": [
+    {
+      "name": "analysis.py",
+      "type": "code"
+    },
+    {
+      "name": "results/leaf_fluxes.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/case_convergence.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/diurnal.png",
+      "type": "figure"
+    }
+  ],
+  "timeout_seconds": 1800,
+  "instance_id": "earth_science.farquhar_ballberry_photosynthesis__seed31415",
+  "parameters": {}
+}

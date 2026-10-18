@@ -1,0 +1,4 @@
+  File "<workspace>/simulation.py", line 28
+    def run_simulation
+                      ^
+SyntaxError: expected '('

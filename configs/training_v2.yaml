@@ -1,0 +1,44 @@
+# v2: 8192-token agent samples; 120 steps (time budget), otherwise identical to v1
+method: lora
+lora:
+  r: 16
+  lora_alpha: 32
+  lora_dropout: 0.05
+  bias: none
+  task_type: CAUSAL_LM
+  target_modules:
+  - q_proj
+  - k_proj
+  - v_proj
+  - o_proj
+  - gate_proj
+  - up_proj
+  - down_proj
+training:
+  output_dir: checkpoints
+  num_train_epochs: 1
+  max_steps: 120
+  per_device_train_batch_size: 1
+  per_device_eval_batch_size: 1
+  gradient_accumulation_steps: 8
+  gradient_checkpointing: true
+  learning_rate: 0.0002
+  weight_decay: 0.01
+  warmup_ratio: 0.03
+  lr_scheduler_type: cosine
+  logging_steps: 10
+  save_steps: 100
+  eval_steps: 100
+  eval_strategy: steps
+  max_eval_samples: 200
+  save_total_limit: 3
+  bf16: true
+  max_grad_norm: 0.3
+  optim: adamw_torch_fused
+  seed: 42
+  max_seq_length: 8192
+  packing: false
+  completion_only_loss: true
+  report_to: none
+  logging_dir: logs
+  dataloader_num_workers: 2

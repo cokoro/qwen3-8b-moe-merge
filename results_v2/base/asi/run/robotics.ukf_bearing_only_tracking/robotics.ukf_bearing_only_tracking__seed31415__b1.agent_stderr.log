@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "<workspace>/analysis.py", line 147, in <module>
+    main()
+  File "<workspace>/analysis.py", line 76, in main
+    observer_x, observer_y = task_info['observer_position']
+                             ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'observer_position'

@@ -1,0 +1,22 @@
+{
+  "schema_version": 3,
+  "task_id": "task_f1bbf4584850",
+  "prompt_level": "b1",
+  "expected_outputs": [
+    {
+      "name": "signal_summary.csv",
+      "type": "data"
+    },
+    {
+      "name": "target_predictions.csv",
+      "type": "data"
+    }
+  ],
+  "timeout_seconds": 1800,
+  "instance_id": "astronomy.planet_activity_sep__seed31415",
+  "parameters": {
+    "task_id": "planet_activity_v005",
+    "seed": 1208735734,
+    "reference_epoch_day": 0.0
+  }
+}

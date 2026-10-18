@@ -12,7 +12,10 @@ source lanes.sh   # LANE_A / LANE_B / LANE_C (conflicting tasks share a lane)
 if [ "$MODE" = oracle ]; then
   CMD=(harbor run -p "$TB2_DATASET" -a oracle -e singularity --ek singularity_image_cache_dir="$SIF_CACHE" -o jobs -y -q)
 else
-  CMD=(env MODEL_NAME="${MODEL_NAME:-Qwen3-8B}" bash run_tb2.sh)   # explicit: tmux sessions do not inherit the caller env
+  # explicit: tmux sessions do not inherit the caller env
+  CMD=(env MODEL_NAME="${MODEL_NAME:-Qwen3-8B}")
+  for v in TB_CONTEXT TB_TEMPERATURE TB_TOP_P TB_TOP_K TB_PRESENCE_PENALTY; do [ -n "${!v:-}" ] && CMD+=("$v=${!v}"); done
+  CMD+=(bash run_tb2.sh)
 fi
 launch() {  # session job_name args...
   local s=$1 j=$2; shift 2

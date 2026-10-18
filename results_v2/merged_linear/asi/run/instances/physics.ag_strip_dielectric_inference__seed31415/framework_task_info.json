@@ -1,0 +1,44 @@
+{
+  "schema_version": 3,
+  "task_id": "task_36b077f998a1",
+  "prompt_level": "b1",
+  "expected_outputs": [
+    {
+      "name": "analysis.py",
+      "type": "code"
+    },
+    {
+      "name": "results/fitted_params.json",
+      "type": "data"
+    },
+    {
+      "name": "results/model_comparison.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/heldout_predictions.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/resonance_summary.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/diagnostic_plots.png",
+      "type": "figure"
+    },
+    {
+      "name": "results/conclusion.txt",
+      "type": "conclusion"
+    }
+  ],
+  "timeout_seconds": 1800,
+  "instance_id": "physics.ag_strip_dielectric_inference__seed31415",
+  "parameters": {
+    "seed": 1802620927,
+    "n_calibration_samples": 6,
+    "n_wavelengths": 198,
+    "wavelength_min_nm": 423.4066,
+    "wavelength_max_nm": 912.5804
+  }
+}

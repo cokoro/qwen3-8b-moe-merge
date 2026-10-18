@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "<workspace>/simulation.py", line 22, in <module>
+    u_x
+NameError: name 'u_x' is not defined

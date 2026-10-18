@@ -1,0 +1,3 @@
+usage: solver.py [-h] --input INPUT --output OUTPUT --seed SEED
+                 --time-limit-seconds TIME_LIMIT_SECONDS
+solver.py: error: the following arguments are required: --input, --output, --seed, --time-limit-seconds

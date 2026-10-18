@@ -1,0 +1,4 @@
+  File "<workspace>/analysis.py", line 10
+    def sequence_operator_backward(sensitivity, cache, params, meta):
+    ^
+IndentationError: expected an indented block after function definition on line 5

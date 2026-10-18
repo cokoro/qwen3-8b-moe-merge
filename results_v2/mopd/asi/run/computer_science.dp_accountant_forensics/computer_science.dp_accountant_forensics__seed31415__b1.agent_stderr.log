@@ -1,0 +1,4 @@
+  File "<workspace>/analysis.py", line 81
+    monotonicity_errors.append(monotonic
+                              ^
+SyntaxError: '(' was never closed

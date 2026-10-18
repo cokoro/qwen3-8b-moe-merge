@@ -1,0 +1,4 @@
+  File "<workspace>/analysis.py", line 61
+    reconstructed[k] = interpolator(np.column_stack((grid[0
+                                                         ^
+SyntaxError: '[' was never closed

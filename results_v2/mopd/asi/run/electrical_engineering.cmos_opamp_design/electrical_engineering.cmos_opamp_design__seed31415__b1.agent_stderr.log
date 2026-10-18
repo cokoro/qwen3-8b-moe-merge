@@ -1,0 +1,4 @@
+  File "<workspace>/simulation.py", line 60
+    normalized.append([row[0], row[1], row[2
+                                          ^
+SyntaxError: '[' was never closed

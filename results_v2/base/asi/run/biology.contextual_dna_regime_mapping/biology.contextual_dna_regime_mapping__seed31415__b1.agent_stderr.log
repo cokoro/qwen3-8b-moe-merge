@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "<workspace>/analysis.py", line 239, in <module>
+    main()
+  File "<workspace>/analysis.py", line 192, in main
+    B, A, pi, _ = initialize_hmm(sequences[next(iter(sequences))], spec)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<workspace>/analysis.py", line 48, in initialize_hmm
+    window_size = spec['window_size']
+                  ~~~~^^^^^^^^^^^^^^^
+KeyError: 'window_size'

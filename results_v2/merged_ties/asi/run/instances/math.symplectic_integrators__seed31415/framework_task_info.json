@@ -1,0 +1,44 @@
+{
+  "schema_version": 3,
+  "task_id": "task_db5c44f13c3f",
+  "prompt_level": "b1",
+  "expected_outputs": [
+    {
+      "name": "analysis.py",
+      "type": "code"
+    },
+    {
+      "name": "energy_drift.csv",
+      "type": "data"
+    },
+    {
+      "name": "lyapunov_exponents.csv",
+      "type": "data"
+    },
+    {
+      "name": "poincare_points.csv",
+      "type": "data"
+    },
+    {
+      "name": "energy_drift.png",
+      "type": "figure"
+    },
+    {
+      "name": "poincare_section.png",
+      "type": "figure"
+    }
+  ],
+  "timeout_seconds": 1800,
+  "instance_id": "math.symplectic_integrators__seed31415",
+  "parameters": {
+    "energy_level": 0.0377,
+    "n_orbits": 6,
+    "n_steps": 109220,
+    "dt": 0.0404,
+    "seed": 1802620927,
+    "k1_coeff": 0.8885244552447411,
+    "k2_coeff": 1.011861751085412,
+    "a_coeff": 1.3352786228829032,
+    "b_coeff": -0.2482300410302548
+  }
+}

@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "<workspace>/analysis.py", line 36, in <module>
+    layer_thickness
+NameError: name 'layer_thickness' is not defined. Did you mean: 'layer_thicknesses_m'?

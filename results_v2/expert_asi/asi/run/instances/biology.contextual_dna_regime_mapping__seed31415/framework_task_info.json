@@ -1,0 +1,50 @@
+{
+  "schema_version": 3,
+  "task_id": "task_17a6f608697d",
+  "prompt_level": "b1",
+  "expected_outputs": [
+    {
+      "name": "analysis.py",
+      "type": "code"
+    },
+    {
+      "name": "predicted_regions.csv",
+      "type": "data"
+    },
+    {
+      "name": "state_paths.npz",
+      "type": "data"
+    },
+    {
+      "name": "posterior_probs.npz",
+      "type": "data"
+    },
+    {
+      "name": "fit_diagnostics.json",
+      "type": "data"
+    },
+    {
+      "name": "summary_metrics.json",
+      "type": "data"
+    },
+    {
+      "name": "diagnostic_plots.png",
+      "type": "figure"
+    }
+  ],
+  "timeout_seconds": 1800,
+  "instance_id": "biology.contextual_dna_regime_mapping__seed31415",
+  "parameters": {
+    "n_sequences": 8,
+    "min_length": 8620,
+    "max_length": 12152,
+    "target_entry_rate": 0.0007,
+    "target_exit_rate": 0.0022,
+    "background_pair_damping": 0.6646,
+    "target_pair_enrichment": 1.1104,
+    "local_perturbation_rate": 9,
+    "local_perturbation_max_bp": 275,
+    "example_window_count": 57,
+    "seed": 753799080
+  }
+}

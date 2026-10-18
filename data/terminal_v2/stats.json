@@ -1,0 +1,144 @@
+{
+  "description": "Multi-turn terminus-2 (harbor, JSON parser) trajectories; one sample per selected assistant turn (prompt = all previous messages, completion = that turn), <= 4 turns per trajectory picked uniformly incl. the final task_complete turn. No system message, matching terminus-2.",
+  "eval_format": {
+    "agent": "harbor terminus-2, parser=json",
+    "first_user_template": ".venv-harness/lib/python3.12/site-packages/harbor/agents/terminus_2/templates/terminus-json-plain.txt",
+    "assistant": "one JSON object {analysis, plan, commands[{keystrokes,duration}], task_complete}",
+    "observations": "raw terminal output / harbor warning + completion-confirmation wrappers",
+    "target_validation": "harbor TerminusJSONPlainParser: no error, no warning"
+  },
+  "sources": {
+    "nemotron_terminal_skill": {
+      "license": "cc-by-4.0 (nvidia/Nemotron-Terminal-Corpus)",
+      "train_samples": 2001,
+      "validation_samples": 100,
+      "trajectories": 609
+    },
+    "ota_inferredbugs": {
+      "license": "apache-2.0 (open-thoughts/OpenThoughts-Agent-v1-SFT)",
+      "train_samples": 1003,
+      "validation_samples": 52,
+      "trajectories": 277
+    },
+    "ota_nl2bash": {
+      "license": "apache-2.0 (open-thoughts/OpenThoughts-Agent-v1-SFT)",
+      "train_samples": 1003,
+      "validation_samples": 52,
+      "trajectories": 264
+    }
+  },
+  "raw_trajectories": 41707,
+  "rejected_format_or_incomplete": {
+    "ota_nl2bash": 20,
+    "ota_inferredbugs": 6247,
+    "nemotron_terminal_skill": 20779
+  },
+  "after_normalisation_and_decontam": 14631,
+  "after_instruction_dedup": 14607,
+  "train": 4007,
+  "validation": 204,
+  "train_trajectories": 1093,
+  "validation_trajectories": 57,
+  "tokens_train": {
+    "mean": 4487.4,
+    "min": 1101,
+    "p50": 3958,
+    "p90": 7995,
+    "p99": 8177,
+    "max": 8192
+  },
+  "tokens_validation": {
+    "mean": 4359.5,
+    "min": 1139,
+    "p50": 3848,
+    "p90": 7929,
+    "p99": 8159,
+    "max": 8177
+  },
+  "turn_position": {
+    "intermediate": 3114,
+    "final": 893
+  },
+  "length_control": {
+    "max_tokens": 8192,
+    "samples_truncated": 888,
+    "messages_truncated": 2978,
+    "samples_dropped_too_long": {
+      "nemotron_terminal_skill": 335,
+      "ota_inferredbugs": 77,
+      "ota_nl2bash": 1
+    }
+  },
+  "decontamination": {
+    "reference": "Terminal-Bench 2.0, 89 tasks (third_party/terminal-bench, identical task list to the x86 tb2-mirror)",
+    "criteria": [
+      "task name == TB2 task name",
+      "instruction 13-gram containment >= 0.2 (max of both directions)",
+      "any distinctive TB2 solve.sh line (>=30 chars, non-boilerplate, unique to one task) typed verbatim in keystrokes",
+      "13-gram containment of solve.sh vs trajectory keystrokes >= 0.2"
+    ],
+    "distinctive_solution_lines": 7437,
+    "solution_lines_dropped_as_corpus_idioms": {
+      "rule": "typed in >= 5 distinct training tasks",
+      "count": 18,
+      "examples": [
+        "// GNU General Public License for more details.",
+        "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>",
+        "for (int i = 0; i < size; i++) {",
+        "for epoch in range(num_epochs):",
+        "for i, line in enumerate(lines):",
+        "for line_num, line in enumerate(f, 1):",
+        "from PIL import Image, ImageDraw, ImageFont",
+        "from datetime import datetime, timedelta",
+        "from mpl_toolkits.mplot3d import Axes3D",
+        "if response.status_code == 200:",
+        "import matplotlib.pyplot as plt",
+        "os.makedirs(os.path.dirname(output_path), exist_ok=True)",
+        "os.makedirs(output_dir, exist_ok=True)",
+        "with open(\"results.json\", \"w\") as f:",
+        "with open(csv_path, 'w', newline='') as csvfile:",
+        "with open(filename, 'w') as f:",
+        "with open(json_path, 'w') as f:",
+        "with open(output_path, 'w') as f:"
+      ]
+    },
+    "removed_trajectories": {
+      "solution_unique_cmd": 30
+    },
+    "removed_total": 30,
+    "examples": {
+      "solution_unique_cmd": [
+        "ota::task_3718__isVwgd7 -> log-summary-date-ranges:while IFS= read -r -d '' file; do",
+        "ota::task_5862__amFe3Zo -> log-summary-date-ranges:while IFS= read -r -d '' file; do",
+        "ota::inferredbugs-2804__o2ywH8T -> make-doom-for-mips://-----------------------------------------------------------------------------",
+        "nemo::medium/data_processing::data_processing_task_0043__GpuYG28 -> sam-cell-seg:from typing import List, Tuple, Optional",
+        "nemo::medium/data_querying::data_querying_task_3208__3Cq8MXH -> reshard-c4-data:with open(output_path, \"w\") as f:",
+        "nemo::medium/data_querying::data_querying_task_1537__exQNpUa -> reshard-c4-data:with open(output_path, \"w\") as f:",
+        "nemo::medium/data_querying::data_querying_task_2627__F4Xukro -> reshard-c4-data:with open(output_path, \"w\") as f:",
+        "nemo::medium/dependency_management::dependency_management_task_3722__uTZSJP7 -> count-dataset-tokens:from transformers import AutoTokenizer",
+        "nemo::medium/dependency_management::dependency_management_task_1274__goHmm9n -> rstan-to-pystan:sudo rm -rf /var/lib/apt/lists/*",
+        "nemo::medium/dependency_management::dependency_management_task_3867__KqhEJgB -> financial-document-processor:except (ValueError, IndexError):"
+      ]
+    },
+    "tb2_name_mentions_kept_for_review": {}
+  },
+  "tokenizer": "models/Qwen3-8B + configs/chat_templates/qwen3_nothink.jinja",
+  "seed": 42,
+  "format_check": {
+    "samples": [
+      "tv2_0b0dfb9b54_t02",
+      "tv2_2b7038419e_t05"
+    ],
+    "rendered": "format_check_samples.txt",
+    "checks": {
+      "all_first_user_use_current_harbor_template": true,
+      "no_system_message": true,
+      "roles_alternate_user_assistant": true,
+      "targets_parse_with_harbor_parser_no_error_no_warning": true,
+      "real_eval_first_prompt_has_same_template_prefix": true,
+      "tv2_0b0dfb9b54_t02_prompt_render_is_prefix_of_full": true,
+      "tv2_2b7038419e_t05_prompt_render_is_prefix_of_full": true
+    },
+    "conclusion": "Rendered text matches what terminus-2 sends through sglang with qwen3_nothink: <|im_start|>user = harbor template (instruction + initial screen), assistant = bare JSON object, later user turns = terminal output / harbor confirmation text, and the completion turn is preceded by the same '<think>\\n\\n</think>\\n\\n' generation prefix the server adds at inference."
+  }
+}

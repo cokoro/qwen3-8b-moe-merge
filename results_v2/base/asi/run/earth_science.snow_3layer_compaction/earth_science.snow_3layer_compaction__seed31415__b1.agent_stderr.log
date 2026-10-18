@@ -1,0 +1,4 @@
+  File "<workspace>/analysis.py", line 40
+    def compute_density
+                       ^
+SyntaxError: expected '('

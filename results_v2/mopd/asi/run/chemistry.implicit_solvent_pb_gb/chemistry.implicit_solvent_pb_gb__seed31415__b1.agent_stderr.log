@@ -1,0 +1,4 @@
+  File "<workspace>/analysis.py", line 87
+    field_slices.append(compute_reaction_field(
+                                              ^
+SyntaxError: '(' was never closed

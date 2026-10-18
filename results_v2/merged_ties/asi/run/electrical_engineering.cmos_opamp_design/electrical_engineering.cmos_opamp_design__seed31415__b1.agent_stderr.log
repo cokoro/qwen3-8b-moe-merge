@@ -1,0 +1,4 @@
+  File "<workspace>/simulation.py", line 7
+    * opamp_netlist.cir — Two-stage Miller-compensated CMOS op-amp
+                        ^
+SyntaxError: invalid character '—' (U+2014)

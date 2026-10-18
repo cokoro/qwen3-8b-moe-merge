@@ -1,0 +1,46 @@
+{
+  "schema_version": 3,
+  "task_id": "task_7e24e328fbd7",
+  "prompt_level": "b1",
+  "expected_outputs": [
+    {
+      "name": "analysis.py",
+      "type": "code"
+    },
+    {
+      "name": "state_history.npy",
+      "type": "data"
+    },
+    {
+      "name": "covariance_history.npy",
+      "type": "data"
+    },
+    {
+      "name": "measurement_outlier_prob.npy",
+      "type": "data"
+    }
+  ],
+  "timeout_seconds": 1800,
+  "instance_id": "robotics.ukf_bearing_only_tracking__seed31415",
+  "parameters": {
+    "T_steps": 252,
+    "dt": 0.142,
+    "observer_x": 0.0,
+    "observer_y": 0.0,
+    "process_pos_std": 0.05,
+    "process_vel_std": 0.3485,
+    "bearing_std": 0.0471,
+    "outlier_fraction": 0.0903,
+    "wrap_fraction": 0.3615,
+    "field_half_extent": 40.0,
+    "turn_rate": 0.2455,
+    "ukf_alpha": 0.001,
+    "ukf_beta": 2.0,
+    "ukf_kappa": 0.0,
+    "outlier_gate_nis": 27.2907,
+    "baseline_score_max": 20.0,
+    "reference_score_min": 50.0,
+    "quality_max_attempts": 64,
+    "seed": 1619416728
+  }
+}

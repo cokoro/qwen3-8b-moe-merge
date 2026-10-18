@@ -1,0 +1,30 @@
+{
+  "schema_version": 3,
+  "task_id": "task_d7ab5b8863e3",
+  "prompt_level": "b1",
+  "expected_outputs": [
+    {
+      "name": "analysis.py",
+      "type": "code"
+    },
+    {
+      "name": "results/fes_2d.npy",
+      "type": "data"
+    },
+    {
+      "name": "results/minima.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/fes_plot.png",
+      "type": "figure"
+    },
+    {
+      "name": "results/cv_definition.txt",
+      "type": "data"
+    }
+  ],
+  "timeout_seconds": 1800,
+  "instance_id": "chemistry.metadynamics_for_dipeptide_in_vacuum__seed31415",
+  "parameters": {}
+}

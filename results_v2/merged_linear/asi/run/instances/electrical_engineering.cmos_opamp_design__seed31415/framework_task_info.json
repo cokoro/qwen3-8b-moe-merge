@@ -1,0 +1,105 @@
+{
+  "schema_version": 3,
+  "task_id": "task_e627b472f30b",
+  "prompt_level": "b1",
+  "expected_outputs": [
+    {
+      "name": "simulation.py",
+      "type": "data"
+    },
+    {
+      "name": "opamp_netlist.cir",
+      "type": "data"
+    },
+    {
+      "name": "design_reasoning.md",
+      "type": "data"
+    },
+    {
+      "name": "results.json",
+      "type": "data"
+    },
+    {
+      "name": "dc_operating_point.json",
+      "type": "data"
+    },
+    {
+      "name": "ac_response.csv",
+      "type": "data"
+    },
+    {
+      "name": "transient_response.csv",
+      "type": "data"
+    },
+    {
+      "name": "tran_testbench.cir",
+      "type": "data"
+    },
+    {
+      "name": "noise_response.csv",
+      "type": "data"
+    },
+    {
+      "name": "swing_response.csv",
+      "type": "data"
+    },
+    {
+      "name": "bode_plot.png",
+      "type": "figure"
+    },
+    {
+      "name": "transient_plot.png",
+      "type": "figure"
+    },
+    {
+      "name": "noise_plot.png",
+      "type": "figure"
+    },
+    {
+      "name": "swing_plot.png",
+      "type": "figure"
+    }
+  ],
+  "timeout_seconds": 1800,
+  "instance_id": "electrical_engineering.cmos_opamp_design__seed31415",
+  "parameters": {
+    "target_gain": 1586,
+    "target_slew_rate_v_per_us": 265.2,
+    "target_settling_ns": 8.72,
+    "max_power_mw": 0.542,
+    "load_cap_pf": 0.77,
+    "target_noise_uv_rms": 430.5,
+    "target_output_swing_margin_v": 0.23,
+    "output_swing_gain_threshold_vv": 500.0,
+    "vdd": 1.0,
+    "vcm": 0.5,
+    "feedback_cap_pf": 1.0,
+    "input_cap_pf": 1.0,
+    "noise_bw_low_mhz": 1.0,
+    "noise_bw_high_mhz": 500.0,
+    "honor_requested_targets": false,
+    "seed": 1610416701,
+    "tradeoff_mode": "power",
+    "requested_targets": {
+      "target_gain": 3805.0,
+      "target_slew_rate_v_per_us": 1205.8006,
+      "target_settling_ns": 5.1211,
+      "max_power_mw": 0.955,
+      "load_cap_pf": 0.3904,
+      "target_noise_uv_rms": 499.09,
+      "target_output_swing_margin_v": 0.2403,
+      "vdd": 1.1808
+    },
+    "normalized_targets": {
+      "target_gain": 1586,
+      "target_slew_rate_v_per_us": 265.2,
+      "target_settling_ns": 8.72,
+      "max_power_mw": 0.542,
+      "load_cap_pf": 0.77,
+      "target_noise_uv_rms": 430.5,
+      "target_output_swing_margin_v": 0.23,
+      "vdd": 1.0,
+      "vcm": 0.5
+    }
+  }
+}

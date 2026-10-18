@@ -1,0 +1,4 @@
+  File "<workspace>/analysis.py", line 76
+    I don't have the full inertia tensor for the last link yet
+         ^
+SyntaxError: unterminated string literal (detected at line 76)

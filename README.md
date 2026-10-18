@@ -87,7 +87,7 @@
 
 ## 5. 数据
 
-详见 [`data/README.md`](data/README.md)，包括来源、许可、清洗、去重和污染检查。**HLE 和 ASI 用的是代理数据**（GSM8K、CommonsenseQA 模板），这是本实验最主要的局限，见 §8。
+详见 [`data/README.md`](data/README.md)，包括来源、许可、清洗、去重和污染检查。**独立污染审计**（`analysis/contamination_review.md`）做了四类检查：全字段 n-gram / 最长公共子串，覆盖 solution、tests、gold patch、答案；embedding 近邻；专家与 base 的记忆探测，带正对照；选模和流程泄漏。**未发现训练数据污染，也未发现测试信息泄漏**；确认存在的是评测覆盖与有效性问题，见 §8。**HLE 和 ASI 用的是代理数据**（GSM8K、CommonsenseQA 模板），这是本实验最主要的局限，见 §8。
 
 ## 6. 合版方法
 
@@ -103,28 +103,28 @@
 <!-- BEGIN RESULTS_TABLES (generated: scripts/render_results.py) -->
 **表 1：主指标（0–100）**。macro4 = 四项等权平均；「—」= 未评测。n = 题目数。
 
-| 模型 | HLE (n) | ASI (n) | TB2 (n) | SWE-Pro (n) | **macro4** | HLE 原始 judge | HLE 选择题 |
-|---|---|---|---|---|---|---|---|
-| base | 2.80 (500) | 1.20 (60) | 0.00 (74) | 0.00 (4) | **1.00** | 4.40 | 5.43 |
-| expert_hle | 4.20 (500) | — | — | — | **—** | 4.20 | 8.53 |
-| expert_asi | — | 0.21 (60) | — | — | **—** | — | — |
-| expert_terminal | — | — | 0.00 (74) | — | **—** | — | — |
-| expert_swe | — | — | — | 0.00 (4) | **—** | — | — |
-| merged_linear | 4.80 (500) | 0.03 (60) | 1.35 (74) | 0.00 (4) | **1.55** | 11.20 | 8.53 |
-| merged_ties | 3.40 (500) | 0.00 (60) | 0.00 (72) | 0.00 (4) | **0.85** | 6.80 | 7.75 |
-| mopd | 3.40 (500) | 0.14 (60) | 0.00 (74) | 0.00 (4) | **0.89** | 4.00 | 6.98 |
+| 模型 | HLE (n) | ASI v2 (n) | TB2 (n) | SWE-Pro (n) | **macro4** | HLE 原始 judge | HLE 选择题 | ASI v1（环境缺包，仅参考） |
+|---|---|---|---|---|---|---|---|---|
+| base | 2.80 (500) | 0.45 (60) | 0.00 (74) | 0.00 (4) | **0.81** | 4.40 | 5.43 | 1.20 |
+| expert_hle | 4.20 (500) | — | — | — | **—** | 4.20 | 8.53 | — |
+| expert_asi | — | 0.00 (60) | — | — | **—** | — | — | 0.21 |
+| expert_terminal | — | — | 0.00 (74) | — | **—** | — | — | — |
+| expert_swe | — | — | — | 0.00 (4) | **—** | — | — | — |
+| merged_linear | 4.80 (500) | 0.39 (60) | 1.35 (74) | 0.00 (4) | **1.64** | 11.20 | 8.53 | 0.03 |
+| merged_ties | 3.40 (500) | 0.00 (60) | 0.00 (72) | 0.00 (4) | **0.85** | 6.80 | 7.75 | 0.00 |
+| mopd | 3.40 (500) | 0.14 (60) | 0.00 (74) | 0.00 (4) | **0.88** | 4.00 | 6.98 | 0.14 |
 
 **表 2：相对 base 的变化（百分点），配对 bootstrap 95% CI（10k 次，seed 42）**。
 
-| 模型 | HLE | ASI | TB2 | SWE-Pro | **macro4** | HLE 原始 judge | HLE 选择题 |
-|---|---|---|---|---|---|---|---|
-| expert_hle | +1.40 [-0.6, +3.4] | — | — | — | **—** | -0.20 [-2.4, +2.0] | +3.10 [-2.3, +8.5] |
-| expert_asi | — | -0.99 [-2.7, +0.0] | — | — | **—** | — | — |
-| expert_terminal | — | — | +0.00 [+0.0, +0.0] | — | **—** | — | — |
-| expert_swe | — | — | — | +0.00 [+0.0, +0.0] | **—** | — | — |
-| merged_linear | +2.00 [-0.4, +4.4] | -1.17 [-3.1, +0.1] | +1.35 [+0.0, +4.1] | +0.00 [+0.0, +0.0] | **+0.55 [-0.4, +1.6]** | +6.80 [+3.4, +10.2] | +3.10 [-3.1, +10.1] |
-| merged_ties | +0.60 [-1.4, +2.8] | -1.20 [-3.1, +0.0] | +0.00 [+0.0, +0.0] | +0.00 [+0.0, +0.0] | **-0.15 [-0.9, +0.5]** | +2.40 [-0.2, +5.0] | +2.33 [-3.9, +8.5] |
-| mopd | +0.60 [-1.4, +2.6] | -1.06 [-2.9, +0.0] | +0.00 [+0.0, +0.0] | +0.00 [+0.0, +0.0] | **-0.11 [-0.8, +0.5]** | -0.40 [-2.6, +2.0] | +1.55 [-4.7, +7.8] |
+| 模型 | HLE | ASI v2 | TB2 | SWE-Pro | **macro4** | HLE 原始 judge | HLE 选择题 | ASI v1（环境缺包，仅参考） |
+|---|---|---|---|---|---|---|---|---|
+| expert_hle | +1.40 [-0.6, +3.4] | — | — | — | **—** | -0.20 [-2.4, +2.0] | +3.10 [-2.3, +8.5] | — |
+| expert_asi | — | -0.45 [-1.3, +0.0] | — | — | **—** | — | — | -0.99 [-2.7, +0.0] |
+| expert_terminal | — | — | +0.00 [+0.0, +0.0] | — | **—** | — | — | — |
+| expert_swe | — | — | — | +0.00 [+0.0, +0.0] | **—** | — | — | — |
+| merged_linear | +2.00 [-0.4, +4.4] | -0.05 [-0.4, +0.3] | +1.35 [+0.0, +4.1] | +0.00 [+0.0, +0.0] | **+0.82 [+0.0, +1.8]** | +6.80 [+3.4, +10.2] | +3.10 [-3.1, +10.1] | -1.17 [-3.1, +0.1] |
+| merged_ties | +0.60 [-1.4, +2.8] | -0.45 [-1.3, +0.0] | +0.00 [+0.0, +0.0] | +0.00 [+0.0, +0.0] | **+0.04 [-0.5, +0.6]** | +2.40 [-0.2, +5.0] | +2.33 [-3.9, +8.5] | -1.20 [-3.1, +0.0] |
+| mopd | +0.60 [-1.4, +2.6] | -0.31 [-1.3, +0.4] | +0.00 [+0.0, +0.0] | +0.00 [+0.0, +0.0] | **+0.07 [-0.5, +0.6]** | -0.40 [-2.6, +2.0] | +1.55 [-4.7, +7.8] | -1.06 [-2.9, +0.0] |
 
 **表 3：重复运行波动**（相同题目、相同设置，第二次采样；TB2 第二次运行若未跑完，只在两次都完成的任务上比较）。
 
@@ -135,17 +135,17 @@
 | terminal | base | 71 | 0.00 | 1.41 | 1.41 | 0.986 |
 | terminal | merged_linear | 74 | 1.35 | 0.00 | 1.35 | 0.986 |
 
-**运行失败（errored）**：base: asi=2, terminal=42, swe=1；expert_asi: asi=3；expert_terminal: terminal=49；expert_swe: swe=1；merged_linear: asi=2, terminal=22, swe=1；merged_ties: asi=2, terminal=26, swe=1；mopd: asi=0, terminal=27, swe=1
+**运行失败（errored）**：base: asi=0, terminal=42, swe=1；expert_asi: asi=0；expert_terminal: terminal=49；expert_swe: swe=1；merged_linear: asi=0, terminal=22, swe=1；merged_ties: asi=0, terminal=26, swe=1；mopd: asi=0, terminal=27, swe=1
 
 **SWE-Pro 计分任务**（gold patch 在本机通过）：4 个：`ansible__ansible-d33bedc48fdd933b5abd65a`, `flipt-io__flipt-e2bd19dafa7166c96b082fb2`, `gravitational__teleport-2b15263e49da5625`, `internetarchive__openlibrary-322d7a46cdc`
 <!-- END RESULTS_TABLES -->
 
-**结论：最终合版模型（merged_ties）相对 base 的宏平均变化是 −0.15 个百分点（95% CI [−0.9, +0.5]），没有达到 +3 的目标。** 三种单模型方法里最好的是 merged_linear：+0.55 [−0.4, +1.6]，同样没达到目标，而且置信区间包含 0。
+**结论：最终合版模型（merged_ties）相对 base 的宏平均变化是 +0.04 个百分点（95% CI [−0.5, +0.6]），没有达到 +3 的目标。** 三种单模型方法里最好的是 merged_linear：+0.82 [0.0, +1.8]，同样远低于目标，且其中 TB2 的 +1.35 在第二次运行中没有复现。MOPD 为 +0.07 [−0.5, +0.6]。（ASI 采用 v2 结果：v1 的评测环境缺少任务声明的依赖包，见 §8 第 4 条和 §12。）
 
 逐项看（不隐藏退化）：
 
 1. **HLE**：每个模型都比 base 略高，但置信区间都包含 0。merged_linear +2.0 [−0.4, +4.4]，第二次运行 +1.6，方向一致；expert_hle +1.4；TIES 和 MOPD 各 +0.6。注意 HLE 专家是用 GSM8K 训练的，提升主要体现在「给出一个短的最终答案」，而不是推理变强了。
-2. **ASI**：**所有训练过的变体都比 base 差**（base 1.20 → 专家 0.21、Linear 0.03、TIES 0.00、MOPD 0.14）。ASI 专家只背下了 CSQA 的「Step 1–4 + Answer」模板，不再写出任务要求的代码和文件（54–56/60 题是 `missing_outputs`）。合版把这个模板也带了进去。
+2. **ASI（v2，修正评测环境后）**：所有模型都在地板上，60 题里最多 2 题拿到部分分。base 0.45、ASI 专家 0.00、Linear 0.39、TIES 0.00、MOPD 0.14，ASI 专家仍未超过 base（差 1 道题，CI [−1.3, 0]）。**更正**：先前版本写的「ASI 专家背下模板、不再写代码」是错的。专家对 60/60 题都写出了代码；失败原因是代码运行时报错。v1 里主要是环境缺少任务**已声明**的包（如 matplotlib）。v2 里，一部分是 import 了任务**未声明**的包（主要是 pandas：ASI 专家 13 次，base 4 次），按官方规则算作模型错误；其余是 SyntaxError、KeyError 等。
 3. **TB2**：第一次运行只有 merged_linear 解出 1 题（`modernize-scientific-stack`）。但在第二次运行中，base 解出 1 题，merged_linear 是 0，所以这 1 题的差别是采样噪声。除此之外，base、expert_terminal、TIES、MOPD 都是 0/74。各模型的行为差别很大：base 每题中位输出 12.7k token，常常一直循环到 agent 超时（42/74）；所有合版模型都只输出约 1k token 就结束了（超时 22–27 次）。终端专家本身也没有提升（0/74，49 次超时）。NL→bash 的单轮数据教不会多轮 agent 行为。
 4. **SWE-Pro**：在 4 个 gold patch 能在本机通过的任务上，所有模型都是 0。但这一项的评测配置有缺陷（patch 末尾换行被丢掉、agent 异常退出时修改丢失、32K 上下文不够、SWE 专家的训练格式与 agent 接口不匹配），详见 §8 第 6 条。修正 patch 换行后重新判分，base 仍然是 0（代码本身有编译和运行错误），但其他问题导致的 0 分不能说明模型的能力。
 
@@ -158,7 +158,7 @@
 
 **开发集选择规则的盲区**：teacher-forced 的验证 loss 选中了 TIES（在 HLE 验证集上它的 loss 也最低：0.356 vs 0.400），但它自由生成时会切换到错误的格式。loss 只衡量「给定正确答案的概率」，衡量不到「模型会选择哪种回答格式」。下次应该用小规模的生成式开发集来做选择。
 
-**MOPD（蒸馏）没有带来额外收益**：HLE +0.6，ASI 也低于 base。学生忠实地复制了两个教师的行为，包括 ASI 教师的模板化短回答（ASI 回答长度从 320 token 降到约 43，见 `curves/stage2_metrics.png`）。教师本身没有能力，蒸馏也传不出能力。这一点和我们事先的假设（蒸馏优于权重合并）都只是部分成立：MOPD 没有出现 TIES 那样的格式接管（HLE 中 0 个代码块回答，0 个模板回声），但在本实验的专家质量下，它也没有超过 Linear。 MOPD 与权重合并的对比（行为完整性证据、机制分析、为什么在分数上还没赢）见 [`docs/mopd_vs_merge.md`](docs/mopd_vs_merge.md)。
+**MOPD（蒸馏）没有带来额外收益**：HLE +0.6，ASI 也低于 base。学生忠实地复制了两个教师的行为，包括 ASI 教师在训练 prompt 上的模板化短回答：在 MOPD 的 ASI 训练 prompt（CSQA 代理题）上，回答长度从 320 token 降到约 43（`curves/stage2_metrics.png`）；在真实的 ASI 题目上，学生仍然会写代码。教师本身没有能力，蒸馏也传不出能力。这一点和我们事先的假设（蒸馏优于权重合并）都只是部分成立：MOPD 没有出现 TIES 那样的格式接管（HLE 中 0 个代码块回答，0 个模板回声），但在本实验的专家质量下，它也没有超过 Linear。 MOPD 与权重合并的对比（行为完整性证据、机制分析、为什么在分数上还没赢）见 [`docs/mopd_vs_merge.md`](docs/mopd_vs_merge.md)；相关文献见 [`docs/mopd_literature.md`](docs/mopd_literature.md)，包括小米 MOPD / MiMo-V2-Flash、DeepSeek-V4、Kimi K3、Qwen3、GKD、MiniLLM 等，以及反例和适用前提。
 
 **下一步实验**（按预期收益排序）：
 1. **换掉代理数据**：TB2 / SWE 用真实的多轮 agent 轨迹（如 SWE-smith、开源终端 agent 轨迹）做 SFT；HLE 用「Explanation / Answer / Confidence」格式的高难推理数据；ASI 用科学计算代码数据。先让每个专家在本领域显著超过 base，再比较合版方法，结论才有意义。
@@ -172,12 +172,12 @@
 
 按影响从大到小：
 
-1. **专家训练数据是代理数据**：HLE 专家用 GSM8K，ASI 专家用 CommonsenseQA 套模板，和评测考察的能力差距很大。ASI 专家验证 loss 降到 0.006，只是背下了模板。专家本身几乎没有学到目标能力，是总分上不去的根本原因。合版和蒸馏都只能重新分配专家已有的能力，没法凭空创造。
+1. **专家训练数据是代理数据**：HLE 专家用 GSM8K，ASI 专家用 CommonsenseQA 套模板，和评测考察的能力差距很大。ASI 专家在代理验证集上的 loss 降到 0.006，说明它只学会了代理数据的模板，而不是 ASI 需要的科学计算编程能力。专家本身几乎没有学到目标能力，是总分上不去的根本原因。合版和蒸馏都只能重新分配专家已有的能力，没法凭空创造。
 2. **基座是 8B，不是 35B-A3B**（题目允许）。在 TB2、SWE-hard、ASI 上，8B 的分数接近地板。分数越低，评测噪声相对越大。
 3. **HLE 没有用官方 judge**：o3-mini 不可用，改用本地 Qwen3-8B judge，并在其上加了一层确定性审核（`configs/eval/benchmarks.yaml` → `judge_audit`）。审核前后的分数都报告了（`hle` / `hle_judge`）。审核规则是看过 judge 输出之后才加的，但规则对所有模型完全相同，而且只会把「判为正确」改成「错误」，不会反过来。
-4. **ASI**：只能用 seed31415 公开集（60 题）。13 题里含 GPT-5.5 看图打分项，统一记 0 分；少数题打分超时，也记 0 分（`asi_errored` 列）。分数绝对值被压低，但不同模型之间仍可比较。
+4. **ASI**：只能用 seed31415 公开集（60 题），而且只评了 b1 这一个 prompt 级别。**v1 的评测环境有缺陷**：用默认的 `--sandbox none` 运行，任务声明的依赖包（60 题里有 36 题声明了 matplotlib）不可用，大部分代码因 ModuleNotFoundError 崩溃，而且各模型受影响的程度不同（base 33/60，merged_ties 1/60）。v2 改用 `--sandbox task`，按任务声明建环境，对所有模型重跑，作为主结果；v1 只作参考列出。13 题里含 GPT-5.5 看图打分项，统一记 0 分；少数题打分超时，也记 0 分（`asi_errored` 列）。分数绝对值被压低，但不同模型之间仍可比较。
 5. **Terminal-Bench 2.0**：
-   - 只跑 74 题（去掉 15 个依赖外网的任务），且只跑 1 次（要求 5 次）；
+   - 只跑 74 题，且只跑 1 次（要求 5 次）。去掉的 15 题是因为共享网络下的端口 / 进程冲突（`scripts/tb2/lanes.sh`），不是因为「依赖外网」，也不是根据模型结果挑的；其中 8 题 oracle 在本机其实能通过。74 题中 oracle 在本机能通过的只有 66 题。merged_ties 只有 72/74 条记录，分母按 72 计；只在 66 道 oracle 可解题上算，merged_linear 是 1/66，其余模型都是 0（`analysis/contamination_review.md`）；
    - temperature 0.7，32K 上下文，单步最多输出 4096 token（模型卡：T=1.0，256K 上下文，80K 输出）；
    - 环境用 singularity 代替 docker（非特权容器）。
    所以这个分数不能和官方榜单对比，只能在本实验内部比较。
@@ -229,3 +229,15 @@ bash scripts/aggregate_all.sh
 huggingface-cli login   # 需要 write token
 python scripts/upload_hf.py --user cokoro   # 上传 4 个专家 adapter、merged_linear/ties 完整权重、MOPD adapter，均设为 public
 ```
+
+## 12. 2026-10-18 下午：修正与 v2 实验（提交后追加）
+
+| 项目 | 做了什么 | 结果 |
+|---|---|---|
+| **独立污染审计** | 全字段 n-gram / 最长公共子串、embedding 近邻、专家 vs base 记忆探测（带正对照）、流程泄漏检查（`analysis/contamination_review.md`） | **未发现污染或泄漏**；确认的是评测覆盖与有效性问题，已写入 §8 |
+| **ASI 评测环境** | v1 未按任务声明建环境 → v2 用 `--sandbox task`，5 个单模型 + ASI 专家全部重跑（`scripts/bench_asi_v2.sh`、`scripts/run_asi_v2_dgx.sh`，结果在 `results_v2/`） | 地板效应未改变：base 0.45，ASI 专家 0.00；表中 ASI 一列已换成 v2 |
+| **SWE harness** | 修复 patch 丢末尾换行、agent 异常退出时修改丢失（`tooling_v2`）；64K 上下文（YaRN ×2）重跑 base（`scripts/bench_swe_v2.sh`） | base 仍为 0/6：2 题 agent 超时，1 题格式错误，提交的补丁编译 / 测试不通过，因此这个 0 分是真实的。merged_ties 的 v2 重跑因 x86 主机 15:37 起离线而未完成 |
+| **终端 / SWE 专家 v2** | 按评测 agent 的格式重做训练数据：terminus-2 多轮 JSON 轨迹（Nemotron-Terminal-Corpus + OpenThoughts-Agent，4007 条）；mini-swe-agent 工具调用轨迹（由 SWE-smith 转换，4000 条）。8192 token，120 步（`configs/*_v2.yaml`，`src/data/prepare_*_v2.py`，数据统计在 `data/*_v2/stats.json`） | 已训练完成，**尚未评测**：TB2 / SWE 只能在 x86 上跑，而 x86 已关机 |
+| **MOPD 文献** | `docs/mopd_literature.md` | 小米 MOPD 论文中 MOPD 0.937 vs Task Arithmetic 0.857 vs 权重平均 0.328；收益取决于教师比学生强多少 |
+
+**算力判断**：Qwen3-8B 每个 token 的 KV 缓存约 144KB。L40S 上能放的 KV 约 14.5 万 token，而 TB2 12 并发时最多需要约 34 万 token，于是请求排队、大量超时。按今天的设置（32K 上下文、12 并发）不排队地跑 TB2，需要约 75GB 显存（1 张 80GB 卡）；接近模型卡设置（128K 上下文、32 并发）需要约 290GB（4 张 H100 级别）。

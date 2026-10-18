@@ -1,0 +1,1 @@
+[{"step":"prompt","system_prompt":"<redacted>","user_prompt":"<redacted>","model":"openai/base","timestamp_ms":0},{"step":"error","error":"litellm.Timeout: APITimeoutError - Request timed out. Error_str: Request timed out.","error_type":"Timeout","timestamp_ms":1801615}]

@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "<workspace>/analysis.py", line 128, in <module>
+    json.dump(network_metrics, f)
+  File "<abs_path>", line 179, in dump
+    for chunk in iterable:
+  File "<abs_path>", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "<abs_path>", line 406, in _iterencode_dict
+    yield from chunks
+  File "<abs_path>", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "<abs_path>", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type int64 is not JSON serializable

@@ -9,8 +9,8 @@ import csv
 import json
 from pathlib import Path
 
-BENCH = [("hle", "HLE"), ("asi", "ASI"), ("terminal", "TB2"), ("swe", "SWE-Pro")]
-SUPP = [("hle_judge", "HLE 原始 judge"), ("hle_mc", "HLE 选择题")]
+BENCH = [("hle", "HLE"), ("asi", "ASI v2"), ("terminal", "TB2"), ("swe", "SWE-Pro")]
+SUPP = [("hle_judge", "HLE 原始 judge"), ("hle_mc", "HLE 选择题"), ("asi_v1", "ASI v1（环境缺包，仅参考）")]
 
 
 def f(v, nd=2):

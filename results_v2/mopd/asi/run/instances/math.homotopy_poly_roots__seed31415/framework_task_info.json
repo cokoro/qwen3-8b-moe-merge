@@ -1,0 +1,58 @@
+{
+  "schema_version": 3,
+  "task_id": "task_d83cc4a4df31",
+  "prompt_level": "b1",
+  "expected_outputs": [
+    {
+      "name": "solver.py",
+      "type": "code"
+    },
+    {
+      "name": "roots.npy",
+      "type": "data"
+    },
+    {
+      "name": "residuals.npy",
+      "type": "data"
+    },
+    {
+      "name": "is_singular.npy",
+      "type": "data"
+    },
+    {
+      "name": "is_real.npy",
+      "type": "data"
+    },
+    {
+      "name": "condition_numbers.npy",
+      "type": "data"
+    },
+    {
+      "name": "path_log.npy",
+      "type": "data"
+    },
+    {
+      "name": "path_status.npy",
+      "type": "data"
+    }
+  ],
+  "timeout_seconds": 1800,
+  "instance_id": "math.homotopy_poly_roots__seed31415",
+  "parameters": {
+    "d1": 10,
+    "d2": 7,
+    "difficulty_type": "mixed",
+    "n_deficient_directions": 2,
+    "cluster_epsilon": 0.0,
+    "seed": 892434247,
+    "enforce_pathological_instance": true,
+    "pathology_max_trials": 466,
+    "pathology_seed_step": 56331904,
+    "match_tol": 1e-09,
+    "residual_pass_tol": 2e-09,
+    "real_tol": 1e-12,
+    "singular_sigma_min_tol": 1e-11,
+    "emit_pred_from_ref": false,
+    "coeff_scale": 0.8
+  }
+}

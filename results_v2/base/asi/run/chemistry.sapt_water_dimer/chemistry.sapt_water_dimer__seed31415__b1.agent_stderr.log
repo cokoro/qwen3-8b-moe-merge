@@ -1,0 +1,4 @@
+  File "<workspace>/analysis.py", line 128
+    E_ind = compute_e_ind(mf_A, mf_B, S_AB, D_A, D_B, the rest of the code is omitted for brevity. The full code would continue with the remaining steps, including computing E_disp and assembling the results into the required files. The code would also generate the matplotlib plot as specified.
+                                                      ^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?

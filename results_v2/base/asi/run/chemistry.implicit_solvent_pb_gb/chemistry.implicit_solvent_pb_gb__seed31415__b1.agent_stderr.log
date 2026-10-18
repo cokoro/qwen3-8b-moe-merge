@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "<workspace>/analysis.py", line 97, in <module>
+    main()
+  File "<workspace>/analysis.py", line 57, in main
+    case = manifest[case_idx]
+           ~~~~~~~~^^^^^^^^^^
+KeyError: 0

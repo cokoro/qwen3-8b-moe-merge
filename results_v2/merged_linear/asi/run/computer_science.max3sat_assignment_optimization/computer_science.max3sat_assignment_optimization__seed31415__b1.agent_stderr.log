@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "<workspace>/solver.py", line 2, in <module>
+    END_EXACT_SPB_SOURCE_B64
+NameError: name 'END_EXACT_SPB_SOURCE_B64' is not defined

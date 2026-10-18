@@ -1,0 +1,919 @@
+{
+  "framework_version": "0.2.0",
+  "git_commit": "unknown",
+  "git_dirty": false,
+  "timestamp": "2026-10-18T10:08:19.151693+00:00",
+  "python_version": "3.12.3",
+  "platform": "Linux-7.0.0-1019-nvidia-aarch64-with-glibc2.39",
+  "dependencies": {
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "click": "8.5.0",
+    "litellm": "1.105.1",
+    "pyyaml": "6.0.3",
+    "openai": "2.54.0"
+  },
+  "agent_config": {
+    "agent_name": "direct_llm",
+    "cmd_template": null,
+    "config": {
+      "model": "base:expert_asi",
+      "api_base": "http://127.0.0.1:30021/v1",
+      "api_protocol": "openai",
+      "api_key": "<redacted>"
+    },
+    "allow_external_tools": false,
+    "tool_mode": "restricted",
+    "adapter_class": "DirectLLMAdapter"
+  },
+  "task_versions": {
+    "astronomy.nbody_close_encounters": "4.0",
+    "astronomy.planet_activity_sep": "3.2",
+    "astronomy.white_dwarf_sparse_inference": "1.3",
+    "biology.calcium_ip3_dyk_oscillations": "1.1",
+    "biology.contextual_dna_regime_mapping": "1.4",
+    "biology.gene_network_timeseries": "4.1",
+    "biology.gillespie_ssssa_michaelis_menten": "10.1",
+    "biology.protein_folding_go_model": "1.6",
+    "biology.scrna_seq_analysis": "0.5",
+    "biostat.perturbation_convergence_testing": "1.0",
+    "chemistry.implicit_solvent_pb_gb": "6.8",
+    "chemistry.marcus_et_reorganization_energy": "10.2",
+    "chemistry.metadynamics_for_dipeptide_in_vacuum": "1.4",
+    "chemistry.reaction_path_bifurcation_vri": "8.6",
+    "chemistry.sapt_water_dimer": "1.2",
+    "chemistry.vtst_tunneling_corrections": "1.2",
+    "computer_science.affinity_subset_bound_audit": "2.1",
+    "computer_science.bci_forensics": "1.14",
+    "computer_science.causal_attention": "2.9",
+    "computer_science.deployment_prediction_sets": "0.6",
+    "computer_science.dp_accountant_forensics": "1.12",
+    "computer_science.euclidean_tsp_tour_optimization": "1.2",
+    "computer_science.hmc_neal_funnel": "1.9.5",
+    "computer_science.max3sat_assignment_optimization": "1.5",
+    "computer_science.stable_latent_state_fitting": "1.2",
+    "earth_science.2_e_soil_carbon_nitrogen_cycling": "1.0",
+    "earth_science.farquhar_ballberry_photosynthesis": "1.0",
+    "earth_science.richards_topmodel_hydrology": "1.0",
+    "earth_science.snow_3layer_compaction": "1.0",
+    "electrical_engineering.cmos_opamp_design": "1.0",
+    "electrical_engineering.lossy_tline_skin": "0.5",
+    "materials.ising_domain_growth": "1.2",
+    "materials.relaxation_mode_recovery": "0.5",
+    "math.homotopy_poly_roots": "4.3",
+    "math.ill_posed_inverse_problem": "1.0",
+    "math.levin_context_grid_search": "0.7",
+    "math.manifold_pde_meshfree": "1.0",
+    "math.mpsc_safety_filter": "5.1",
+    "math.multiply_connected_conformal_mapping": "1.1",
+    "math.nnls_modulus_deblur": "0.1",
+    "math.sigma_linear_diophantine": "1.0",
+    "math.sparse_hyperbolic_recovery_2d": "1.1",
+    "math.sparse_nonlinear_interaction_recovery": "0.7",
+    "math.symplectic_integrators": "2.1",
+    "math.ucb_q_learning_regret": "0.19",
+    "physics.ag_strip_dielectric_inference": "0.6",
+    "physics.dp_contact_process": "1.1",
+    "physics.ks_2d_anisotropic": "5.1",
+    "physics.kt_phase_transition_2d_xy_model": "6.6",
+    "physics.lbm_square_wake": "1.0",
+    "physics.lid_driven_cavity_flow": "1.4",
+    "physics.paired_nanorod_negative_index_retrieval": "0.3",
+    "physics.vpfm_leapfrog": "1.1",
+    "robotics.lidar_imu_time_offset_yaw_calibration": "1.0",
+    "robotics.multiregime_icp_degeneracy": "1.0",
+    "robotics.occupancy_grid_mapping_correlated_clutter": "1.0",
+    "robotics.particle_filter": "0.1",
+    "robotics.rnea_inverse_dynamics_dh": "2.2",
+    "robotics.robust_pose_graph_false_loops": "1.0",
+    "robotics.ukf_bearing_only_tracking": "1.0"
+  },
+  "sandbox": {
+    "requested_mode": "task",
+    "effective_mode": "task",
+    "enforcement_status": "fail_closed",
+    "verification_status": "task_env_active",
+    "image_identity": null
+  },
+  "task_runtime": {
+    "astronomy.nbody_close_encounters": {
+      "python_requirement": ">=3.11",
+      "resolved_python_version": "3.12.3",
+      "python_requirement_satisfied": true,
+      "packages": [
+        "numpy>=1.24",
+        "scipy>=1.11"
+      ],
+      "task_env_cache_key": "352b31dcc3816018",
+      "runtime_source": "task_env_cache",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    },
+    "astronomy.planet_activity_sep": {
+      "python_requirement": ">=3.11",
+      "resolved_python_version": "3.12.3",
+      "python_requirement_satisfied": true,
+      "packages": [
+        "numpy>=1.24",
+        "scipy>=1.11",
+        "matplotlib>=3.7"
+      ],
+      "task_env_cache_key": "3769dc8ed9f44d76",
+      "runtime_source": "task_env_cache",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    },
+    "astronomy.white_dwarf_sparse_inference": {
+      "python_requirement": ">=3.11",
+      "resolved_python_version": "3.12.3",
+      "python_requirement_satisfied": true,
+      "packages": [
+        "numpy>=1.26",
+        "scipy>=1.11",
+        "pandas>=2.0",
+        "matplotlib>=3.8"
+      ],
+      "task_env_cache_key": "c3846e8c3f4b5e8a",
+      "runtime_source": "task_env_cache",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    },
+    "biology.calcium_ip3_dyk_oscillations": {
+      "python_requirement": ">=3.11",
+      "resolved_python_version": "3.12.3",
+      "python_requirement_satisfied": true,
+      "packages": [
+        "numpy>=2.0",
+        "scipy>=1.11",
+        "matplotlib>=3.7"
+      ],
+      "task_env_cache_key": "c01fd38c0c370827",
+      "runtime_source": "task_env_cache",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    },
+    "biology.contextual_dna_regime_mapping": {
+      "python_requirement": ">=3.11",
+      "resolved_python_version": "3.12.3",
+      "python_requirement_satisfied": true,
+      "packages": [
+        "numpy>=2.0",
+        "matplotlib>=3.7"
+      ],
+      "task_env_cache_key": "e6af0dd654f73518",
+      "runtime_source": "task_env_cache",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    },
+    "biology.gene_network_timeseries": {
+      "python_requirement": ">=3.11",
+      "resolved_python_version": "3.12.3",
+      "python_requirement_satisfied": true,
+      "packages": [
+        "numpy>=2.0",
+        "scipy>=1.11",
+        "matplotlib>=3.7",
+        "scikit-learn>=1.3"
+      ],
+      "task_env_cache_key": "d9af8b625652ed5b",
+      "runtime_source": "task_env_cache",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    },
+    "biology.gillespie_ssssa_michaelis_menten": {
+      "python_requirement": ">=3.11",
+      "resolved_python_version": "3.12.3",
+      "python_requirement_satisfied": true,
+      "packages": [
+        "numpy>=2.0",
+        "scipy>=1.11"
+      ],
+      "task_env_cache_key": "beb47ca5e6e913fc",
+      "runtime_source": "task_env_cache",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    },
+    "biology.protein_folding_go_model": {
+      "python_requirement": ">=3.11",
+      "resolved_python_version": "3.12.3",
+      "python_requirement_satisfied": true,
+      "packages": [
+        "numpy>=2.0",
+        "scipy>=1.11",
+        "matplotlib>=3.7"
+      ],
+      "task_env_cache_key": "c01fd38c0c370827",
+      "runtime_source": "task_env_cache",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    },
+    "biology.scrna_seq_analysis": {
+      "python_requirement": ">=3.11",
+      "resolved_python_version": "3.12.3",
+      "python_requirement_satisfied": true,
+      "packages": [
+        "numpy",
+        "scipy"
+      ],
+      "task_env_cache_key": "650bd83b95848277",
+      "runtime_source": "task_env_cache",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    },
+    "biostat.perturbation_convergence_testing": {
+      "python_requirement": ">=3.11",
+      "resolved_python_version": "3.12.3",
+      "python_requirement_satisfied": true,
+      "packages": [
+        "scikit-learn>=1.4"
+      ],
+      "task_env_cache_key": "b4441057033282f2",
+      "runtime_source": "task_env_cache",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    },
+    "chemistry.implicit_solvent_pb_gb": {
+      "python_requirement": ">=3.11",
+      "resolved_python_version": "3.12.3",
+      "python_requirement_satisfied": true,
+      "packages": [
+        "numpy>=1.26.0",
+        "scipy>=1.11.0",
+        "matplotlib>=3.8.0"
+      ],
+      "task_env_cache_key": "d0625da5e7820a07",
+      "runtime_source": "task_env_cache",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    },
+    "chemistry.marcus_et_reorganization_energy": {
+      "python_requirement": ">=3.11",
+      "resolved_python_version": "3.12.3",
+      "python_requirement_satisfied": true,
+      "packages": [
+        "numpy>=1.26",
+        "scipy>=1.11",
+        "matplotlib>=3.8"
+      ],
+      "task_env_cache_key": "13be8820d908729f",
+      "runtime_source": "task_env_cache",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    },
+    "chemistry.metadynamics_for_dipeptide_in_vacuum": {
+      "python_requirement": ">=3.11",
+      "resolved_python_version": "3.12.3",
+      "python_requirement_satisfied": true,
+      "packages": [
+        "openmm>=8.0",
+        "numpy>=1.26.0",
+        "scipy>=1.11.0",
+        "matplotlib>=3.8.0"
+      ],
+      "task_env_cache_key": "62fd252a13c0a720",
+      "runtime_source": "task_env_cache",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    },
+    "chemistry.reaction_path_bifurcation_vri": {
+      "python_requirement": ">=3.11",
+      "resolved_python_version": "3.12.3",
+      "python_requirement_satisfied": true,
+      "packages": [
+        "numpy>=1.26.0",
+        "scipy>=1.11.0",
+        "matplotlib>=3.8.0"
+      ],
+      "task_env_cache_key": "d0625da5e7820a07",
+      "runtime_source": "task_env_cache",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    },
+    "chemistry.sapt_water_dimer": {
+      "python_requirement": ">=3.11",
+      "resolved_python_version": "3.12.3",
+      "python_requirement_satisfied": true,
+      "packages": [
+        "pyscf>=2.5",
+        "numpy>=1.24",
+        "scipy>=1.11",
+        "matplotlib>=3.7"
+      ],
+      "task_env_cache_key": "f8d9a9161071482b",
+      "runtime_source": "task_env_cache",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    },
+    "chemistry.vtst_tunneling_corrections": {
+      "python_requirement": ">=3.11",
+      "resolved_python_version": "3.12.3",
+      "python_requirement_satisfied": true,
+      "packages": [
+        "numpy>=2.0.0",
+        "scipy>=1.11.0",
+        "matplotlib>=3.8.0",
+        "pandas>=2.0.0"
+      ],
+      "task_env_cache_key": "390f34102d1f3661",
+      "runtime_source": "task_env_cache",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    },
+    "computer_science.affinity_subset_bound_audit": {
+      "python_requirement": ">=3.10",
+      "resolved_python_version": "3.12.3",
+      "python_requirement_satisfied": true,
+      "packages": [
+        "numpy>=1.24",
+        "pandas>=2.0",
+        "scipy>=1.10",
+        "matplotlib>=3.7",
+        "scikit-learn==1.8.0"
+      ],
+      "task_env_cache_key": "dfe2625c9c432f85",
+      "runtime_source": "task_env_cache",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    },
+    "computer_science.bci_forensics": {
+      "python_requirement": ">=3.10",
+      "resolved_python_version": "3.12.3",
+      "python_requirement_satisfied": true,
+      "packages": [
+        "numpy>=1.24",
+        "matplotlib>=3.7"
+      ],
+      "task_env_cache_key": "25c49d26f6682ed4",
+      "runtime_source": "task_env_cache",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    },
+    "computer_science.causal_attention": {
+      "python_requirement": ">=3.12,<3.13",
+      "resolved_python_version": "3.12.3",
+      "python_requirement_satisfied": true,
+      "packages": [
+        "numpy>=1.24.0",
+        "torch==2.5.1"
+      ],
+      "task_env_cache_key": "d489c747a31fa926",
+      "runtime_source": "task_env_cache",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    },
+    "computer_science.deployment_prediction_sets": {
+      "python_requirement": ">=3.10",
+      "resolved_python_version": "3.12.3",
+      "python_requirement_satisfied": true,
+      "packages": [
+        "numpy>=1.24",
+        "pandas>=2.0",
+        "scipy>=1.11",
+        "matplotlib>=3.7"
+      ],
+      "task_env_cache_key": "190df755cad14898",
+      "runtime_source": "task_env_cache",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    },
+    "computer_science.dp_accountant_forensics": {
+      "python_requirement": ">=3.10",
+      "resolved_python_version": "3.12.3",
+      "python_requirement_satisfied": true,
+      "packages": [
+        "numpy>=1.24",
+        "matplotlib>=3.7"
+      ],
+      "task_env_cache_key": "25c49d26f6682ed4",
+      "runtime_source": "task_env_cache",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    },
+    "computer_science.euclidean_tsp_tour_optimization": {
+      "python_requirement": ">=3.11",
+      "resolved_python_version": "3.12.3",
+      "python_requirement_satisfied": true,
+      "packages": [
+        "numpy>=1.24"
+      ],
+      "task_env_cache_key": "88b1de7d9fdf3c76",
+      "runtime_source": "task_env_cache",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    },
+    "computer_science.hmc_neal_funnel": {
+      "python_requirement": ">=3.11",
+      "resolved_python_version": "3.12.3",
+      "python_requirement_satisfied": true,
+      "packages": [
+        "numpy>=2.0",
+        "matplotlib>=3.8"
+      ],
+      "task_env_cache_key": "68d75414007c2a1d",
+      "runtime_source": "task_env_cache",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    },
+    "computer_science.max3sat_assignment_optimization": {
+      "python_requirement": ">=3.11",
+      "resolved_python_version": "3.12.3",
+      "python_requirement_satisfied": true,
+      "packages": [
+        "numpy>=1.24"
+      ],
+      "task_env_cache_key": "88b1de7d9fdf3c76",
+      "runtime_source": "task_env_cache",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    },
+    "computer_science.stable_latent_state_fitting": {
+      "python_requirement": ">=3.10",
+      "resolved_python_version": "3.12.3",
+      "python_requirement_satisfied": true,
+      "packages": [
+        "numpy>=1.24",
+        "pandas>=2.0",
+        "scipy>=1.11",
+        "matplotlib>=3.7"
+      ],
+      "task_env_cache_key": "190df755cad14898",
+      "runtime_source": "task_env_cache",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    },
+    "earth_science.2_e_soil_carbon_nitrogen_cycling": {
+      "python_requirement": ">=3.10",
+      "resolved_python_version": "3.12.3",
+      "python_requirement_satisfied": true,
+      "packages": [
+        "numpy>=1.24",
+        "scipy>=1.11",
+        "pandas>=2.0",
+        "matplotlib>=3.7"
+      ],
+      "task_env_cache_key": "190df755cad14898",
+      "runtime_source": "task_env_cache",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    },
+    "earth_science.farquhar_ballberry_photosynthesis": {
+      "python_requirement": ">=3.10",
+      "resolved_python_version": "3.12.3",
+      "python_requirement_satisfied": true,
+      "packages": [
+        "numpy>=1.24",
+        "pandas>=2.0",
+        "matplotlib>=3.7"
+      ],
+      "task_env_cache_key": "ffa33a367d8b441c",
+      "runtime_source": "task_env_cache",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    },
+    "earth_science.richards_topmodel_hydrology": {
+      "python_requirement": ">=3.10",
+      "resolved_python_version": "3.12.3",
+      "python_requirement_satisfied": true,
+      "packages": [
+        "numpy>=1.24",
+        "pandas>=2.0",
+        "matplotlib>=3.7",
+        "scipy>=1.10"
+      ],
+      "task_env_cache_key": "d3856950c631c61b",
+      "runtime_source": "task_env_cache",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    },
+    "earth_science.snow_3layer_compaction": {
+      "python_requirement": ">=3.10",
+      "resolved_python_version": "3.12.3",
+      "python_requirement_satisfied": true,
+      "packages": [
+        "numpy>=1.24",
+        "pandas>=2.0",
+        "matplotlib>=3.7"
+      ],
+      "task_env_cache_key": "ffa33a367d8b441c",
+      "runtime_source": "task_env_cache",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    },
+    "electrical_engineering.cmos_opamp_design": {
+      "python_requirement": ">=3.11",
+      "resolved_python_version": "3.12.3",
+      "python_requirement_satisfied": true,
+      "packages": [
+        "numpy>=1.24",
+        "matplotlib>=3.7",
+        "pandas>=2.0",
+        "scipy>=1.11",
+        "sympy>=1.12"
+      ],
+      "task_env_cache_key": "196cbc22c119dbd2",
+      "runtime_source": "task_env_cache",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    },
+    "electrical_engineering.lossy_tline_skin": {
+      "python_requirement": ">=3.11",
+      "resolved_python_version": "3.12.3",
+      "python_requirement_satisfied": true,
+      "packages": [
+        "numpy>=1.26",
+        "pandas>=2.0",
+        "matplotlib>=3.8",
+        "scipy>=1.11"
+      ],
+      "task_env_cache_key": "c3846e8c3f4b5e8a",
+      "runtime_source": "task_env_cache",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    },
+    "materials.ising_domain_growth": {
+      "python_requirement": ">=3.11",
+      "resolved_python_version": "3.12.3",
+      "python_requirement_satisfied": true,
+      "packages": [
+        "numpy>=2.0",
+        "scipy>=1.11",
+        "matplotlib>=3.7"
+      ],
+      "task_env_cache_key": "c01fd38c0c370827",
+      "runtime_source": "task_env_cache",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    },
+    "materials.relaxation_mode_recovery": {
+      "python_requirement": ">=3.10",
+      "resolved_python_version": "3.12.3",
+      "python_requirement_satisfied": true,
+      "packages": [
+        "numpy>=1.26",
+        "scipy>=1.11"
+      ],
+      "task_env_cache_key": "38f649f23551ae35",
+      "runtime_source": "task_env_cache",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    },
+    "math.homotopy_poly_roots": {
+      "python_requirement": ">=3.11",
+      "resolved_python_version": "3.12.3",
+      "python_requirement_satisfied": true,
+      "packages": [
+        "numpy>=1.26",
+        "scipy>=1.11",
+        "sympy>=1.12"
+      ],
+      "task_env_cache_key": "79d25e38783a9af1",
+      "runtime_source": "task_env_cache",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    },
+    "math.ill_posed_inverse_problem": {
+      "python_requirement": null,
+      "resolved_python_version": "3.12.3",
+      "python_requirement_satisfied": null,
+      "packages": [
+        "numpy",
+        "scipy"
+      ],
+      "task_env_cache_key": "10f5d60a5370b694",
+      "runtime_source": "task_env_cache",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    },
+    "math.levin_context_grid_search": {
+      "python_requirement": null,
+      "resolved_python_version": "3.12.3",
+      "python_requirement_satisfied": null,
+      "packages": [],
+      "task_env_cache_key": "06d751daa4a9e90c",
+      "runtime_source": "task_env_cache",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    },
+    "math.manifold_pde_meshfree": {
+      "python_requirement": null,
+      "resolved_python_version": "3.12.3",
+      "python_requirement_satisfied": null,
+      "packages": [
+        "numpy",
+        "scipy"
+      ],
+      "task_env_cache_key": "10f5d60a5370b694",
+      "runtime_source": "task_env_cache",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    },
+    "math.mpsc_safety_filter": {
+      "python_requirement": ">=3.11",
+      "resolved_python_version": "3.12.3",
+      "python_requirement_satisfied": true,
+      "packages": [
+        "numpy>=1.26",
+        "scipy>=1.11",
+        "cvxpy>=1.4",
+        "clarabel>=0.7",
+        "scs>=3.2"
+      ],
+      "task_env_cache_key": "2263544063b14981",
+      "runtime_source": "task_env_cache",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    },
+    "math.multiply_connected_conformal_mapping": {
+      "python_requirement": ">=3.11",
+      "resolved_python_version": "3.12.3",
+      "python_requirement_satisfied": true,
+      "packages": [
+        "numpy>=1.26",
+        "scipy>=1.11"
+      ],
+      "task_env_cache_key": "580763c9821912a7",
+      "runtime_source": "task_env_cache",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    },
+    "math.nnls_modulus_deblur": {
+      "python_requirement": ">=3.11",
+      "resolved_python_version": "3.12.3",
+      "python_requirement_satisfied": true,
+      "packages": [
+        "numpy>=1.26",
+        "scipy>=1.11",
+        "matplotlib>=3.8",
+        "Pillow>=10.0"
+      ],
+      "task_env_cache_key": "3cfe54fa333d72db",
+      "runtime_source": "task_env_cache",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    },
+    "math.sigma_linear_diophantine": {
+      "python_requirement": ">=3.11",
+      "resolved_python_version": "3.12.3",
+      "python_requirement_satisfied": true,
+      "packages": [],
+      "task_env_cache_key": "f69e0284a30e49c6",
+      "runtime_source": "task_env_cache",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    },
+    "math.sparse_hyperbolic_recovery_2d": {
+      "python_requirement": ">=3.10",
+      "resolved_python_version": "3.12.3",
+      "python_requirement_satisfied": true,
+      "packages": [
+        "numpy>=1.26",
+        "scipy>=1.11",
+        "matplotlib>=3.8"
+      ],
+      "task_env_cache_key": "e17f4a7f69b93009",
+      "runtime_source": "task_env_cache",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    },
+    "math.sparse_nonlinear_interaction_recovery": {
+      "python_requirement": ">=3.11",
+      "resolved_python_version": "3.12.3",
+      "python_requirement_satisfied": true,
+      "packages": [
+        "numpy"
+      ],
+      "task_env_cache_key": "aa6f3378b7b40e2c",
+      "runtime_source": "task_env_cache",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    },
+    "math.symplectic_integrators": {
+      "python_requirement": ">=3.9",
+      "resolved_python_version": "3.12.3",
+      "python_requirement_satisfied": true,
+      "packages": [
+        "numpy>=1.24.0",
+        "pandas>=2.0.0",
+        "matplotlib>=3.7.0",
+        "scipy>=1.11.0"
+      ],
+      "task_env_cache_key": "e834b77846217a1e",
+      "runtime_source": "task_env_cache",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    },
+    "math.ucb_q_learning_regret": {
+      "python_requirement": null,
+      "resolved_python_version": "3.12.3",
+      "python_requirement_satisfied": null,
+      "packages": [],
+      "task_env_cache_key": "06d751daa4a9e90c",
+      "runtime_source": "task_env_cache",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    },
+    "physics.ag_strip_dielectric_inference": {
+      "python_requirement": ">=3.11",
+      "resolved_python_version": "3.12.3",
+      "python_requirement_satisfied": true,
+      "packages": [
+        "numpy>=1.26",
+        "pandas>=2.0",
+        "matplotlib>=3.8",
+        "scipy>=1.11"
+      ],
+      "task_env_cache_key": "c3846e8c3f4b5e8a",
+      "runtime_source": "task_env_cache",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    },
+    "physics.dp_contact_process": {
+      "python_requirement": ">=3.11",
+      "resolved_python_version": "3.12.3",
+      "python_requirement_satisfied": true,
+      "packages": [
+        "numpy>=1.24.0",
+        "pandas>=2.0.0"
+      ],
+      "task_env_cache_key": "7251f2ad49d78fda",
+      "runtime_source": "task_env_cache",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    },
+    "physics.ks_2d_anisotropic": {
+      "python_requirement": ">=3.11",
+      "resolved_python_version": "3.12.3",
+      "python_requirement_satisfied": true,
+      "packages": [
+        "scipy>=1.11",
+        "numpy>=2.0",
+        "matplotlib>=3.7"
+      ],
+      "task_env_cache_key": "c01fd38c0c370827",
+      "runtime_source": "task_env_cache",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    },
+    "physics.kt_phase_transition_2d_xy_model": {
+      "python_requirement": ">=3.11",
+      "resolved_python_version": "3.12.3",
+      "python_requirement_satisfied": true,
+      "packages": [
+        "numpy>=1.26",
+        "scipy>=1.11",
+        "matplotlib>=3.8"
+      ],
+      "task_env_cache_key": "13be8820d908729f",
+      "runtime_source": "task_env_cache",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    },
+    "physics.lbm_square_wake": {
+      "python_requirement": ">=3.11",
+      "resolved_python_version": "3.12.3",
+      "python_requirement_satisfied": true,
+      "packages": [
+        "numpy>=1.24.0",
+        "pandas>=2.0.0",
+        "numba>=0.59.0"
+      ],
+      "task_env_cache_key": "366867806474c264",
+      "runtime_source": "task_env_cache",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    },
+    "physics.lid_driven_cavity_flow": {
+      "python_requirement": ">=3.11",
+      "resolved_python_version": "3.12.3",
+      "python_requirement_satisfied": true,
+      "packages": [
+        "scipy>=1.11.0",
+        "Pillow>=10.0.0",
+        "matplotlib>=3.8.0"
+      ],
+      "task_env_cache_key": "702d6f16f06ac0b6",
+      "runtime_source": "task_env_cache",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    },
+    "physics.paired_nanorod_negative_index_retrieval": {
+      "python_requirement": ">=3.11",
+      "resolved_python_version": "3.12.3",
+      "python_requirement_satisfied": true,
+      "packages": [
+        "numpy>=1.26",
+        "pandas>=2.0",
+        "matplotlib>=3.8",
+        "scipy>=1.11"
+      ],
+      "task_env_cache_key": "c3846e8c3f4b5e8a",
+      "runtime_source": "task_env_cache",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    },
+    "physics.vpfm_leapfrog": {
+      "python_requirement": ">=3.11",
+      "resolved_python_version": "3.12.3",
+      "python_requirement_satisfied": true,
+      "packages": [
+        "scipy>=1.11"
+      ],
+      "task_env_cache_key": "28208168f2eb80e6",
+      "runtime_source": "task_env_cache",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    },
+    "robotics.lidar_imu_time_offset_yaw_calibration": {
+      "python_requirement": ">=3.10",
+      "resolved_python_version": "3.12.3",
+      "python_requirement_satisfied": true,
+      "packages": [
+        "numpy>=1.24.0",
+        "scipy>=1.10.0",
+        "matplotlib>=3.7.0"
+      ],
+      "task_env_cache_key": "fda3466e6be3e3b3",
+      "runtime_source": "task_env_cache",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    },
+    "robotics.multiregime_icp_degeneracy": {
+      "python_requirement": ">=3.10",
+      "resolved_python_version": "3.12.3",
+      "python_requirement_satisfied": true,
+      "packages": [
+        "numpy>=2.0.0",
+        "scipy>=1.11.0"
+      ],
+      "task_env_cache_key": "cbeff76a0ef6d8f0",
+      "runtime_source": "task_env_cache",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    },
+    "robotics.occupancy_grid_mapping_correlated_clutter": {
+      "python_requirement": ">=3.9",
+      "resolved_python_version": "3.12.3",
+      "python_requirement_satisfied": true,
+      "packages": [
+        "numpy>=1.24.0"
+      ],
+      "task_env_cache_key": "61f776dcebcafcad",
+      "runtime_source": "task_env_cache",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    },
+    "robotics.particle_filter": {
+      "python_requirement": ">=3.10",
+      "resolved_python_version": "3.12.3",
+      "python_requirement_satisfied": true,
+      "packages": [
+        "numpy>=1.24",
+        "scipy>=1.10",
+        "pandas>=2.0",
+        "matplotlib>=3.7"
+      ],
+      "task_env_cache_key": "d3856950c631c61b",
+      "runtime_source": "task_env_cache",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    },
+    "robotics.rnea_inverse_dynamics_dh": {
+      "python_requirement": ">=3.9",
+      "resolved_python_version": "3.12.3",
+      "python_requirement_satisfied": true,
+      "packages": [
+        "numpy>=1.24.0"
+      ],
+      "task_env_cache_key": "61f776dcebcafcad",
+      "runtime_source": "task_env_cache",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    },
+    "robotics.robust_pose_graph_false_loops": {
+      "python_requirement": ">=3.10",
+      "resolved_python_version": "3.12.3",
+      "python_requirement_satisfied": true,
+      "packages": [
+        "numpy>=1.24.0",
+        "scipy>=1.10.0",
+        "matplotlib>=3.7.0"
+      ],
+      "task_env_cache_key": "fda3466e6be3e3b3",
+      "runtime_source": "task_env_cache",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    },
+    "robotics.ukf_bearing_only_tracking": {
+      "python_requirement": ">=3.9",
+      "resolved_python_version": "3.12.3",
+      "python_requirement_satisfied": true,
+      "packages": [
+        "numpy>=1.24.0"
+      ],
+      "task_env_cache_key": "61f776dcebcafcad",
+      "runtime_source": "task_env_cache",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    }
+  }
+}

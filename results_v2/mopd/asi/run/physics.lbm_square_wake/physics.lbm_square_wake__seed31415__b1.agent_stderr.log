@@ -1,0 +1,4 @@
+  File "<workspace>/analysis.py", line 32
+    cix = cxy[i][0
+                ^
+SyntaxError: '[' was never closed

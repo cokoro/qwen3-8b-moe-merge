@@ -23,4 +23,4 @@ exec python -m sglang.launch_server \
   --mem-fraction-static "$MEM_FRACTION" \
   --tool-call-parser qwen25 \
   --chat-template "$CHAT_TEMPLATE" \
-  --random-seed 42
+  --random-seed 42 "${@:4}"   # extra sglang flags (e.g. YaRN override) pass through

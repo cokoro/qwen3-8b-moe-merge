@@ -1,0 +1,4 @@
+  File "<workspace>/simulation.py", line 13
+    snapshot_times = params['snapshot_times
+                            ^
+SyntaxError: unterminated string literal (detected at line 13)

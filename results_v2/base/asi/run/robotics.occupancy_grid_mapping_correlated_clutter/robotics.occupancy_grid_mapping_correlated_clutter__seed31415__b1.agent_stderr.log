@@ -1,0 +1,12 @@
+<workspace>/analysis.py:61: RuntimeWarning: invalid value encountered in scalar divide
+  x = start_x + dx * i / steps
+<workspace>/analysis.py:62: RuntimeWarning: invalid value encountered in scalar divide
+  y = start_y + dy * i / steps
+Traceback (most recent call last):
+  File "<workspace>/analysis.py", line 63, in <module>
+    grid_x, grid_y = world_to_grid(x, y)
+                     ^^^^^^^^^^^^^^^^^^^
+  File "<workspace>/analysis.py", line 28, in world_to_grid
+    grid_x = int((x - origin[0]) / cell_size)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: cannot convert float NaN to integer

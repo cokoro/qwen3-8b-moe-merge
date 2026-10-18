@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "<workspace>/solver.py", line 9, in <module>
+    num_components = metadata['num_components']
+                     ~~~~~~~~^^^^^^^^^^^^^^^^^^
+KeyError: 'num_components'

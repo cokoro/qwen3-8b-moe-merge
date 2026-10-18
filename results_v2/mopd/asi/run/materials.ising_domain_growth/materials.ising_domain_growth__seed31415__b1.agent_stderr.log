@@ -1,0 +1,4 @@
+  File "<workspace>/simulation.py", line 17
+    np.save('series
+            ^
+SyntaxError: unterminated string literal (detected at line 17)

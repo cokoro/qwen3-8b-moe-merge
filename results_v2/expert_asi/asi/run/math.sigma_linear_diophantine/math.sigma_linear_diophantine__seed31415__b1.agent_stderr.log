@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "<workspace>/analysis.py", line 130, in <module>
+    main()
+  File "<workspace>/analysis.py", line 102, in main
+    input_path = sys.argv[1]
+                 ~~~~~~~~^^^
+IndexError: list index out of range

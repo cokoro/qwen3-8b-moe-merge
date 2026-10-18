@@ -1,0 +1,89 @@
+{
+  "schema_version": 3,
+  "task_id": "task_468c31c5b1cf",
+  "prompt_level": "b1",
+  "expected_outputs": [
+    {
+      "name": "results/diagnosis/picard_data.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/diagnosis/diagnosis_report.md",
+      "type": "markdown"
+    },
+    {
+      "name": "results/solution/tikhonov/x_reg.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/solution/tikhonov/reg_param.txt",
+      "type": "data"
+    },
+    {
+      "name": "results/solution/tikhonov/lcurve_data.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/solution/tsvd/x_reg.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/solution/tsvd/reg_param.txt",
+      "type": "data"
+    },
+    {
+      "name": "results/solution/cgls/x_reg.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/solution/cgls/reg_param.txt",
+      "type": "data"
+    },
+    {
+      "name": "results/solution/method_a/x_reg.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/solution/method_a/reg_param.txt",
+      "type": "data"
+    },
+    {
+      "name": "results/solution/method_b/x_reg.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/solution/method_b/reg_param.txt",
+      "type": "data"
+    },
+    {
+      "name": "results/solution/method_c/x_reg.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/solution/method_c/reg_param.txt",
+      "type": "data"
+    },
+    {
+      "name": "results/comparison/comparison_report.md",
+      "type": "markdown"
+    },
+    {
+      "name": "results/comparison/recommended_solution.csv",
+      "type": "data"
+    },
+    {
+      "name": "solution.py",
+      "type": "code"
+    }
+  ],
+  "timeout_seconds": 1800,
+  "instance_id": "math.ill_posed_inverse_problem__seed31415",
+  "parameters": {
+    "n": 222,
+    "log10_cond": 14.7595,
+    "noise_level": 0.2169,
+    "noise_rho": 0.9,
+    "solution_type": "mixed",
+    "seed": 1802620927
+  }
+}

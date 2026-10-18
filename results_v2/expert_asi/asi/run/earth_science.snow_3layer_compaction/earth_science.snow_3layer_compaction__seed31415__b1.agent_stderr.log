@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "<workspace>/analysis.py", line 33, in <module>
+    state[0] = snow_init.values
+    ~~~~~^^^
+ValueError: could not broadcast input array from shape (2,1) into shape (3,5)

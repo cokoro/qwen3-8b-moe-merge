@@ -1,0 +1,27 @@
+{
+  "schema_version": 3,
+  "task_id": "task_2cb514e61b85",
+  "prompt_level": "b1",
+  "expected_outputs": [
+    {
+      "name": "analysis.py",
+      "type": "code"
+    }
+  ],
+  "timeout_seconds": 1800,
+  "instance_id": "math.levin_context_grid_search__seed31415",
+  "parameters": {
+    "seed": 20260606,
+    "train_count": 260,
+    "public_count": 4,
+    "hidden_count": 24,
+    "grid_size": 27,
+    "train_path_min": 20,
+    "train_path_max": 30,
+    "hidden_path_min": 44,
+    "hidden_path_max": 58,
+    "branch_length": 15,
+    "branch_count": 3,
+    "budget": 95
+  }
+}

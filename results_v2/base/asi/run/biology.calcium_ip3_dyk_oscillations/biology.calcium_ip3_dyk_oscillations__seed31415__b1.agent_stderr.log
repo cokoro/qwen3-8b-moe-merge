@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "<workspace>/simulate.py", line 7, in <module>
+    from scipy.signal import find_peaks, autocorrelate
+ImportError: cannot import name 'autocorrelate' from 'scipy.signal' (<repo_root>/.ai4sci-bench/task-envs/c01fd38c0c370827/lib/python3.12/site-packages/scipy/signal/__init__.py). Did you mean: 'correlate'?

@@ -1,0 +1,158 @@
+{
+  "result_schema_version": 1,
+  "instance_id": "materials.relaxation_mode_recovery__seed31415",
+  "task_id": "materials.relaxation_mode_recovery",
+  "attempt": 1,
+  "prompt_level": "b1",
+  "agent_name": "DirectLLMAdapter",
+  "parameters": {
+    "n_modes": 5,
+    "n_curves": 5,
+    "n_points": 96,
+    "x_decades": 7.653121206381433,
+    "noise_frac": 0.014528478363768731,
+    "seed": 2406261880,
+    "truth_seed": 2406261880,
+    "n_close_pairs": 1,
+    "close_gap_min_decades": 0.3428135243418522,
+    "close_gap_max_decades": 0.3728135243418522,
+    "weak_amp_min": 0.15652652393417846,
+    "weak_amp_max": 0.20652652393417845,
+    "enriched_amp_min": 0.783869605369901,
+    "enriched_amp_max": 0.9038696053699009,
+    "phi_min": 0.7826493988636465,
+    "phi_max": 0.960703663517623,
+    "proposal_family": "transition_band",
+    "anchor_min_gap_decades": 1.1,
+    "other_anchor_clearance_decades": 0.78,
+    "proposal_version": "fair_hard_window_v1",
+    "noise_seed": 352009512,
+    "bank_id": "relaxation_mode_bank_008"
+  },
+  "gates_passed": true,
+  "hard_gates_passed": true,
+  "soft_gate_failures": 0,
+  "gate_results": [],
+  "score_results": [
+    {
+      "scorer_name": "unscored_submission",
+      "score": 0.0,
+      "max_score": 0.0,
+      "passed": true,
+      "details": {
+        "unscored_submission": true
+      },
+      "message": "Submit this run to https://asibench.apexin.ai/ for official scoring."
+    }
+  ],
+  "final_score": 0.0,
+  "max_possible_score": 100.0,
+  "execution_time_seconds": 2.931077718734741,
+  "status": "failed",
+  "provenance": {
+    "agent": {
+      "agent_name": "direct_llm",
+      "cmd_template": null,
+      "config": {
+        "model": "merged_ties",
+        "api_base": "http://127.0.0.1:30022/v1",
+        "api_protocol": "openai",
+        "api_key": "<redacted>"
+      },
+      "allow_external_tools": false,
+      "tool_mode": "restricted",
+      "adapter_class": "DirectLLMAdapter"
+    },
+    "sandbox": {
+      "requested_mode": "task",
+      "effective_mode": "task",
+      "enforcement_status": "fail_closed",
+      "verification_status": "task_env_active",
+      "image_identity": null
+    },
+    "runtime": {
+      "python_requirement": ">=3.10",
+      "resolved_python_version": "3.12.3",
+      "python_requirement_satisfied": true,
+      "packages": [
+        "numpy>=1.26",
+        "scipy>=1.11"
+      ],
+      "task_env_cache_key": "38f649f23551ae35",
+      "runtime_source": "task_env_cache",
+      "runtime_interpreter": null,
+      "docker_image_identity": null
+    }
+  },
+  "agent_output": {
+    "code_files": [
+      "analysis.py"
+    ],
+    "data_files": [],
+    "log": "\n  File \"<workspace>/analysis.py\", line 1\n    ```bash\n    ^\nSyntaxError: invalid syntax\n",
+    "error_message": null,
+    "status": "failed",
+    "process_exit_code": null,
+    "termination_signal": null,
+    "timeout_phase": null,
+    "raw_model_output_file": "materials.relaxation_mode_recovery__seed31415__b1.agent_model_output.json",
+    "raw_model_output_format": "json",
+    "llm_response_file": "materials.relaxation_mode_recovery__seed31415__b1.llm_response.md",
+    "selected_code_file": "materials.relaxation_mode_recovery__seed31415__b1.selected_code.py",
+    "execution_artifacts": [
+      "materials.relaxation_mode_recovery__seed31415__b1.artifact.analysis.py"
+    ],
+    "raw_stdout_file": "materials.relaxation_mode_recovery__seed31415__b1.agent_stdout.log",
+    "raw_stdout_format": "log",
+    "raw_stderr_file": "materials.relaxation_mode_recovery__seed31415__b1.agent_stderr.log",
+    "model_call_observability": {
+      "schema_version": 1,
+      "capture_status": "captured",
+      "records_file": "materials.relaxation_mode_recovery__seed31415__b1.model_calls.json",
+      "summary": {
+        "call_records_emitted": 1,
+        "calls_attempted": 1,
+        "calls_attempted_observed": 1,
+        "calls_with_response": 1,
+        "calls_with_nonempty_content": 1,
+        "calls_with_empty_content": 0,
+        "calls_with_omitted_content": 0,
+        "calls_with_known_content_state": 1,
+        "calls_with_unknown_content_state": 0,
+        "calls_with_partial_content": 0,
+        "calls_with_transport_error": 0,
+        "calls_with_timeout": 0,
+        "calls_retried": 0,
+        "calls_without_observable_boundary": 0,
+        "empty_response_rate": 0.0,
+        "empty_response_rate_status": "observed"
+      }
+    },
+    "persisted_outputs": {
+      "dir": "materials.relaxation_mode_recovery__seed31415__b1.outputs",
+      "files": [
+        {
+          "path": "analysis.py",
+          "sha256": "bdf7953603547e1bad5d3aaf34597b075a7636a81579109cc00076c5c524bcfd",
+          "bytes": 45
+        }
+      ]
+    },
+    "trajectory_summary": {
+      "total_turns": 1,
+      "total_tool_calls": 0,
+      "tool_call_distribution": {},
+      "thinking_total_chars": 0,
+      "total_code_executions": 1,
+      "code_execution_failures": 1,
+      "unique_files_modified": []
+    },
+    "trajectory_file": "materials.relaxation_mode_recovery__seed31415__b1.trajectory.json"
+  },
+  "cost": {
+    "input_tokens": 1737,
+    "output_tokens": 12,
+    "total_tokens": 1749,
+    "estimated_cost_usd": 0.0
+  }
+}

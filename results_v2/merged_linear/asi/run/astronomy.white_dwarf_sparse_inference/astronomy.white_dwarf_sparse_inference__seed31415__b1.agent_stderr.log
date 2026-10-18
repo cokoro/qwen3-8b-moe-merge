@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "<workspace>/analysis.py", line 15, in <module>
+    M_sun = physics_manifest["M_sun"]
+            ~~~~~~~~~~~~~~~~^^^^^^^^^
+KeyError: 'M_sun'

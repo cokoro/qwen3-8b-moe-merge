@@ -1,0 +1,4 @@
+  File "<workspace>/solver.py", line 49
+    '-output', output `output_path`,
+                      ^
+SyntaxError: invalid syntax

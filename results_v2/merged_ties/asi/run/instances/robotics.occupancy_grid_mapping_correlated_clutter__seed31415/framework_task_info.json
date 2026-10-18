@@ -1,0 +1,33 @@
+{
+  "schema_version": 3,
+  "task_id": "task_96d2b56fcb07",
+  "prompt_level": "b1",
+  "expected_outputs": [
+    {
+      "name": "analysis.py",
+      "type": "code"
+    },
+    {
+      "name": "occupancy_prob.npy",
+      "type": "data"
+    },
+    {
+      "name": "clutter_likelihood.npy",
+      "type": "data"
+    },
+    {
+      "name": "uncertainty_map.npy",
+      "type": "data"
+    }
+  ],
+  "timeout_seconds": 1800,
+  "instance_id": "robotics.occupancy_grid_mapping_correlated_clutter__seed31415",
+  "parameters": {
+    "grid_size": 82,
+    "n_poses": 156,
+    "n_beams": 138,
+    "clutter_objects": 6,
+    "correlated_noise_scale": 0.0434,
+    "seed": 1802620927
+  }
+}

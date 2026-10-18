@@ -1,0 +1,52 @@
+{
+  "schema_version": 3,
+  "task_id": "task_eb7a4c37c123",
+  "prompt_level": "b1",
+  "expected_outputs": [
+    {
+      "name": "analysis.py",
+      "type": "code"
+    },
+    {
+      "name": "results/accountant_audit.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/privacy_curve.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/delta_inverse_audit.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/mechanism_panel_diagnostics.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/failure_modes.json",
+      "type": "data"
+    },
+    {
+      "name": "results/selected_accountant.json",
+      "type": "data"
+    },
+    {
+      "name": "results/reliability_report.json",
+      "type": "data"
+    },
+    {
+      "name": "results/accountant_overview.png",
+      "type": "figure"
+    }
+  ],
+  "timeout_seconds": 1800,
+  "instance_id": "computer_science.dp_accountant_forensics__seed31415",
+  "parameters": {
+    "n_cases": 6,
+    "n_epsilon": 58,
+    "n_target_delta": 5,
+    "n_accountants": 8,
+    "seed": 1915016675
+  }
+}

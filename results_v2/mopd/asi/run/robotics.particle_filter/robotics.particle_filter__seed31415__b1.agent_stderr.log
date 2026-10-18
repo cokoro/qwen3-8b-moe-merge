@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "<workspace>/analysis.py", line 89, in <module>
+    vx_new = vx + np.random.normal(0, process_noise[0], num_particles)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "numpy/random/mtrand.pyx", line 1579, in numpy.random.mtrand.RandomState.normal
+  File "numpy/random/_common.pyx", line 618, in numpy.random._common.cont
+  File "numpy/random/_common.pyx", line 535, in numpy.random._common.cont_broadcast_2
+  File "../numpy/__init__.cython-30.pxd", line 801, in numpy.PyArray_MultiIterNew3
+ValueError: shape mismatch: objects cannot be broadcast to a single shape.  Mismatch is between arg 0 with shape (1500,) and arg 2 with shape (4,).

@@ -1,0 +1,73 @@
+{
+  "schema_version": 3,
+  "task_id": "task_87976f89189c",
+  "prompt_level": "b1",
+  "expected_outputs": [
+    {
+      "name": "beta_hat.csv",
+      "type": "data"
+    },
+    {
+      "name": "hyperparams.json",
+      "type": "data"
+    },
+    {
+      "name": "diagnostic_trace.csv",
+      "type": "data"
+    },
+    {
+      "name": "lambda_cv_trace.csv",
+      "type": "data"
+    },
+    {
+      "name": "beta_hat.npy",
+      "type": "data"
+    },
+    {
+      "name": "support_indicator.npy",
+      "type": "data"
+    },
+    {
+      "name": "support_score.npy",
+      "type": "data"
+    },
+    {
+      "name": "interaction_score.npy",
+      "type": "data"
+    },
+    {
+      "name": "interaction_weight.npy",
+      "type": "data"
+    },
+    {
+      "name": "hyperparam_vector.npy",
+      "type": "data"
+    },
+    {
+      "name": "objective_trace.npy",
+      "type": "data"
+    },
+    {
+      "name": "objective_increments.npy",
+      "type": "data"
+    },
+    {
+      "name": "rmse_score.npy",
+      "type": "data"
+    },
+    {
+      "name": "moment_vector.npy",
+      "type": "data"
+    },
+    {
+      "name": "objective_decrease_count.npy",
+      "type": "data"
+    }
+  ],
+  "timeout_seconds": 1800,
+  "instance_id": "math.sparse_nonlinear_interaction_recovery__seed31415",
+  "parameters": {
+    "task_id": "sparse_nonlinear_interaction_recovery_001",
+    "seed": 0
+  }
+}

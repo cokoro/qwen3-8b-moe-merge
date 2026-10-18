@@ -1,0 +1,4 @@
+  File "<workspace>/solver.py", line 20
+    def build_polynomial
+                        ^
+SyntaxError: expected '('

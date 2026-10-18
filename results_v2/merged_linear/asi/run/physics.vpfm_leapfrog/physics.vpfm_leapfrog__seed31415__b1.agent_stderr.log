@@ -1,0 +1,4 @@
+  File "<workspace>/simulation.py", line 20
+    w_n[i, j] = (u_y_np[i, j] - u_y_np[i-1, j] - u_x_np[i, j
+                                                       ^
+SyntaxError: '[' was never closed

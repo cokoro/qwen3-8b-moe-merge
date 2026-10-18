@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "<workspace>/analysis.py", line 89, in <module>
+    main()
+  File "<workspace>/analysis.py", line 61, in main
+    model_comparison_df.to_csv('results/model_comparison.csv', index=False)
+  File "<repo_root>/.ai4sci-bench/task-envs/c3846e8c3f4b5e8a/lib/python3.12/site-packages/pandas/core/generic.py", line 3976, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo_root>/.ai4sci-bench/task-envs/c3846e8c3f4b5e8a/lib/python3.12/site-packages/pandas/io/formats/format.py", line 1025, in to_csv
+    csv_formatter.save()
+  File "<repo_root>/.ai4sci-bench/task-envs/c3846e8c3f4b5e8a/lib/python3.12/site-packages/pandas/io/formats/csvs.py", line 251, in save
+    with get_handle(
+         ^^^^^^^^^^^
+  File "<repo_root>/.ai4sci-bench/task-envs/c3846e8c3f4b5e8a/lib/python3.12/site-packages/pandas/io/common.py", line 797, in get_handle
+    check_parent_directory(str(handle))
+  File "<repo_root>/.ai4sci-bench/task-envs/c3846e8c3f4b5e8a/lib/python3.12/site-packages/pandas/io/common.py", line 656, in check_parent_directory
+    raise OSError(rf"Cannot save file into a non-existent directory: '{parent}'")
+OSError: Cannot save file into a non-existent directory: 'results'

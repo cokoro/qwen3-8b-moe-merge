@@ -1,0 +1,31 @@
+{
+  "schema_version": 3,
+  "task_id": "task_9e3918640923",
+  "prompt_level": "b1",
+  "expected_outputs": [
+    {
+      "name": "analysis.py",
+      "type": "code"
+    },
+    {
+      "name": "results/output.npy",
+      "type": "data"
+    },
+    {
+      "name": "results/input_gradient.npy",
+      "type": "data"
+    },
+    {
+      "name": "results/input_hvp.npy",
+      "type": "data"
+    }
+  ],
+  "timeout_seconds": 1800,
+  "instance_id": "computer_science.causal_attention__seed31415",
+  "parameters": {
+    "input_scale": 0.7216,
+    "weight_scale": 0.1425,
+    "direction_scale": 0.0571,
+    "seed": 182889174
+  }
+}

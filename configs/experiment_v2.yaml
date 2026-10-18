@@ -1,0 +1,60 @@
+# v2 experts: multi-turn agent trajectories in the evaluation agent format (data/terminal_v2, data/swe_v2)
+experiment_name: moe_expert_merge_v1
+base_model: models/Qwen3-8B
+base_model_hf: Qwen/Qwen3-8B
+base_revision: b968826d9c46dd6066d109eabc6255188de91218
+tokenizer_revision: b968826d9c46dd6066d109eabc6255188de91218
+seed: 42
+output_dir: checkpoints
+results_dir: results
+data_dir: data
+logs_dir: logs
+device_map: auto
+torch_dtype: bfloat16
+attn_implementation: sdpa
+experts:
+  swe:
+    target_benchmark: swe_bench_pro_v2_hard
+    description: Code repair, patch generation, repository-level reasoning
+    data_path: data/swe_v2/train.jsonl
+    max_samples: null
+  hle:
+    target_benchmark: hle
+    description: High-level reasoning, complex problem solving
+    data_path: data/hle/train.jsonl
+    max_samples: 3000
+  asi:
+    target_benchmark: asi_bench
+    description: Agent tasks, multi-step planning, tool use
+    data_path: data/asi/train.jsonl
+    max_samples: 4000
+  terminal:
+    target_benchmark: terminal_bench
+    description: Shell commands, environment interaction, CLI tools
+    data_path: data/terminal_v2/train.jsonl
+    max_samples: null
+  distill:
+    target_benchmark: all
+    description: Student distilled from the 4 experts' verified outputs (alternative
+      to weight merging)
+    data_path: data/distill/train.jsonl
+    max_samples: 5000
+merge_methods:
+- name: linear
+  type: linear_average
+  weights:
+  - 0.25
+  - 0.25
+  - 0.25
+  - 0.25
+- name: ties
+  type: ties
+  density: 0.2
+  majority_sign_method: total
+benchmarks:
+- swe_bench_pro_v2_hard
+- hle
+- asi_bench
+- terminal_bench
+gpu_hourly_rate: 1.5
+target_budget: 100

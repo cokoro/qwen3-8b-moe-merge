@@ -34,8 +34,15 @@ def load_jsonl(p):
     return [json.loads(l) for l in open(p) if l.strip()] if Path(p).exists() else []
 
 
+ASI_ROOT = None  # set from --asi_results: ASI v2 (per-task runtime environments) replaces the invalid v1 run
+
+
 def per_item(results: Path, model: str, bench: str, swe_valid=None):
     """Return {item_id: score in [0,1]} or None if the cell was not run."""
+    if bench == "asi" and ASI_ROOT is not None and (ASI_ROOT / model / "asi" / "results.json").exists():
+        results = ASI_ROOT
+    if bench == "asi_v1":
+        bench = "asi"
     d = results / model / ("hle" if bench == "hle_judge" else bench)
     if not (d / "results.json").exists():
         return None
@@ -160,8 +167,13 @@ def main():
     ap.add_argument("--out_csv", default="results/summary.csv")
     ap.add_argument("--out_json", default="analysis/uncertainty.json")
     ap.add_argument("--rep2", default="results_rep2", help="second HLE run of some models (repeat-run variance)")
+    ap.add_argument("--asi_results", default="results_v2",
+                    help="ASI v2 root (asibench --sandbox task); v1 ran without the declared task packages and is "
+                         "kept only as the supplementary column asi_v1")
     args = ap.parse_args()
     res = Path(args.results)
+    global ASI_ROOT
+    ASI_ROOT = Path(args.asi_results) if Path(args.asi_results).exists() else None
 
     swe_valid = None
     if Path(args.swe_validation).exists():
@@ -171,6 +183,7 @@ def main():
     for m in MODELS:
         items[m]["hle_mc"] = hle_mc(res, m)
         items[m]["hle_judge"] = per_item(res, m, "hle_judge") if items[m]["hle"] is not None else None
+        items[m]["asi_v1"] = per_item(res, m, "asi_v1")
 
     def score(d):
         return None if not d else 100 * sum(d.values()) / len(d)
@@ -178,10 +191,10 @@ def main():
     rows, unc = [], {}
     for m in MODELS:
         r = {"model": m}
-        for b in BENCHES + ["hle_mc", "hle_judge"]:
+        for b in BENCHES + ["hle_mc", "hle_judge", "asi_v1"]:
             r[b] = score(items[m][b])
             r[f"{b}_n"] = len(items[m][b]) if items[m][b] else 0
-            meta = res / m / b / "results.json"
+            meta = ((ASI_ROOT if b == "asi" and ASI_ROOT is not None else res) / m / b / "results.json")
             if b in BENCHES and meta.exists():
                 j = json.loads(meta.read_text())
                 r[f"{b}_errored"] = j.get("n_errored", j.get("n_scorer_errors"))
@@ -190,7 +203,7 @@ def main():
         rows.append(r)
         if m != "base":
             unc[m] = {b: paired_bootstrap(items["base"][b], items[m][b])
-                      for b in BENCHES + ["hle_mc", "hle_judge"] if items["base"][b] and items[m][b]}
+                      for b in BENCHES + ["hle_mc", "hle_judge", "asi_v1"] if items["base"][b] and items[m][b]}
             # macro delta CI: bootstrap each benchmark independently, average the deltas
             if all(items["base"][b] and items[m][b] for b in BENCHES):
                 rng = np.random.default_rng(42)
@@ -205,7 +218,7 @@ def main():
                                     "ci95": [float(np.percentile(md, 2.5)), float(np.percentile(md, 97.5))]}
 
     Path(args.out_csv).parent.mkdir(parents=True, exist_ok=True)
-    cols = ["model"] + [c for b in BENCHES + ["hle_mc", "hle_judge"] for c in (b, f"{b}_n")] + \
+    cols = ["model"] + [c for b in BENCHES + ["hle_mc", "hle_judge", "asi_v1"] for c in (b, f"{b}_n")] + \
            [f"{b}_errored" for b in BENCHES] + ["macro4"]
     with open(args.out_csv, "w", newline="") as fh:
         w = csv.DictWriter(fh, fieldnames=cols, extrasaction="ignore")
@@ -235,9 +248,9 @@ def main():
                                                "paired_vs_base": unc, "repeat_runs": rep}, indent=2))
 
     fmt = lambda v: "  -  " if v is None else f"{v:5.2f}"
-    print(f"{'model':16s} " + " ".join(f"{b:>8s}" for b in BENCHES + ['hle_mc', 'hle_judge', 'macro4']))
+    print(f"{'model':16s} " + " ".join(f"{b:>8s}" for b in BENCHES + ['hle_mc', 'hle_judge', 'asi_v1', 'macro4']))
     for r in rows:
-        print(f"{r['model']:16s} " + " ".join(f"{fmt(r[b]):>8s}" for b in BENCHES + ['hle_mc', 'hle_judge', 'macro4']))
+        print(f"{r['model']:16s} " + " ".join(f"{fmt(r[b]):>8s}" for b in BENCHES + ['hle_mc', 'hle_judge', 'asi_v1', 'macro4']))
 
 
 if __name__ == "__main__":

@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "<workspace>/analysis.py", line 109, in <module>
+    analysis()
+  File "<workspace>/analysis.py", line 85, in analysis
+    beta = np.sum((theta - theta_wilt) / (theta_fc - theta_wilt) * root_frac)
+                   ~~~~~~^~~~~~~~~~~~
+ValueError: operands could not be broadcast together with shapes (5,) (4,) 

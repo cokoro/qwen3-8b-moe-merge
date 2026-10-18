@@ -1,0 +1,4 @@
+  File "<workspace>/analysis.py", line 41
+    sol = solve_ivp(lambda r, y: white_dwarf_ode(r, y
+                                                ^
+SyntaxError: '(' was never closed

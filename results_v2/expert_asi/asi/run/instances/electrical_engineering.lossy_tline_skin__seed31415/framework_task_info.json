@@ -1,0 +1,26 @@
+{
+  "schema_version": 3,
+  "task_id": "task_d09d13c5f617",
+  "prompt_level": "b1",
+  "expected_outputs": [
+    {
+      "name": "analysis.py",
+      "type": "code"
+    },
+    {
+      "name": "results/target_transfer.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/target_waveforms.csv",
+      "type": "data"
+    },
+    {
+      "name": "results/pulse_metrics.csv",
+      "type": "data"
+    }
+  ],
+  "timeout_seconds": 1800,
+  "instance_id": "electrical_engineering.lossy_tline_skin__seed31415",
+  "parameters": {}
+}

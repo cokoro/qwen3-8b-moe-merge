@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "<workspace>/analysis.py", line 6, in <module>
+    from scipy.optimize import curve_fit
+ModuleNotFoundError: No module named 'scipy'

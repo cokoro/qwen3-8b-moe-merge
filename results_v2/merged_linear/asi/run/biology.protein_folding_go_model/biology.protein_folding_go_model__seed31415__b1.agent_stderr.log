@@ -1,0 +1,4 @@
+  File "<workspace>/simulation.py", line 22
+    r_ref[j, i
+         ^
+SyntaxError: '[' was never closed

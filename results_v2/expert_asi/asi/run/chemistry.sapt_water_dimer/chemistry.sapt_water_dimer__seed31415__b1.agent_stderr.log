@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "<workspace>/analysis.py", line 77, in <module>
+    main()
+  File "<workspace>/analysis.py", line 23, in main
+    basis = config['basis']
+            ~~~~~~^^^^^^^^^
+KeyError: 'basis'

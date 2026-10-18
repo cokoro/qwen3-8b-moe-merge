@@ -1,0 +1,4 @@
+  File "<workspace>/analysis.py", line 3
+    echo 'import numpy as np
+         ^
+SyntaxError: unterminated string literal (detected at line 3)
