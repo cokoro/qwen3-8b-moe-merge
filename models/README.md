@@ -23,7 +23,7 @@
 >
 > 上面两个 revision 是上传权重时的 commit。之后只更新过模型卡（README），对应的最新 revision 分别是 `fa6e1e38d6f4d0db047e8267a703d5e5a34f4f42` 和 `71497d96aaf3b9b5263b85e81ca0f820e8cb6085`，权重文件完全相同。
 >
-> **最终合版模型是 merged_ties**，选择依据见 README §2。v2 专家（`expert_terminal_v2`、`expert_swe_v2`，见 README §12）已训练完成但尚未评测，因此还没有上传。
+> **最终合版模型是 merged_ties**，选择依据见 README §2。v2 专家（`expert_terminal_v2`、`expert_swe_v2`，见 README §12）已训练完成，但因为 x86 评测主机停用，没有评测结果，所以没有上传。
 
 ## 合版配方（merge recipe）
 
