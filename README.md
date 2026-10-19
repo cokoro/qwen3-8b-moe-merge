@@ -240,4 +240,6 @@ python scripts/upload_hf.py --user cokoro   # 上传 4 个专家 adapter、merge
 | **终端 / SWE 专家 v2** | 按评测 agent 的格式重做训练数据：terminus-2 多轮 JSON 轨迹（Nemotron-Terminal-Corpus + OpenThoughts-Agent，4007 条）；mini-swe-agent 工具调用轨迹（由 SWE-smith 转换，4000 条）。8192 token，120 步（`configs/*_v2.yaml`，`src/data/prepare_*_v2.py`，数据统计在 `data/*_v2/stats.json`） | 已训练完成，**不再评测**：TB2 / SWE 的镜像只有 amd64，只能在 x86 上跑；x86 主机已停用（DGX 上用 qemu 模拟，连 gold patch 都过不了）。所以 v2 专家没有评测结果，也不计入任何表格 |
 | **MOPD 文献** | `docs/mopd_literature.md` | 小米 MOPD 论文中 MOPD 0.937 vs Task Arithmetic 0.857 vs 权重平均 0.328；收益取决于教师比学生强多少 |
 
+**下一轮方案**：先训强专家，再做 4 教师 MOPD，评测接近模型卡设置，需要 4×H100 80GB，约 3–4 天，见 [`docs/plan_4xh100.md`](docs/plan_4xh100.md)。
+
 **算力判断**：Qwen3-8B 每个 token 的 KV 缓存约 144KB。L40S 上能放的 KV 约 14.5 万 token，而 TB2 12 并发时最多需要约 34 万 token，于是请求排队、大量超时。按今天的设置（32K 上下文、12 并发）不排队地跑 TB2，需要约 75GB 显存（1 张 80GB 卡）；接近模型卡设置（128K 上下文、32 并发）需要约 290GB（4 张 H100 级别）。
