@@ -1,7 +1,7 @@
 # 多专家训练与模型合版：Qwen3-8B × 4 专家 × {Linear, TIES, MOPD}
 
-- 个人候选人仓库：https://github.com/cokoro/qwen3-8b-moe-merge（最终 commit SHA 见提交邮件）
-- 模型：见 [`models/README.md`](models/README.md)（Hugging Face Public 链接上传后补全）
+- 仓库：https://github.com/cokoro/qwen3-8b-moe-merge
+- 模型：见 [`models/README.md`](models/README.md)（Hugging Face Public 链接: https://huggingface.co/cokoro/qwen3-8b-moe-merge-experts）
 - 一页报告：[`report.pdf`](report.pdf)
 
 ## 1. 研究问题
@@ -230,14 +230,20 @@ huggingface-cli login   # 需要 write token
 python scripts/upload_hf.py --user cokoro   # 上传 4 个专家 adapter、merged_linear/ties 完整权重、MOPD adapter，均设为 public
 ```
 
-## 12. 2026-10-18 下午：修正与 v2 实验（提交后追加）
+## 12. 经验总结与判断
 
-| 项目 | 做了什么 | 结果 |
-|---|---|---|
-| **独立污染审计** | 全字段 n-gram / 最长公共子串、embedding 近邻、专家 vs base 记忆探测（带正对照）、流程泄漏检查（`analysis/contamination_review.md`） | **未发现污染或泄漏**；确认的是评测覆盖与有效性问题，已写入 §8 |
-| **ASI 评测环境** | v1 未按任务声明建环境 → v2 用 `--sandbox task`，5 个单模型 + ASI 专家全部重跑（`scripts/bench_asi_v2.sh`、`scripts/run_asi_v2_dgx.sh`，结果在 `results_v2/`） | 地板效应未改变：base 0.45，ASI 专家 0.00；表中 ASI 一列已换成 v2 |
-| **SWE harness** | 修复 patch 丢末尾换行、agent 异常退出时修改丢失（`tooling_v2`）；64K 上下文（YaRN ×2）重跑 base（`scripts/bench_swe_v2.sh`） | base 仍为 0/6：2 题 agent 超时，1 题格式错误，提交的补丁编译 / 测试不通过，因此这个 0 分是真实的。merged_ties 的 v2 重跑因 x86 主机离线后停用而未完成；base v2 的原始轨迹留在 x86 上，没能拉回，这里只记录结论 |
-| **终端 / SWE 专家 v2** | 按评测 agent 的格式重做训练数据：terminus-2 多轮 JSON 轨迹（Nemotron-Terminal-Corpus + OpenThoughts-Agent，4007 条）；mini-swe-agent 工具调用轨迹（由 SWE-smith 转换，4000 条）。8192 token，120 步（`configs/*_v2.yaml`，`src/data/prepare_*_v2.py`，数据统计在 `data/*_v2/stats.json`） | 已训练完成，**不再评测**：TB2 / SWE 的镜像只有 amd64，只能在 x86 上跑；x86 主机已停用（DGX 上用 qemu 模拟，连 gold patch 都过不了）。所以 v2 专家没有评测结果，也不计入任何表格 |
-| **MOPD 文献** | `docs/mopd_literature.md` | 小米 MOPD 论文中 MOPD 0.937 vs Task Arithmetic 0.857 vs 权重平均 0.328；收益取决于教师比学生强多少 |
-
+首先是算力限制了评测设置。8B 模型每个 token 的 KV 缓存约 144KB；而 TB2 同时跑 12 道题、每道最长 28K，需要约 34 万 token。请求只能排队，base 有一半以上的题是超时失败，不是做错。
 **算力判断**：Qwen3-8B 每个 token 的 KV 缓存约 144KB。L40S 上能放的 KV 约 14.5 万 token，而 TB2 12 并发时最多需要约 34 万 token，于是请求排队、大量超时。按今天的设置（32K 上下文、12 并发）不排队地跑 TB2，需要约 75GB 显存（1 张 80GB 卡）；接近模型卡设置（128K 上下文、32 并发）需要约 290GB（4 张 H100 级别）。
+
+算力决定了分数的地板，融合方式决定了专家的能力能不能被保住。
+
+- 权重融合是在参数上做加法，但网络是非线性的，不同专家的参数改动会互相干扰。我们观察到，TIES 让终端专家「接管」了模型，40% 的数学题直接输出 bash 代码；Linear 有 27 次把题目模板原样抄回来。这些病态行为，任何一个单独的专家都没有。
+- MOPD（多教师在线蒸馏）是在输出上对齐：每道题由对应领域的教师逐个 token 指导，学生在自己生成的回答上被纠错。所以它的输出格式和 base 一样健全：0 次输出代码，0 次抄模板。
+- 业界也是这样做的：
+  - 小米的 MOPD 论文：MOPD 0.937，Task Arithmetic 合并 0.857，简单权重平均只有 0.328；
+  - DeepSeek-V4 用 10 个以上教师做在线蒸馏，取代了混合 RL；
+  - Qwen3 用在线蒸馏，以 RL 约 1/10 的算力拿到了更高的分数。
+
+这次 MOPD 的分数没拉开，原因很明确：教师不够强。文献同样指出，蒸馏的收益取决于教师比学生强多少。所以下一步不是换融合方法，而是先把教师训强。
+
+在只有一张 48GB L40S 和一台 GB10 的条件下，评测被迫缩到 32K 上下文、单次运行和题目子集，大部分分数因此落在地板上，看不出各方法之间的真实差距。但实验揭示了更本质的问题：权重融合会让某个专家「接管」模型，而多教师在线蒸馏在行为上始终保持健全，它的上限只取决于教师质量。所以下一步应该先把专家训强，再在 4 张 H100 上，按接近模型卡的设置验证蒸馏路线。
